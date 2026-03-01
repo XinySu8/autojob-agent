@@ -3,7 +3,7 @@ import os
 import sys
 from datetime import datetime, timezone
 
-ROOT = os.path.dirname(os.path.dirname(__file__))  # ai-career/
+ROOT = os.path.dirname(os.path.dirname(__file__))  # repo root/
 STATE_PATH = os.path.join(ROOT, "data", "state.json")
 JOBS_JSON = os.path.join(ROOT, "data", "jobs.json")
 JOBS_TODAY_JSON = os.path.join(ROOT, "data", "jobs_today.json")
@@ -61,7 +61,7 @@ def find_job_id_by_url(url: str):
 def main():
     """
     Usage:
-      python ai-career/scripts/mark_job.py <status> <url> [note...]
+      python scripts/mark_job.py <status> <url> [note...]
 
     status: applied | ignored | new | closed
     """

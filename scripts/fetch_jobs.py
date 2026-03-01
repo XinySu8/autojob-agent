@@ -1,4 +1,4 @@
-import json
+﻿import json
 import os
 import re
 import sys
@@ -6,10 +6,11 @@ import time
 import hashlib
 import html
 from datetime import datetime, timezone
+from urllib.parse import urlparse
 from urllib.request import urlopen, Request
 from urllib.error import URLError, HTTPError
 
-ROOT = os.path.dirname(os.path.dirname(__file__))  # ai-career/
+ROOT = os.path.dirname(os.path.dirname(__file__))  # repo root/
 CONFIG_PATH = os.path.join(ROOT, "config", "targets.json")
 OUT_DIR = os.path.join(ROOT, "data")
 
@@ -26,12 +27,21 @@ OUT_BACKLOG_MD = os.path.join(OUT_DIR, "jobs_backlog.md")
 
 ARCHIVE_DIR = os.path.join(OUT_DIR, "archive")
 
-UA = "ai-career-job-fetcher/0.1 (GitHub Actions)"
+UA = "ai-career-job-fetcher/0.2 (GitHub Actions)"
 
 
-def http_get_json(url: str):
-    req = Request(url, headers={"User-Agent": UA})
-    with urlopen(req, timeout=30) as resp:
+# ----------------------------
+# HTTP helpers
+# ----------------------------
+def http_get_json(url: str, method: str = "GET", data: dict | None = None, timeout: int = 30):
+    headers = {"User-Agent": UA, "Accept": "application/json"}
+    body = None
+    if data is not None:
+        body = json.dumps(data).encode("utf-8")
+        headers["Content-Type"] = "application/json"
+
+    req = Request(url, headers=headers, data=body, method=method)
+    with urlopen(req, timeout=timeout) as resp:
         return json.loads(resp.read().decode("utf-8"))
 
 
@@ -61,8 +71,6 @@ def _token_regex(token: str) -> re.Pattern:
       - co-op matching co-opetition
     """
     tok = token.strip()
-    # Match token as a standalone "word-like" unit using lookarounds against alnum.
-    # This works for hyphenated tokens too.
     pattern = r"(?<![A-Za-z0-9])" + re.escape(tok) + r"(?![A-Za-z0-9])"
     return re.compile(pattern, flags=re.IGNORECASE)
 
@@ -90,6 +98,9 @@ def contains_any(text: str, keywords) -> bool:
     return False
 
 
+# ----------------------------
+# Filters
+# ----------------------------
 def apply_filters(jobs, filters):
     internship_any = filters.get("internship_any") or []
     domain_any = filters.get("domain_any") or []
@@ -127,7 +138,7 @@ def apply_filters(jobs, filters):
             if et in ashby_types:
                 is_internship = True
 
-        # Keyword-based fallback (A: only check TITLE)
+        # Keyword-based fallback (only check TITLE)
         if not is_internship and internship_any:
             if contains_any(title, internship_any):
                 is_internship = True
@@ -169,6 +180,9 @@ def apply_filters(jobs, filters):
     return kept, dropped
 
 
+# ----------------------------
+# State
+# ----------------------------
 def load_state(path: str) -> dict:
     try:
         with open(path, "r", encoding="utf-8") as f:
@@ -193,6 +207,101 @@ def utc_date_str(dt: datetime) -> str:
     return dt.astimezone(timezone.utc).strftime("%Y-%m-%d")
 
 
+# ----------------------------
+# Target normalization (fix obvious wrong configs at runtime)
+# ----------------------------
+def normalize_targets(raw_targets: list[dict]) -> tuple[list[dict], list[str]]:
+    """
+    Returns (enabled_targets, warnings)
+    - Only keeps supported sources: greenhouse, lever, ashby, workday
+    - Auto-fixes common wrong configs that cause 404 spam:
+        square -> greenhouse board_token=block
+        notion -> ashby job_board_name=notion
+        slack  -> workday workday_url=https://salesforce.wd12.myworkdayjobs.com/Slack
+    - Removes duplicates
+    """
+    SUPPORTED = {"greenhouse", "lever", "ashby", "workday"}
+    warnings = []
+
+    FIX_BY_COMPANY = {
+        # Square jobs are under Block on Greenhouse
+        "square": {"source": "greenhouse", "company": "square", "board_token": "block"},
+        # Notion is on Ashby
+        "notion": {"source": "ashby", "company": "notion", "job_board_name": "notion"},
+        # Slack is on Salesforce Workday
+        "slack": {"source": "workday", "company": "slack", "workday_url": "https://salesforce.wd12.myworkdayjobs.com/Slack"},
+    }
+
+    enabled = []
+    seen = set()
+
+    for t in raw_targets or []:
+        if not isinstance(t, dict):
+            continue
+
+        company = (t.get("company") or "").strip().lower()
+        source = (t.get("source") or "").strip().lower()
+
+        if not company:
+            warnings.append("target missing company; skipped")
+            continue
+
+        # Apply fix if company is known wrong
+        if company in FIX_BY_COMPANY:
+            fixed = FIX_BY_COMPANY[company]
+            # preserve any user-supplied company label, but enforce required keys
+            t = {**t, **fixed}
+            source = t["source"]
+            warnings.append(f"auto-fixed target for company='{company}' -> source='{source}'")
+
+        # Normalize wrong key names (common mistakes)
+        # e.g. ashby mistakenly using board_token instead of job_board_name
+        if source == "ashby":
+            if "job_board_name" not in t and "board_token" in t:
+                t["job_board_name"] = t["board_token"]
+                warnings.append(f"auto-fixed ashby key for company='{company}': board_token -> job_board_name")
+
+        if source not in SUPPORTED:
+            warnings.append(f"unsupported source='{source}' for company='{company}'; skipped")
+            continue
+
+        # Validate required fields per source
+        if source == "greenhouse" and not t.get("board_token"):
+            warnings.append(f"greenhouse missing board_token for company='{company}'; skipped")
+            continue
+        if source == "lever" and not t.get("lever_slug"):
+            warnings.append(f"lever missing lever_slug for company='{company}'; skipped")
+            continue
+        if source == "ashby" and not t.get("job_board_name"):
+            warnings.append(f"ashby missing job_board_name for company='{company}'; skipped")
+            continue
+        if source == "workday" and not t.get("workday_url"):
+            warnings.append(f"workday missing workday_url for company='{company}'; skipped")
+            continue
+
+        # Dedup key
+        uniq = None
+        if source == "greenhouse":
+            uniq = ("greenhouse", t.get("board_token"))
+        elif source == "lever":
+            uniq = ("lever", t.get("lever_slug"))
+        elif source == "ashby":
+            uniq = ("ashby", t.get("job_board_name"))
+        elif source == "workday":
+            uniq = ("workday", t.get("workday_url"))
+
+        if uniq in seen:
+            continue
+        seen.add(uniq)
+
+        enabled.append(t)
+
+    return enabled, warnings
+
+
+# ----------------------------
+# Fetchers
+# ----------------------------
 def fetch_greenhouse(board_token: str, company: str):
     url = f"https://api.greenhouse.io/v1/boards/{board_token}/jobs?content=true"
     data = http_get_json(url)
@@ -273,6 +382,109 @@ def fetch_ashby(job_board_name: str, company: str):
     return jobs
 
 
+def _parse_workday_base(workday_url: str):
+    """
+    Example input:
+      https://salesforce.wd12.myworkdayjobs.com/Slack
+
+    Workday CXS endpoints typically look like:
+      https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/Slack/jobs
+    where tenant = "salesforce", site = "Slack"
+    """
+    u = urlparse(workday_url)
+    host = u.netloc
+    path = u.path.strip("/")
+    site = path.split("/")[0] if path else ""
+    tenant = host.split(".")[0] if host else ""
+    base_origin = f"{u.scheme}://{host}"
+    return base_origin, tenant, site, workday_url.rstrip("/")
+
+
+def fetch_workday(workday_url: str, company: str):
+    """
+    Minimal Workday connector using public CXS endpoint.
+    Gets list of postings and extracts title/location/url/postedOn.
+
+    Notes:
+    - Some Workday sites require POST; we try GET then fallback to POST.
+    - Description is not always provided in listing endpoint; we keep it empty if missing.
+    """
+    base_origin, tenant, site, site_root = _parse_workday_base(workday_url)
+    if not tenant or not site:
+        raise ValueError(f"Invalid workday_url: {workday_url}")
+
+    jobs_endpoint = f"{base_origin}/wday/cxs/{tenant}/{site}/jobs"
+
+    jobs = []
+    offset = 0
+    limit = 50
+    max_pages = 40  # safety cap
+
+    def call_jobs(offset_val: int):
+        url = f"{jobs_endpoint}?offset={offset_val}&limit={limit}"
+        try:
+            return http_get_json(url, method="GET")
+        except HTTPError as e:
+            # Some sites require POST
+            if getattr(e, "code", None) in (400, 405):
+                return http_get_json(jobs_endpoint, method="POST", data={"offset": offset_val, "limit": limit})
+            raise
+
+    for _ in range(max_pages):
+        data = call_jobs(offset)
+        postings = data.get("jobPostings") or []
+        if not postings:
+            break
+
+        for p in postings:
+            title = p.get("title") or ""
+            external_path = p.get("externalPath") or ""
+            posted_on = p.get("postedOn") or ""
+            location_text = p.get("locationsText") or ""
+
+            # Build external URL: site_root + externalPath (usually starts with "/job/...")
+            url = (site_root + external_path) if external_path.startswith("/") else (site_root + "/" + external_path)
+
+            # Workday listing often doesn't include full description; keep empty to avoid false signals
+            content_plain = ""
+            content_text = ""
+
+            # Stable id
+            job_id = stable_id("workday", tenant, site, title, url)
+
+            jobs.append({
+                "id": job_id,
+                "source": "workday",
+                "company": company,
+                "title": title,
+                "location": location_text,
+                "url": url,
+                "updated_at": posted_on,
+                "created_at": posted_on,
+                "departments": [],
+                "content_text": content_text,
+                "content_plain": content_plain
+            })
+
+        total = data.get("total")
+        if isinstance(total, int):
+            offset += len(postings)
+            if offset >= total:
+                break
+        else:
+            # fallback: continue until postings < limit
+            if len(postings) < limit:
+                break
+            offset += len(postings)
+
+        time.sleep(0.1)
+
+    return jobs
+
+
+# ----------------------------
+# Markdown output
+# ----------------------------
 def write_md(path_md: str, title: str, jobs_list, now_utc: datetime, today_str: str, errors=None):
     lines = []
     lines.append(f"# {title}\n")
@@ -293,12 +505,15 @@ def write_md(path_md: str, title: str, jobs_list, now_utc: datetime, today_str: 
         loc = j.get("location") or "Unknown location"
         url = j.get("url") or ""
         source = j.get("source")
-        lines.append(f"- [{company}] {title_j} ({loc}) — {source} — {url}\n")
+        lines.append(f"- [{company}] {title_j} ({loc}) 鈥?{source} 鈥?{url}\n")
 
     with open(path_md, "w", encoding="utf-8") as f:
         f.writelines(lines)
 
 
+# ----------------------------
+# Main
+# ----------------------------
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     os.makedirs(ARCHIVE_DIR, exist_ok=True)
@@ -313,8 +528,13 @@ def main():
     all_jobs = []
     errors = []
 
-    for t in cfg.get("targets", []):
-        source = t.get("source")
+    targets_raw = cfg.get("targets", []) or []
+    targets, norm_warnings = normalize_targets(targets_raw)
+    for w in norm_warnings:
+        errors.append(f"[config] {w}")
+
+    for t in targets:
+        source = (t.get("source") or "").strip().lower()
         company = t.get("company") or "unknown"
         try:
             if source == "greenhouse":
@@ -326,9 +546,12 @@ def main():
             elif source == "ashby":
                 job_board_name = t["job_board_name"]
                 all_jobs.extend(fetch_ashby(job_board_name, company))
+            elif source == "workday":
+                workday_url = t["workday_url"]
+                all_jobs.extend(fetch_workday(workday_url, company))
             else:
                 errors.append(f"Unknown source: {source} ({company})")
-        except (HTTPError, URLError, KeyError, TimeoutError) as e:
+        except (HTTPError, URLError, KeyError, TimeoutError, ValueError) as e:
             errors.append(f"{company} ({source}) failed: {repr(e)}")
 
         time.sleep(0.3)
@@ -420,7 +643,7 @@ def main():
     with open(OUT_JSON, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
 
-    # Today snapshot (overwritten every run; same-day latest)
+    # Today snapshot
     with open(OUT_TODAY_JSON, "w", encoding="utf-8") as f:
         json.dump(
             {"generated_at_utc": now_utc.isoformat(), "today_utc": today_str, "count": len(today_jobs), "jobs": today_jobs},
@@ -455,3 +678,4 @@ if __name__ == "__main__":
     except Exception as e:
         print("fatal:", repr(e))
         sys.exit(1)
+

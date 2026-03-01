@@ -53,7 +53,7 @@ def format_md_item(r: Dict[str, Any]) -> str:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--config", default="ai-career/v2/config/scoring.yaml")
+    ap.add_argument("--config", default="v2/config/scoring.yaml")
     args = ap.parse_args()
 
     cfg_path = args.config

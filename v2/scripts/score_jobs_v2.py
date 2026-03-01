@@ -41,7 +41,7 @@ def ensure_parent(path: str) -> None:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--config", default="ai-career/v2/config/scoring.yaml")
+    ap.add_argument("--config", default="v2/config/scoring.yaml")
     args = ap.parse_args()
 
     cfg = load_yaml(args.config)
@@ -50,7 +50,7 @@ def main():
     jobs_doc = read_json(io["jobs_json"])
     jobs = jobs_doc.get("jobs", [])
 
-    profile = clean_text(read_text("ai-career/v2/config/profile.md"))
+    profile = clean_text(read_text("v2/config/profile.md"))
     sem_cfg = cfg["semantic_scoring"]
     model_name = sem_cfg["model_name"]
     content_max_chars = int(sem_cfg.get("content_max_chars", 8000))

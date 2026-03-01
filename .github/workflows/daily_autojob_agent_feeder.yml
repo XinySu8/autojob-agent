@@ -12,10 +12,9 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout feature branch
+      - name: Checkout default branch
         uses: actions/checkout@v4
         with:
-          ref: feature/autojob-agent-feeder-v2
           fetch-depth: 0
 
       - name: Setup Python
@@ -26,30 +25,30 @@ jobs:
       - name: Install deps (V2)
         run: |
           python -m pip install --upgrade pip
-          pip install -r ai-career/v2/requirements.txt
+          pip install -r v2/requirements.txt
 
       - name: Run V1 Producer (update jobs.json)
         run: |
-          python ai-career/scripts/fetch_jobs.py
+          python scripts/fetch_jobs.py
 
       - name: Run V2 Scoring + Triage
         run: |
-          python ai-career/v2/scripts/score_jobs_v2.py --config ai-career/v2/config/scoring.yaml
-          python ai-career/v2/scripts/triage_v2.py --config ai-career/v2/config/scoring.yaml
+          python v2/scripts/score_jobs_v2.py --config v2/config/scoring.yaml
+          python v2/scripts/triage_v2.py --config v2/config/scoring.yaml
 
-      - name: Commit outputs (V1 + V2) to feature branch
+      - name: Commit outputs (V1 + V2) to default branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # V1 outputs (single source of truth)
-          git add ai-career/data/state.json || true
-          git add ai-career/data/jobs.json ai-career/data/jobs_today.json ai-career/data/jobs_backlog.json || true
-          git add ai-career/data/jobs.md ai-career/data/jobs_today.md ai-career/data/jobs_backlog.md || true
+          # V1 outputs
+          git add data/state.json || true
+          git add data/jobs.json data/jobs_today.json data/jobs_backlog.json || true
+          git add data/jobs.md data/jobs_today.md data/jobs_backlog.md || true
 
           # V2 outputs
-          git add ai-career/v2/data/*
-          git add ai-career/v2/output/*
+          git add v2/data/* || true
+          git add v2/output/* || true
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
@@ -57,4 +56,4 @@ jobs:
           fi
 
           git commit -m "chore: daily V1 feed + V2 candidates"
-          git push origin HEAD:refs/heads/feature/autojob-agent-feeder-v2
+          git push

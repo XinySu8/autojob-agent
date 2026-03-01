@@ -2,13 +2,13 @@ version: 2
 engine_name: "AutoJob-Agent Feeder"
 
 io:
-  jobs_json: "ai-career/data/jobs.json"
-  scored_jobs_json: "ai-career/v2/data/scored_jobs.json"
-  emb_cache_json: "ai-career/v2/data/emb_cache.json"
-  candidates_json: "ai-career/v2/output/candidates.json"
-  apply_md: "ai-career/v2/output/apply.md"
-  maybe_md: "ai-career/v2/output/maybe.md"
-  skip_md: "ai-career/v2/output/skip.md"
+  jobs_json: "data/jobs.json"
+  scored_jobs_json: "v2/data/scored_jobs.json"
+  emb_cache_json: "v2/data/emb_cache.json"
+  candidates_json: "v2/output/candidates.json"
+  apply_md: "v2/output/apply.md"
+  maybe_md: "v2/output/maybe.md"
+  skip_md: "v2/output/skip.md"
 
 hard_gate:
   # NEW: allowlist gate (strict). If a job doesn't match these regions, it is skipped.
