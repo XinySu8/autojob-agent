@@ -1,154 +1,140 @@
-# ai-career: daily internship job pipeline (GitHub Actions)
+# AutoJob-Agent
 
-This folder adds an "ai-career" workflow plugin and a daily job pipeline on top of the upstream fork.
+AutoJob-Agent is a modular, config-driven job-search automation pipeline:
 
-What it does (daily):
-1) Fetch job postings from multiple public ATS sources (Greenhouse / Lever / Ashby)
-2) Filter for internship-like roles + your target domain keywords
-3) Score jobs against your profile keywords (optional but recommended)
-4) Triage today's jobs into Apply / Maybe / Skip and generate one markdown "job card" per job
-5) Maintain a small persistent state file so you can separate:
-   - today's newly-seen jobs
-   - older backlog jobs you still haven't applied/ignored/closed
+- **V1 Producer**: fetches job postings from multiple ATS sources and maintains a single source of truth.
+- **V2 Feeder/Scoring**: applies hard gates + semantic matching to triage jobs and outputs Apply/Maybe/Skip lists.
+- **V3 Local Agent (Ollama)**: generates human-readable Markdown job cards locally (not run in GitHub Actions).
+
+This repo is designed so that **V1 + V2 can run reliably in GitHub Actions**, while **V3 is intentionally local-only**.
 
 ---
 
-## Quick start (local)
+## Repository structure
 
-From repo root:
+```text
+scripts/                 # V1 Producer scripts (fetch + status updates)
+config/targets.json       # V1 targets and filters
+data/                     # V1 outputs: jobs.json, state.json, today/backlog, archive/
 
-    python ai-career/scripts/fetch_jobs.py
-    python ai-career/scripts/score_jobs.py
-    python ai-career/scripts/triage_jobs.py
+v2/                       # V2 scoring + triage
+  config/                 # scoring.yaml, profile.md (input for V3 too)
+  scripts/                # score_jobs_v2.py, triage_v2.py
+  data/                   # scored_jobs.json, emb_cache.json (optional)
+  output/                 # candidates.json, apply.md, maybe.md, skip.md
 
----
+v3/                       # V3 local-only job cards (Ollama)
+  agent/                  # run_ollama_agent.py + prompt/template
+  cards-samples/          # curated sample cards committed for demo
+  cards/                  # generated cards (typically local output; often gitignored)
+```
 
-## Configuration
-
-### 1) Targets (where to fetch jobs)
-
-Edit:
-
-- `ai-career/config/targets.json`
-
-This controls which companies/sources you fetch from and the filtering rules.
-
-### 2) Profile (how to score/triage)
-
-Edit:
-
-- `ai-career/config/profile.json`
-
-This controls keyword lists used by scoring/triage, plus location preferences.
-
-Tip: keep keywords simple and stable first, then iterate.
 
 ---
 
-## Outputs (generated files)
+## V1 Producer (fetch)
 
-Main outputs are under:
+### Inputs
+- `config/targets.json` (companies + ATS settings + filters)
 
-- `ai-career/data/`
+### Outputs (single source of truth)
+- `data/jobs.json`
+- `data/state.json`
+- additional reports:
+  - `data/jobs.md`
+  - `data/jobs_today.json / .md`
+  - `data/jobs_backlog.json / .md`
+  - `data/archive/`
 
-### Current snapshot (overwritten every run)
-- `jobs.json`
-- `jobs.md`
+### Run locally
+```bash
+python scripts/fetch_jobs.py
+```
 
-### Today vs backlog
-- `jobs_today.json`
-- `jobs_today.md`
-- `jobs_backlog.json`
-- `jobs_backlog.md`
+## Status behavior (important)
 
-Meaning:
-- **Today** = jobs first seen on today’s UTC date (same-day reruns do NOT change “first seen”)
-- **Backlog** = jobs first seen on previous days and not marked applied/ignored/closed
+`data/state.json` stores `job_uid -> status`.
 
-### Persistent state (do not delete)
-- `state.json`
-
-This stores per-job metadata such as:
-- `first_seen_date_utc`
-- `last_seen_at_utc`
-- `status` (new/applied/ignored/closed)
-
-### Daily archive (last run of the day wins)
-- `ai-career/data/archive/jobs.YYYY-MM-DD.json`
-- `ai-career/data/archive/jobs.YYYY-MM-DD.md`
-
-Same-day reruns overwrite the SAME archive file, so you always keep the last snapshot for that date.
-
-### Scoring output
-- `scored_jobs.json`
-- `scored_jobs.md`
-
-### Triage output + per-job markdown cards
-- `triage_today.md` (summary)
-- `cards/by_day/YYYY-MM-DD/<job_id>.md` (one job card per job)
-
-Job cards are stable per job id; within the same day, re-running updates the same card file.
+Jobs with `status` in `applied / ignored / closed` are hidden globally at the V1 output layer, so they will not reappear in V2 and won’t be repeatedly pushed.
 
 ---
 
-## GitHub Actions (daily automation)
+## V2 Feeder/Scoring (triage)
 
-The repo includes a scheduled workflow (plus manual run) that runs:
+### Inputs
+- `data/jobs.json`
 
-- fetch → score → triage → commit generated outputs back to the repo
+### Outputs
+- `v2/data/scored_jobs.json`
+- `v2/output/candidates.json` (Top-N candidates for downstream use)
+- `v2/output/apply.md`
+- `v2/output/maybe.md`
+- `v2/output/skip.md` (skip must include reasons)
 
-Run it now:
-1) Go to GitHub → **Actions**
-2) Select the workflow (e.g., “Fetch jobs” / “Job pipeline”)
-3) Click **Run workflow**
+### Run locally
+```bash
+python v2/scripts/score_jobs_v2.py --config v2/config/scoring.yaml
+python v2/scripts/triage_v2.py     --config v2/config/scoring.yaml
+```
 
----
-
-## Marking job status (applied / ignored / closed)
-
-The pipeline can’t know if you applied automatically, so you mark status yourself.
-
-Recommended workflow:
-- Use a dedicated GitHub Actions workflow that updates `ai-career/data/state.json`
-- You provide the job id and status via manual “Run workflow” inputs
-
-Status meanings:
-- `new`: default; still in your queue
-- `applied`: hide from backlog
-- `ignored`: hide from backlog
-- `closed`: hide from backlog (useful if posting disappears)
-
-After you mark a job as `applied/ignored/closed`, it will stop showing in backlog outputs.
+### Scoring approach (high level)
+- **Hard gate** rules (must-pass constraints)
+- **Semantic match** using sentence-transformers `all-MiniLM-L6-v2` cosine similarity
+- Optional embedding cache for repeat runs
 
 ---
 
-## Notes / FAQ
+## V3 Local Agent (Ollama job cards)
 
-### Why “today vs backlog” is based on *first seen* (not posted date)?
+**V3 requires local Ollama installed.**  
+**V3 runs locally only; not in GitHub Actions.**
 
-Different ATS sources expose timestamps inconsistently. “first seen” is robust:
-- You always get a clean “today” list for review
-- Backlog stays stable across days until you mark items as applied/ignored/closed
+V3 reads the top candidates and generates a Markdown “Job Card” for each candidate, including match points, risks, skill gaps, resume-tailoring suggestions, and interview prep notes. The output is constrained to evidence from:
+- `v2/output/candidates.json`
+- `v2/config/profile.md`
 
-### Will running multiple times per day overwrite files?
+### Install Ollama (system-level, one time)
+Install Ollama on your machine, then pull a small model that fits your available RAM. Example:
+```bash
+ollama pull qwen2.5:3b
+```
+### Generate cards locally
+```bash
+python v3/agent/run_ollama_agent.py --model qwen2.5:3b
+```
+Limit generation (recommended for speed):
+```bash
+python v3/agent/run_ollama_agent.py --model qwen2.5:3b --limit 20
+```
 
-Yes for the “current snapshot” and “today/backlog” outputs — they reflect the latest run.
-Archive uses one file per day (YYYY-MM-DD), also overwritten within the same day.
+### Inputs
+- `v2/output/candidates.json`
+- `v2/config/profile.md`
 
-### I see a weird non-intern role in scored/triage but not in jobs.md
-
-That usually means scoring/triage ran on an older `jobs.json` (or the workflow didn’t run the steps you expect).
-Fix: ensure the workflow runs fetch → score → triage in the same job, and commits all outputs.
+### Outputs
+- `v3/cards/<job_uid>.md` (generated cards)
+- `v3/cards-samples/` contains a few curated sample cards committed for demonstration.
 
 ---
 
-## Attribution
+## GitHub Actions
 
-This repository is a fork of `anthropics/knowledge-work-plugins`.
-It includes an additional "ai-career" workflow plugin and job pipeline contributed by the fork owner.
+GitHub Actions is configured to run **V1 + V2** on the default branch and push updated outputs back to the repo.
 
-Upstream project:
-- https://github.com/anthropics/knowledge-work-plugins
+V3 is excluded by design because it depends on local Ollama and is intended for local use only.
 
-License:
-- This fork remains licensed under the Apache License 2.0 (see the root LICENSE file).
+## Local development setup
+
+Recommended:
+- Python 3.11 + virtual environment (`.venv`)
+
+Typical workflow:
+1) Run V1 fetch (or let Actions run it)
+2) Run V2 scoring + triage
+3) Optionally run V3 locally to generate cards for top candidates
+
+## Notes on tracked vs local-only outputs
+
+- `v3/agent/.cache/` stores local incremental indexes/logs and should not be committed.
+- `v3/cards/` is usually treated as local output (can be committed once for demo, but not recommended for frequent updates).
+- `v3/cards-samples/` is intended for curated examples.
