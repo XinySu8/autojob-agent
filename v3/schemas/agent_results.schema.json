@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V3 Agent Results",
+  "type": "object",
+  "required": ["model", "candidates_path", "top_n", "items"],
+  "properties": {
+    "model": { "type": "string" },
+    "candidates_path": { "type": "string" },
+    "top_n": { "type": "integer", "minimum": 1 },
+    "items": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/item" }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "required": ["field", "snippet"],
+      "properties": {
+        "field": { "type": "string" },
+        "snippet": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "item": {
+      "type": "object",
+      "required": ["job_uid", "decision", "score", "reasons", "missing_info", "risk_flags", "evidence", "notes"],
+      "properties": {
+        "job_uid": { "type": "string" },
+        "decision": { "type": "string", "enum": ["apply", "maybe", "skip"] },
+        "score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "reasons": { "type": "array", "items": { "type": "string" } },
+        "missing_info": { "type": "array", "items": { "type": "string" } },
+        "risk_flags": { "type": "array", "items": { "type": "string" } },
+        "evidence": { "type": "array", "items": { "$ref": "#/$defs/evidence" } },
+        "notes": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

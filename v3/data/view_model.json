@@ -1,0 +1,92 @@
+{
+  "generated_at_utc": "2026-03-03T06:45:23.454207+00:00",
+  "source": {
+    "candidates_path": "v2/output/candidates.json",
+    "agent_results_path": "v3/output/agent_results.normalized.json"
+  },
+  "items": [
+    {
+      "job_uid": "1539e4387be08afa",
+      "title": "Data Platform & Engineering Intern",
+      "company": "vercel",
+      "location": "Hybrid - San Francisco",
+      "apply_url": "https://job-boards.greenhouse.io/vercel/jobs/5810803004",
+      "decision": "maybe",
+      "score": 0.5,
+      "reasons": [
+        "Location is hybrid, but company is not specified for remote work"
+      ],
+      "evidence": [
+        {
+          "field": "location",
+          "snippet": "Hybrid - San Francisco"
+        },
+        {
+          "field": "apply_url",
+          "snippet": "https://job-boards.greenhouse.io/vercel/jobs/5810803004"
+        }
+      ],
+      "status": "new",
+      "matched_keywords": [],
+      "missing_keywords": [],
+      "tags": []
+    },
+    {
+      "job_uid": "8b8f2da94e9ac418",
+      "title": "Marketing Technology Intern (Summer 2026)",
+      "company": "okta",
+      "location": "San Francisco, California",
+      "apply_url": "https://www.okta.com/company/careers/opportunity/7561018?gh_jid=7561018",
+      "decision": "maybe",
+      "score": 0.5,
+      "reasons": [
+        "Internship with a well-known company in the technology industry",
+        "Marketing Technology focus may be relevant to tech skills"
+      ],
+      "evidence": [
+        {
+          "field": "company",
+          "snippet": "okta"
+        },
+        {
+          "field": "location",
+          "snippet": "San Francisco, California"
+        }
+      ],
+      "status": "new",
+      "matched_keywords": [],
+      "missing_keywords": [],
+      "tags": []
+    },
+    {
+      "job_uid": "64e8cd9ce5039875",
+      "title": "Software Engineer, Intern",
+      "company": "brex",
+      "location": "United States",
+      "apply_url": "https://www.brex.com/careers/8434389002?gh_jid=8434389002",
+      "decision": "apply",
+      "score": 1.0,
+      "reasons": [
+        "Internship opportunity with a company in the United States"
+      ],
+      "evidence": [
+        {
+          "field": "job_title",
+          "snippet": "Software Engineer, Intern"
+        },
+        {
+          "field": "company",
+          "snippet": "brex"
+        },
+        {
+          "field": "location",
+          "snippet": "United States"
+        }
+      ],
+      "status": "new",
+      "matched_keywords": [],
+      "missing_keywords": [],
+      "tags": []
+    }
+  ]
+}

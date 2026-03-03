@@ -1,0 +1,86 @@
+{
+  "model": "llama3.1:8b",
+  "candidates_path": "v2\\output\\candidates.json",
+  "top_n": 3,
+  "items": [
+    {
+      "job_uid": "1539e4387be08afa",
+      "decision": "maybe",
+      "score": 0.5,
+      "reasons": [
+        "Location is hybrid, but company is not specified for remote work"
+      ],
+      "missing_info": [
+        "Remote work policy",
+        "Required skills and experience"
+      ],
+      "risk_flags": [
+        "Potential for commuting required"
+      ],
+      "evidence": [
+        {
+          "field": "Location",
+          "snippet": "Hybrid - San Francisco"
+        },
+        {
+          "field": "Apply URL",
+          "snippet": "https://job-boards.greenhouse.io/vercel/jobs/5810803004"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "job_uid": "8b8f2da94e9ac418",
+      "decision": "maybe",
+      "score": 0.5,
+      "reasons": [
+        "Internship with a well-known company in the technology industry",
+        "Marketing Technology focus may be relevant to tech skills"
+      ],
+      "missing_info": [
+        "Job responsibilities and requirements",
+        "Expected skills and qualifications",
+        "How this internship will help the candidate's career"
+      ],
+      "risk_flags": [
+        "Summer intern, may not lead to full-time job"
+      ],
+      "evidence": [
+        {
+          "field": "Company",
+          "snippet": "okta"
+        },
+        {
+          "field": "Location",
+          "snippet": "San Francisco, California"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "job_uid": "64e8cd9ce5039875",
+      "decision": "apply",
+      "score": 1.0,
+      "reasons": [
+        "Internship opportunity with a company in the United States"
+      ],
+      "missing_info": [],
+      "risk_flags": [],
+      "evidence": [
+        {
+          "field": "Job Title",
+          "snippet": "Software Engineer, Intern"
+        },
+        {
+          "field": "Company",
+          "snippet": "brex"
+        },
+        {
+          "field": "Location",
+          "snippet": "United States"
+        }
+      ],
+      "notes": ""
+    }
+  ]
+}
