@@ -1,19 +1,21 @@
 # Job feed (backlog)
-Generated at (UTC): 2026-03-07T15:44:59.389069+00:00
-Today (UTC): 2026-03-07
-Total jobs: 161
+Generated at (UTC): 2026-03-08T15:45:38.898385+00:00
+Today (UTC): 2026-03-08
+Total jobs: 163
 
 ## Jobs
 - [figma] Inside Sales Representative - Early Career (2026) (San Francisco, CA • New York, NY) 鈥?greenhouse 鈥?https://boards.greenhouse.io/figma/jobs/5726175004?gh_jid=5726175004
 - [stripe] Data Analyst, Intern (Master's degree) (Toronto, Ontario, Canada) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7285986
 - [stripe] PhD Data Scientist, Intern (Toronto, Ontario, Canada) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7285974
 - [stripe] PhD Machine Learning Engineer, Intern (San Francisco, New York City, Seattle) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7216664
-- [stripe] Software Engineer, Intern (Dublin) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7206494
 - [stripe] Software Engineer, Intern (Singapore) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7206401
+- [stripe] Software Engineer, Intern (Dublin) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7206494
 - [stripe] Software Engineer, Intern (London) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7360840
 - [stripe] Software Engineer, Intern (Summer) (San Francisco, Seattle, New York City) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7210115
 - [stripe] University Recruiter (Mexico City, MX) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7476012
 - [stripe] University Recruiter (Fixed Term Contract) (Bangalore) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7419549
+- [togetherai] Software Development in Test Intern (San Francisco) 鈥?greenhouse 鈥?https://job-boards.greenhouse.io/togetherai/jobs/5067841007
+- [okta] IT Support Intern (Summer 2026) (San Francisco, California) 鈥?greenhouse 鈥?https://www.okta.com/company/careers/opportunity/7558024?gh_jid=7558024
 - [anthropic] Regional Head of Early Career Associates, Applied AI (San Francisco, CA) 鈥?greenhouse 鈥?https://job-boards.greenhouse.io/anthropic/jobs/4947472008
 - [coinbase] Business Controller Intern (Hybrid - New York, NY) 鈥?greenhouse 鈥?https://www.coinbase.com/careers/positions/7434684?gh_jid=7434684
 - [coinbase] Strategic Sourcing Intern (Hybrid - New York, NY) 鈥?greenhouse 鈥?https://www.coinbase.com/careers/positions/7315887?gh_jid=7315887

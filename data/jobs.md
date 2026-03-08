@@ -1,6 +1,6 @@
 # Job feed (current)
-Generated at (UTC): 2026-03-07T15:44:59.389069+00:00
-Today (UTC): 2026-03-07
+Generated at (UTC): 2026-03-08T15:45:38.898385+00:00
+Today (UTC): 2026-03-08
 Total jobs: 163
 
 ## Errors
@@ -15,8 +15,8 @@ Total jobs: 163
 - [stripe] Data Analyst, Intern (Master's degree) (Toronto, Ontario, Canada) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7285986
 - [stripe] PhD Data Scientist, Intern (Toronto, Ontario, Canada) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7285974
 - [stripe] PhD Machine Learning Engineer, Intern (San Francisco, New York City, Seattle) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7216664
-- [stripe] Software Engineer, Intern (Dublin) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7206494
 - [stripe] Software Engineer, Intern (Singapore) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7206401
+- [stripe] Software Engineer, Intern (Dublin) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7206494
 - [stripe] Software Engineer, Intern (London) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7360840
 - [stripe] Software Engineer, Intern (Summer) (San Francisco, Seattle, New York City) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7210115
 - [stripe] University Recruiter (Mexico City, MX) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7476012
