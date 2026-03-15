@@ -2,7 +2,7 @@
   "meta": {
     "engine_name": "AutoJob-Agent Feeder",
     "version": 2,
-    "generated_at": "2026-03-14T15:49:51.523636+00:00",
+    "generated_at": "2026-03-15T15:51:17.579331+00:00",
     "source_jobs_count": 155,
     "candidates_count": 46,
     "candidates_topN_total": 150,
@@ -30,9 +30,9 @@
       "scores": {
         "hard_raw": 8.0,
         "hard_norm": 0.8,
-        "semantic_raw": 0.5335440357646396,
-        "semantic_norm": 0.8896180040009336,
-        "final": 0.8492899022005136
+        "semantic_raw": 0.5335441549739363,
+        "semantic_norm": 0.88961821492794,
+        "final": 0.8492900182103671
       },
       "signals": {
         "must_hits": [
@@ -68,9 +68,9 @@
       "scores": {
         "hard_raw": 8.0,
         "hard_norm": 0.8,
-        "semantic_raw": 0.5012938976282828,
-        "semantic_norm": 0.8054590678644921,
-        "final": 0.8030024873254706
+        "semantic_raw": 0.501294046717026,
+        "semantic_norm": 0.805459348689942,
+        "final": 0.8030026417794682
       },
       "signals": {
         "must_hits": [
@@ -108,9 +108,9 @@
       "scores": {
         "hard_raw": 10.0,
         "hard_norm": 1.0,
-        "semantic_raw": 0.3915490508075613,
-        "semantic_norm": 0.5190724013690527,
-        "final": 0.735489820752979
+        "semantic_raw": 0.39154913375035316,
+        "semantic_norm": 0.5190724821068207,
+        "final": 0.7354898651587514
       },
       "signals": {
         "must_hits": [
@@ -147,9 +147,9 @@
       "scores": {
         "hard_raw": 5.0,
         "hard_norm": 0.5,
-        "semantic_raw": 0.5446384277718836,
-        "semantic_norm": 0.9185695769976927,
-        "final": 0.730213267348731
+        "semantic_raw": 0.5446386390488231,
+        "semantic_norm": 0.9185700309590673,
+        "final": 0.730213517027487
       },
       "signals": {
         "must_hits": [
@@ -183,9 +183,9 @@
       "scores": {
         "hard_raw": 6.0,
         "hard_norm": 0.6,
-        "semantic_raw": 0.4870743170883175,
-        "semantic_norm": 0.7683521021364651,
-        "final": 0.6925936561750559
+        "semantic_raw": 0.48707458299794265,
+        "semantic_norm": 0.7683526842540485,
+        "final": 0.6925939763397266
       },
       "signals": {
         "must_hits": [
@@ -221,9 +221,9 @@
       "scores": {
         "hard_raw": 7.0,
         "hard_norm": 0.7,
-        "semantic_raw": 0.45383104406734887,
-        "semantic_norm": 0.681601512749562,
-        "final": 0.6898808320122591
+        "semantic_raw": 0.453831190327094,
+        "semantic_norm": 0.6816017743099329,
+        "final": 0.6898809758704632
       },
       "signals": {
         "must_hits": [
@@ -260,9 +260,9 @@
       "scores": {
         "hard_raw": 8.0,
         "hard_norm": 0.8,
-        "semantic_raw": 0.4216968072467883,
-        "semantic_norm": 0.5977450290055099,
-        "final": 0.6887597659530305
+        "semantic_raw": 0.4216969171216295,
+        "semantic_norm": 0.5977451875719796,
+        "final": 0.6887598531645889
       },
       "signals": {
         "must_hits": [
@@ -299,9 +299,9 @@
       "scores": {
         "hard_raw": 5.0,
         "hard_norm": 0.5,
-        "semantic_raw": 0.5071952342981988,
-        "semantic_norm": 0.8208590085972484,
-        "final": 0.6764724547284866
+        "semantic_raw": 0.5071954433433374,
+        "semantic_norm": 0.820859447360454,
+        "final": 0.6764726960482498
       },
       "signals": {
         "must_hits": [
@@ -337,9 +337,9 @@
       "scores": {
         "hard_raw": 8.0,
         "hard_norm": 0.8,
-        "semantic_raw": 0.35671383142435636,
-        "semantic_norm": 0.4281675193194139,
-        "final": 0.5954921356256777
+        "semantic_raw": 0.35671391229080723,
+        "semantic_norm": 0.42816758591761817,
+        "final": 0.5954921722546901
       },
       "signals": {
         "must_hits": [
@@ -376,7 +376,7 @@
       "scores": {
         "hard_raw": 1.0,
         "hard_norm": 0.1,
-        "semantic_raw": 0.575842985610742,
+        "semantic_raw": 0.5758430199336647,
         "semantic_norm": 1.0,
         "final": 0.5950000000000001
       },
@@ -415,9 +415,9 @@
       "scores": {
         "hard_raw": 5.0,
         "hard_norm": 0.5,
-        "semantic_raw": 0.43260559439615853,
-        "semantic_norm": 0.626212253460431,
-        "final": 0.5694167394032371
+        "semantic_raw": 0.4326056499837871,
+        "semantic_norm": 0.6262122730917828,
+        "final": 0.5694167502004805
       },
       "signals": {
         "must_hits": [
@@ -454,9 +454,9 @@
       "scores": {
         "hard_raw": 7.0,
         "hard_norm": 0.7,
-        "semantic_raw": 0.36981070041619507,
-        "semantic_norm": 0.46234469265154676,
-        "final": 0.5692895809583507
+        "semantic_raw": 0.3698107820632802,
+        "semantic_norm": 0.4623447645657507,
+        "final": 0.5692896205111628
       },
       "signals": {
         "must_hits": [
@@ -492,9 +492,9 @@
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.3,
-        "semantic_raw": 0.48726206941925854,
-        "semantic_norm": 0.7688420546558101,
-        "final": 0.5578631300606955
+        "semantic_raw": 0.48726212826467047,
+        "semantic_norm": 0.7688420964721526,
+        "final": 0.557863153059684
       },
       "signals": {
         "must_hits": [
@@ -529,9 +529,9 @@
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.3,
-        "semantic_raw": 0.4821783900256103,
-        "semantic_norm": 0.7555758463803838,
-        "final": 0.5505667155092111
+        "semantic_raw": 0.48217850817265623,
+        "semantic_norm": 0.7555760416756714,
+        "final": 0.5505668229216193
       },
       "signals": {
         "must_hits": [
@@ -566,9 +566,9 @@
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.3,
-        "semantic_raw": 0.45793756842567424,
-        "semantic_norm": 0.6923177682816721,
-        "final": 0.5157747725549198
+        "semantic_raw": 0.4579376553255303,
+        "semantic_norm": 0.6923178759664403,
+        "final": 0.5157748317815423
       },
       "signals": {
         "must_hits": [
@@ -603,9 +603,9 @@
       "scores": {
         "hard_raw": 4.0,
         "hard_norm": 0.4,
-        "semantic_raw": 0.4201331734653086,
-        "semantic_norm": 0.5936646199542387,
-        "final": 0.5065155409748313
+        "semantic_raw": 0.42013331771649537,
+        "semantic_norm": 0.5936648678366714,
+        "final": 0.5065156773101693
       },
       "signals": {
         "must_hits": [
@@ -640,9 +640,9 @@
       "scores": {
         "hard_raw": 7.0,
         "hard_norm": 0.7,
-        "semantic_raw": 0.31691129904425036,
-        "semantic_norm": 0.32430009504721513,
-        "final": 0.49336505227596833
+        "semantic_raw": 0.31691119872433426,
+        "semantic_norm": 0.32429967886237904,
+        "final": 0.4933648233743085
       },
       "signals": {
         "must_hits": [
@@ -679,9 +679,9 @@
       "scores": {
         "hard_raw": 7.0,
         "hard_norm": 0.7,
-        "semantic_raw": 0.31691129904425036,
-        "semantic_norm": 0.32430009504721513,
-        "final": 0.49336505227596833
+        "semantic_raw": 0.31691119872433426,
+        "semantic_norm": 0.32429967886237904,
+        "final": 0.4933648233743085
       },
       "signals": {
         "must_hits": [
@@ -718,9 +718,9 @@
       "scores": {
         "hard_raw": 7.0,
         "hard_norm": 0.7,
-        "semantic_raw": 0.31691129904425036,
-        "semantic_norm": 0.32430009504721513,
-        "final": 0.49336505227596833
+        "semantic_raw": 0.31691119872433426,
+        "semantic_norm": 0.32429967886237904,
+        "final": 0.4933648233743085
       },
       "signals": {
         "must_hits": [
@@ -758,9 +758,9 @@
       "scores": {
         "hard_raw": 4.0,
         "hard_norm": 0.4,
-        "semantic_raw": 0.3933022256669776,
-        "semantic_norm": 0.5236474307970135,
-        "final": 0.46800608693835744
+        "semantic_raw": 0.39330230871427174,
+        "semantic_norm": 0.5236475122464053,
+        "final": 0.46800613173552297
       },
       "signals": {
         "must_hits": [
@@ -796,9 +796,9 @@
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.2,
-        "semantic_raw": 0.4287441457810709,
-        "semantic_norm": 0.6161355398036621,
-        "final": 0.4288745468920142
+        "semantic_raw": 0.42874431610064545,
+        "semantic_norm": 0.6161358578691475,
+        "final": 0.42887472182803116
       },
       "signals": {
         "must_hits": [
@@ -831,9 +831,9 @@
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.2,
-        "semantic_raw": 0.4271014034743806,
-        "semantic_norm": 0.611848691657684,
-        "final": 0.42651678041172625
+        "semantic_raw": 0.4271014587339338,
+        "semantic_norm": 0.6118487090548929,
+        "final": 0.4265167899801911
       },
       "signals": {
         "must_hits": [],
@@ -866,9 +866,9 @@
       "scores": {
         "hard_raw": 0.0,
         "hard_norm": 0.0,
-        "semantic_raw": 0.4882112436415585,
-        "semantic_norm": 0.7713189895582021,
-        "final": 0.4242254442570112
+        "semantic_raw": 0.4882113621481975,
+        "semantic_norm": 0.7713191873022341,
+        "final": 0.42422555301622883
       },
       "signals": {
         "must_hits": [],
@@ -899,9 +899,9 @@
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.3,
-        "semantic_raw": 0.39172532509081087,
-        "semantic_norm": 0.5195324011397134,
-        "final": 0.42074282062684243
+        "semantic_raw": 0.3917254974510922,
+        "semantic_norm": 0.5195327152626754,
+        "final": 0.4207429933944715
       },
       "signals": {
         "must_hits": [
@@ -936,9 +936,9 @@
       "scores": {
         "hard_raw": 4.0,
         "hard_norm": 0.4,
-        "semantic_raw": 0.35850694775545505,
-        "semantic_norm": 0.432846778743237,
-        "final": 0.4180657283087804
+        "semantic_raw": 0.3585070371624222,
+        "semantic_norm": 0.43284686807742107,
+        "final": 0.41806577744258167
       },
       "signals": {
         "must_hits": [
@@ -973,9 +973,9 @@
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.3,
-        "semantic_raw": 0.3882523179050377,
-        "semantic_norm": 0.5104693518990225,
-        "final": 0.41575814354446244
+        "semantic_raw": 0.3882524535953041,
+        "semantic_norm": 0.5104695694595804,
+        "final": 0.41575826320276926
       },
       "signals": {
         "must_hits": [
@@ -1010,9 +1010,9 @@
       "scores": {
         "hard_raw": 1.0,
         "hard_norm": 0.1,
-        "semantic_raw": 0.4483823478217409,
-        "semantic_norm": 0.6673827680911,
-        "final": 0.412060522450105
+        "semantic_raw": 0.44838243415206147,
+        "semantic_norm": 0.6673828718974185,
+        "final": 0.4120605795435802
       },
       "signals": {
         "must_hits": [
@@ -1045,9 +1045,9 @@
       "scores": {
         "hard_raw": 5.0,
         "hard_norm": 0.5,
-        "semantic_raw": 0.31691129904425036,
-        "semantic_norm": 0.32430009504721513,
-        "final": 0.4033650522759683
+        "semantic_raw": 0.31691119872433426,
+        "semantic_norm": 0.32429967886237904,
+        "final": 0.40336482337430846
       },
       "signals": {
         "must_hits": [
@@ -1083,9 +1083,9 @@
       "scores": {
         "hard_raw": 5.0,
         "hard_norm": 0.5,
-        "semantic_raw": 0.31691129904425036,
-        "semantic_norm": 0.32430009504721513,
-        "final": 0.4033650522759683
+        "semantic_raw": 0.31691119872433426,
+        "semantic_norm": 0.32429967886237904,
+        "final": 0.40336482337430846
       },
       "signals": {
         "must_hits": [
@@ -1121,9 +1121,9 @@
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.2,
-        "semantic_raw": 0.4066547155376182,
-        "semantic_norm": 0.5584916642553163,
-        "final": 0.397170415340424
+        "semantic_raw": 0.4066547397761296,
+        "semantic_norm": 0.5584915955820389,
+        "final": 0.3971703775701214
       },
       "signals": {
         "must_hits": [],
@@ -1156,9 +1156,9 @@
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.3,
-        "semantic_raw": 0.3742569088932109,
-        "semantic_norm": 0.4739473770705832,
-        "final": 0.3956710573888208
+        "semantic_raw": 0.3742569908053107,
+        "semantic_norm": 0.47394745078949646,
+        "final": 0.39567109793422306
       },
       "signals": {
         "must_hits": [
@@ -1193,9 +1193,9 @@
       "scores": {
         "hard_raw": 7.0,
         "hard_norm": 0.7,
-        "semantic_raw": 0.24440197646593448,
-        "semantic_norm": 0.13508206992236257,
-        "final": 0.3892951384572994
+        "semantic_raw": 0.24440200593459044,
+        "semantic_norm": 0.13508197427654314,
+        "final": 0.3892950858520987
       },
       "signals": {
         "must_hits": [
@@ -1231,9 +1231,9 @@
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.3,
-        "semantic_raw": 0.3655992964263655,
-        "semantic_norm": 0.4513547465643001,
-        "final": 0.38324511061036504
+        "semantic_raw": 0.36559937782243623,
+        "semantic_norm": 0.45135481676911393,
+        "final": 0.38324514922301267
       },
       "signals": {
         "must_hits": [
@@ -1267,9 +1267,9 @@
       "scores": {
         "hard_raw": 0.0,
         "hard_norm": 0.0,
-        "semantic_raw": 0.4585116778912536,
-        "semantic_norm": 0.6938159461079105,
-        "final": 0.3815987703593508
+        "semantic_raw": 0.45851179710055023,
+        "semantic_norm": 0.6938161382501087,
+        "final": 0.3815988760375598
       },
       "signals": {
         "must_hits": [],
@@ -1300,9 +1300,9 @@
       "scores": {
         "hard_raw": 1.0,
         "hard_norm": 0.1,
-        "semantic_raw": 0.4256120920177018,
-        "semantic_norm": 0.6079622317845523,
-        "final": 0.37937922748150377
+        "semantic_raw": 0.42561214718848506,
+        "semantic_norm": 0.6079622485772519,
+        "final": 0.3793792367174886
       },
       "signals": {
         "must_hits": [
@@ -1336,9 +1336,9 @@
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.2,
-        "semantic_raw": 0.3893846273418347,
-        "semantic_norm": 0.5134241906403382,
-        "final": 0.37238330485218607
+        "semantic_raw": 0.3893847101556169,
+        "semantic_norm": 0.5134242704995697,
+        "final": 0.3723833487747634
       },
       "signals": {
         "must_hits": [],
@@ -1371,9 +1371,9 @@
       "scores": {
         "hard_raw": 4.0,
         "hard_norm": 0.4,
-        "semantic_raw": 0.31691129904425036,
-        "semantic_norm": 0.32430009504721513,
-        "final": 0.3583650522759684
+        "semantic_raw": 0.31691119872433426,
+        "semantic_norm": 0.32429967886237904,
+        "final": 0.3583648233743085
       },
       "signals": {
         "must_hits": [
@@ -1408,9 +1408,9 @@
       "scores": {
         "hard_raw": 4.0,
         "hard_norm": 0.4,
-        "semantic_raw": 0.31691129904425036,
-        "semantic_norm": 0.32430009504721513,
-        "final": 0.3583650522759684
+        "semantic_raw": 0.31691119872433426,
+        "semantic_norm": 0.32429967886237904,
+        "final": 0.3583648233743085
       },
       "signals": {
         "must_hits": [
@@ -1446,9 +1446,9 @@
       "scores": {
         "hard_raw": 7.0,
         "hard_norm": 0.7,
-        "semantic_raw": 0.21998427629355108,
-        "semantic_norm": 0.07136241511909369,
-        "final": 0.35424932831550154
+        "semantic_raw": 0.2199843192079632,
+        "semantic_norm": 0.07136234844777571,
+        "final": 0.35424929164627667
       },
       "signals": {
         "must_hits": [
@@ -1485,9 +1485,9 @@
       "scores": {
         "hard_raw": 7.0,
         "hard_norm": 0.7,
-        "semantic_raw": 0.21998427629355108,
-        "semantic_norm": 0.07136241511909369,
-        "final": 0.35424932831550154
+        "semantic_raw": 0.2199843192079632,
+        "semantic_norm": 0.07136234844777571,
+        "final": 0.35424929164627667
       },
       "signals": {
         "must_hits": [
@@ -1523,9 +1523,9 @@
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.3,
-        "semantic_raw": 0.3415982425209444,
-        "semantic_norm": 0.38872235862557947,
-        "final": 0.3487972972440687
+        "semantic_raw": 0.34159835228876,
+        "semantic_norm": 0.38872249685959454,
+        "final": 0.34879737327277704
       },
       "signals": {
         "must_hits": [
@@ -1560,9 +1560,9 @@
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.3,
-        "semantic_raw": 0.3415982425209444,
-        "semantic_norm": 0.38872235862557947,
-        "final": 0.3487972972440687
+        "semantic_raw": 0.34159835228876,
+        "semantic_norm": 0.38872249685959454,
+        "final": 0.34879737327277704
       },
       "signals": {
         "must_hits": [
@@ -1597,9 +1597,9 @@
       "scores": {
         "hard_raw": 5.0,
         "hard_norm": 0.5,
-        "semantic_raw": 0.27387025952311783,
-        "semantic_norm": 0.21198156540279456,
-        "final": 0.34158986097153704
+        "semantic_raw": 0.27387030564938253,
+        "semantic_norm": 0.2119815206037103,
+        "final": 0.34158983633204065
       },
       "signals": {
         "must_hits": [
@@ -1636,9 +1636,9 @@
       "scores": {
         "hard_raw": 7.0,
         "hard_norm": 0.7,
-        "semantic_raw": 0.20615543163728553,
-        "semantic_norm": 0.035275101342430996,
-        "final": 0.33440130573833704
+        "semantic_raw": 0.2061554737274342,
+        "semantic_norm": 0.035275029058005475,
+        "final": 0.334401265981903
       },
       "signals": {
         "must_hits": [
@@ -1675,9 +1675,9 @@
       "scores": {
         "hard_raw": 4.0,
         "hard_norm": 0.4,
-        "semantic_raw": 0.28741970658273563,
-        "semantic_norm": 0.24733977208560437,
-        "final": 0.3160368746470824
+        "semantic_raw": 0.28741984292358286,
+        "semantic_norm": 0.24733996609983855,
+        "final": 0.3160369813549112
       },
       "signals": {
         "must_hits": [
@@ -1712,9 +1712,9 @@
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.2,
-        "semantic_raw": 0.34577941894496667,
-        "semantic_norm": 0.3996334238171978,
-        "final": 0.30979838309945884
+        "semantic_raw": 0.3457794991596757,
+        "semantic_norm": 0.39963348597714027,
+        "final": 0.3097984172874272
       },
       "signals": {
         "must_hits": [

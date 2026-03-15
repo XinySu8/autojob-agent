@@ -97,12 +97,12 @@
         "norm": 0.2
       },
       "semantic": {
-        "raw": 0.4066547155376182,
+        "raw": 0.4066547397761296,
         "cache_reused": true,
-        "norm": 0.5584916642553163
+        "norm": 0.5584915955820389
       },
       "text_hash": "95a9e26a46c379eda417ac6214b58d6b84b02fe4",
-      "final_score": 0.397170415340424,
+      "final_score": 0.3971703775701214,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=1"
     },
     {
@@ -131,12 +131,12 @@
         "norm": 0.2
       },
       "semantic": {
-        "raw": 0.4271014034743806,
+        "raw": 0.4271014587339338,
         "cache_reused": true,
-        "norm": 0.611848691657684
+        "norm": 0.6118487090548929
       },
       "text_hash": "4085c4b7198e58d55fa17e8fec5d2a53c89a58c1",
-      "final_score": 0.42651678041172625,
+      "final_score": 0.4265167899801911,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=1"
     },
     {
@@ -297,45 +297,13 @@
         "norm": 0.8
       },
       "semantic": {
-        "raw": 0.4216968072467883,
+        "raw": 0.4216969171216295,
         "cache_reused": true,
-        "norm": 0.5977450290055099
+        "norm": 0.5977451875719796
       },
       "text_hash": "a03354be29cb2c91a80e9131f92d4251e6d276b3",
-      "final_score": 0.6887597659530305,
+      "final_score": 0.6887598531645889,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=3, nice_hits=1"
-    },
-    {
-      "job_uid": "acdb4e432b539db6",
-      "source": "greenhouse",
-      "company": "stripe",
-      "title": "Software Engineer, Intern",
-      "location": "London",
-      "url": "https://stripe.com/jobs/search?gh_jid=7360840",
-      "updated_at": "2026-03-13T19:00:45-04:00",
-      "created_at": null,
-      "departments": [
-        "5112 General University"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "0504ebea54da571d1dcdb616371e118fe6fb2ee6",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
       "job_uid": "867837af4b70f7ea",
@@ -397,13 +365,45 @@
         "norm": 0.3
       },
       "semantic": {
-        "raw": 0.3415982425209444,
+        "raw": 0.34159835228876,
         "cache_reused": true,
-        "norm": 0.38872235862557947
+        "norm": 0.38872249685959454
       },
       "text_hash": "2b1d064990c9520a7e0f962a687e84161edd81d2",
-      "final_score": 0.3487972972440687,
+      "final_score": 0.34879737327277704,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=1"
+    },
+    {
+      "job_uid": "acdb4e432b539db6",
+      "source": "greenhouse",
+      "company": "stripe",
+      "title": "Software Engineer, Intern",
+      "location": "London",
+      "url": "https://stripe.com/jobs/search?gh_jid=7360840",
+      "updated_at": "2026-03-13T19:00:45-04:00",
+      "created_at": null,
+      "departments": [
+        "5112 General University"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "0504ebea54da571d1dcdb616371e118fe6fb2ee6",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
       "job_uid": "b35597b79d3ae32f",
@@ -433,12 +433,12 @@
         "norm": 0.3
       },
       "semantic": {
-        "raw": 0.3415982425209444,
+        "raw": 0.34159835228876,
         "cache_reused": true,
-        "norm": 0.38872235862557947
+        "norm": 0.38872249685959454
       },
       "text_hash": "23045855f57a04cda6dd2a02b162d64170aae71b",
-      "final_score": 0.3487972972440687,
+      "final_score": 0.34879737327277704,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=1"
     },
     {
@@ -631,7 +631,7 @@
         "norm": 0.1
       },
       "semantic": {
-        "raw": 0.575842985610742,
+        "raw": 0.5758430199336647,
         "cache_reused": true,
         "norm": 1.0
       },
@@ -729,12 +729,12 @@
         "norm": 0.1
       },
       "semantic": {
-        "raw": 0.4483823478217409,
+        "raw": 0.44838243415206147,
         "cache_reused": true,
-        "norm": 0.6673827680911
+        "norm": 0.6673828718974185
       },
       "text_hash": "2410298f74a27b8f9991f92ff6ca379afbd29400",
-      "final_score": 0.412060522450105,
+      "final_score": 0.4120605795435802,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=0"
     },
     {
@@ -862,12 +862,12 @@
         "norm": 1.0
       },
       "semantic": {
-        "raw": 0.3915490508075613,
+        "raw": 0.39154913375035316,
         "cache_reused": true,
-        "norm": 0.5190724013690527
+        "norm": 0.5190724821068207
       },
       "text_hash": "5cd14b0d4fb263c1fe8d40d387b38271075c5811",
-      "final_score": 0.735489820752979,
+      "final_score": 0.7354898651587514,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=4, nice_hits=0"
     },
     {
@@ -896,12 +896,12 @@
         "norm": 0.3
       },
       "semantic": {
-        "raw": 0.2908277809616995,
+        "raw": 0.290827947308008,
         "cache_reused": true,
-        "norm": 0.25623337473607233
+        "norm": 0.25623364790484493
       },
       "text_hash": "c941bcda98b78e85218933c65c67d5a15f44d95f",
-      "final_score": 0.2759283561048398,
+      "final_score": 0.27592850634766475,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=0"
     },
     {
@@ -1063,12 +1063,12 @@
         "norm": 0.8
       },
       "semantic": {
-        "raw": 0.5012938976282828,
+        "raw": 0.501294046717026,
         "cache_reused": true,
-        "norm": 0.8054590678644921
+        "norm": 0.805459348689942
       },
       "text_hash": "df1a1a167e4e23a7c8478a6a6513ca0a61547cad",
-      "final_score": 0.8030024873254706,
+      "final_score": 0.8030026417794682,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=4, nice_hits=1"
     },
     {
@@ -1097,12 +1097,12 @@
         "norm": 0.2
       },
       "semantic": {
-        "raw": 0.30933967232673226,
+        "raw": 0.3093396609624905,
         "cache_reused": true,
-        "norm": 0.30454141845878163
+        "norm": 0.3045412325142671
       },
       "text_hash": "50ca310d0dc25f47feee47e403a71aa73c2880bc",
-      "final_score": 0.25749778015232994,
+      "final_score": 0.25749767788284694,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=1"
     },
     {
@@ -1231,12 +1231,12 @@
         "norm": 0.6
       },
       "semantic": {
-        "raw": 0.4870743170883175,
+        "raw": 0.48707458299794265,
         "cache_reused": true,
-        "norm": 0.7683521021364651
+        "norm": 0.7683526842540485
       },
       "text_hash": "394dc6f7e9bd964e6e5997884a6abac943cee104",
-      "final_score": 0.6925936561750559,
+      "final_score": 0.6925939763397266,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=1"
     },
     {
@@ -1266,12 +1266,12 @@
         "norm": 0.3
       },
       "semantic": {
-        "raw": 0.3742569088932109,
+        "raw": 0.3742569908053107,
         "cache_reused": true,
-        "norm": 0.4739473770705832
+        "norm": 0.47394745078949646
       },
       "text_hash": "4fc8403d1e2b0f27a94b42392a217d424a1ad48b",
-      "final_score": 0.3956710573888208,
+      "final_score": 0.39567109793422306,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=0"
     },
     {
@@ -1304,12 +1304,12 @@
         "norm": 0.7
       },
       "semantic": {
-        "raw": 0.31691129904425036,
+        "raw": 0.31691119872433426,
         "cache_reused": true,
-        "norm": 0.32430009504721513
+        "norm": 0.32429967886237904
       },
       "text_hash": "7e312fa50e73f73c63afe486f05a3b098651c06a",
-      "final_score": 0.49336505227596833,
+      "final_score": 0.4933648233743085,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=3, nice_hits=1"
     },
     {
@@ -1342,12 +1342,12 @@
         "norm": 0.7
       },
       "semantic": {
-        "raw": 0.31691129904425036,
+        "raw": 0.31691119872433426,
         "cache_reused": true,
-        "norm": 0.32430009504721513
+        "norm": 0.32429967886237904
       },
       "text_hash": "068302da8982e3c36c51b4763ab17c55e02e14ed",
-      "final_score": 0.49336505227596833,
+      "final_score": 0.4933648233743085,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=3, nice_hits=1"
     },
     {
@@ -1378,12 +1378,12 @@
         "norm": 0.4
       },
       "semantic": {
-        "raw": 0.31691129904425036,
+        "raw": 0.31691119872433426,
         "cache_reused": true,
-        "norm": 0.32430009504721513
+        "norm": 0.32429967886237904
       },
       "text_hash": "fefdec8fb4f916129bd71559795c469d8bea30bb",
-      "final_score": 0.3583650522759684,
+      "final_score": 0.3583648233743085,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=1"
     },
     {
@@ -1414,12 +1414,12 @@
         "norm": 0.4
       },
       "semantic": {
-        "raw": 0.31691129904425036,
+        "raw": 0.31691119872433426,
         "cache_reused": true,
-        "norm": 0.32430009504721513
+        "norm": 0.32429967886237904
       },
       "text_hash": "4994a877e831e3f8380644da2909e44611fc87ed",
-      "final_score": 0.3583650522759684,
+      "final_score": 0.3583648233743085,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=1"
     },
     {
@@ -1451,12 +1451,12 @@
         "norm": 0.5
       },
       "semantic": {
-        "raw": 0.31691129904425036,
+        "raw": 0.31691119872433426,
         "cache_reused": true,
-        "norm": 0.32430009504721513
+        "norm": 0.32429967886237904
       },
       "text_hash": "384f524e31ff589b14eb58fd59c6cf8485e68f1b",
-      "final_score": 0.4033650522759683,
+      "final_score": 0.40336482337430846,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=1"
     },
     {
@@ -1490,12 +1490,12 @@
         "norm": 0.7
       },
       "semantic": {
-        "raw": 0.31691129904425036,
+        "raw": 0.31691119872433426,
         "cache_reused": true,
-        "norm": 0.32430009504721513
+        "norm": 0.32429967886237904
       },
       "text_hash": "57adac3e23fa089f61359e174ddfc78ee5a5baad",
-      "final_score": 0.49336505227596833,
+      "final_score": 0.4933648233743085,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=4, nice_hits=1"
     },
     {
@@ -1527,12 +1527,12 @@
         "norm": 0.5
       },
       "semantic": {
-        "raw": 0.31691129904425036,
+        "raw": 0.31691119872433426,
         "cache_reused": true,
-        "norm": 0.32430009504721513
+        "norm": 0.32429967886237904
       },
       "text_hash": "17cc3526a2760819aab2929a93a7fe5c31acf3da",
-      "final_score": 0.4033650522759683,
+      "final_score": 0.40336482337430846,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=1"
     },
     {
@@ -1595,12 +1595,12 @@
         "norm": 0.4
       },
       "semantic": {
-        "raw": 0.4201331734653086,
+        "raw": 0.42013331771649537,
         "cache_reused": true,
-        "norm": 0.5936646199542387
+        "norm": 0.5936648678366714
       },
       "text_hash": "a659b7f912c1a2f8171c6e5afa87738803a2f76a",
-      "final_score": 0.5065155409748313,
+      "final_score": 0.5065156773101693,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=1"
     },
     {
@@ -1665,12 +1665,12 @@
         "norm": 0.7
       },
       "semantic": {
-        "raw": 0.45383104406734887,
+        "raw": 0.453831190327094,
         "cache_reused": true,
-        "norm": 0.681601512749562
+        "norm": 0.6816017743099329
       },
       "text_hash": "b283e35a75dba4b1c447335dd78dba5b31b358d0",
-      "final_score": 0.6898808320122591,
+      "final_score": 0.6898809758704632,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=3, nice_hits=1"
     },
     {
@@ -1731,12 +1731,12 @@
         "norm": 0.2
       },
       "semantic": {
-        "raw": 0.34577941894496667,
+        "raw": 0.3457794991596757,
         "cache_reused": true,
-        "norm": 0.3996334238171978
+        "norm": 0.39963348597714027
       },
       "text_hash": "2b0a78b16944c8b7887b4efc8b2827ab25ddb6ca",
-      "final_score": 0.30979838309945884,
+      "final_score": 0.3097984172874272,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=0"
     },
     {
@@ -1767,12 +1767,12 @@
         "norm": 0.4
       },
       "semantic": {
-        "raw": 0.35850694775545505,
+        "raw": 0.3585070371624222,
         "cache_reused": true,
-        "norm": 0.432846778743237
+        "norm": 0.43284686807742107
       },
       "text_hash": "60d5e61660a58e15e47f1882c7e411c2dc09d3f8",
-      "final_score": 0.4180657283087804,
+      "final_score": 0.41806577744258167,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=3, nice_hits=0"
     },
     {
@@ -1801,12 +1801,12 @@
         "norm": 0.2
       },
       "semantic": {
-        "raw": 0.4287441457810709,
+        "raw": 0.42874431610064545,
         "cache_reused": true,
-        "norm": 0.6161355398036621
+        "norm": 0.6161358578691475
       },
       "text_hash": "1680f83283ab1390ed61b9614efc115a25e3e06b",
-      "final_score": 0.4288745468920142,
+      "final_score": 0.42887472182803116,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=0"
     },
     {
@@ -1838,12 +1838,12 @@
         "norm": 0.5
       },
       "semantic": {
-        "raw": 0.5071952342981988,
+        "raw": 0.5071954433433374,
         "cache_reused": true,
-        "norm": 0.8208590085972484
+        "norm": 0.820859447360454
       },
       "text_hash": "a56295ffe431701e2ee44af5d491aeceab5884e0",
-      "final_score": 0.6764724547284866,
+      "final_score": 0.6764726960482498,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=1"
     },
     {
@@ -1873,12 +1873,12 @@
         "norm": 0.3
       },
       "semantic": {
-        "raw": 0.3655992964263655,
+        "raw": 0.36559937782243623,
         "cache_reused": true,
-        "norm": 0.4513547465643001
+        "norm": 0.45135481676911393
       },
       "text_hash": "ff1e49238706436ab8b694b979dcf7cd31815c73",
-      "final_score": 0.38324511061036504,
+      "final_score": 0.38324514922301267,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=0"
     },
     {
@@ -2069,12 +2069,12 @@
         "norm": 0.3
       },
       "semantic": {
-        "raw": 0.4821783900256103,
+        "raw": 0.48217850817265623,
         "cache_reused": true,
-        "norm": 0.7555758463803838
+        "norm": 0.7555760416756714
       },
       "text_hash": "520f4e6b5757e37b1691013b719d573ae027fac7",
-      "final_score": 0.5505667155092111,
+      "final_score": 0.5505668229216193,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=1"
     },
     {
@@ -2105,12 +2105,12 @@
         "norm": 0.3
       },
       "semantic": {
-        "raw": 0.48726206941925854,
+        "raw": 0.48726212826467047,
         "cache_reused": true,
-        "norm": 0.7688420546558101
+        "norm": 0.7688420964721526
       },
       "text_hash": "df5f9191fa7d6cade11b0a1a29a3549507fd088f",
-      "final_score": 0.5578631300606955,
+      "final_score": 0.557863153059684,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=1"
     },
     {
@@ -2143,12 +2143,12 @@
         "norm": 0.8
       },
       "semantic": {
-        "raw": 0.5335440357646396,
+        "raw": 0.5335441549739363,
         "cache_reused": true,
-        "norm": 0.8896180040009336
+        "norm": 0.88961821492794
       },
       "text_hash": "b7f368eb2f500f3d2f8646c4319bd3fa224ff0c0",
-      "final_score": 0.8492899022005136,
+      "final_score": 0.8492900182103671,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=1"
     },
     {
@@ -2212,12 +2212,12 @@
         "norm": 0.4
       },
       "semantic": {
-        "raw": 0.3933022256669776,
+        "raw": 0.39330230871427174,
         "cache_reused": true,
-        "norm": 0.5236474307970135
+        "norm": 0.5236475122464053
       },
       "text_hash": "5af9236c90e407f4febaf64290d186a425bf9280",
-      "final_score": 0.46800608693835744,
+      "final_score": 0.46800613173552297,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=1"
     },
     {
@@ -2248,12 +2248,12 @@
         "norm": 0.3
       },
       "semantic": {
-        "raw": 0.3882523179050377,
+        "raw": 0.3882524535953041,
         "cache_reused": true,
-        "norm": 0.5104693518990225
+        "norm": 0.5104695694595804
       },
       "text_hash": "0697e7259779553c54de04dcb4a9f6d1bcdbf150",
-      "final_score": 0.41575814354446244,
+      "final_score": 0.41575826320276926,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=1"
     },
     {
@@ -2285,12 +2285,12 @@
         "norm": 0.5
       },
       "semantic": {
-        "raw": 0.43260559439615853,
+        "raw": 0.4326056499837871,
         "cache_reused": true,
-        "norm": 0.626212253460431
+        "norm": 0.6262122730917828
       },
       "text_hash": "37ce97d51c105a2bbf4c2d597195110db5ce961d",
-      "final_score": 0.5694167394032371,
+      "final_score": 0.5694167502004805,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=2"
     },
     {
@@ -2323,12 +2323,12 @@
         "norm": 0.8
       },
       "semantic": {
-        "raw": 0.35671383142435636,
+        "raw": 0.35671391229080723,
         "cache_reused": true,
-        "norm": 0.4281675193194139
+        "norm": 0.42816758591761817
       },
       "text_hash": "9f644998fa2ce6b582c49feaa719daab5ac96ab7",
-      "final_score": 0.5954921356256777,
+      "final_score": 0.5954921722546901,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=2"
     },
     {
@@ -2360,12 +2360,12 @@
         "norm": 0.5
       },
       "semantic": {
-        "raw": 0.27387025952311783,
+        "raw": 0.27387030564938253,
         "cache_reused": true,
-        "norm": 0.21198156540279456
+        "norm": 0.2119815206037103
       },
       "text_hash": "47e1b25152112859588c5a4b5bef56054b938100",
-      "final_score": 0.34158986097153704,
+      "final_score": 0.34158983633204065,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=2"
     },
     {
@@ -2492,12 +2492,12 @@
         "norm": 0.3
       },
       "semantic": {
-        "raw": 0.45793756842567424,
+        "raw": 0.4579376553255303,
         "cache_reused": true,
-        "norm": 0.6923177682816721
+        "norm": 0.6923178759664403
       },
       "text_hash": "d202ff7ef7a148f8c16e4444d2b72b6e5379b51a",
-      "final_score": 0.5157747725549198,
+      "final_score": 0.5157748317815423,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=1"
     },
     {
@@ -2528,12 +2528,12 @@
         "norm": 0.3
       },
       "semantic": {
-        "raw": 0.39172532509081087,
+        "raw": 0.3917254974510922,
         "cache_reused": true,
-        "norm": 0.5195324011397134
+        "norm": 0.5195327152626754
       },
       "text_hash": "9c743cdd01fff062a6c9a9a55dbbaf3be92d8890",
-      "final_score": 0.42074282062684243,
+      "final_score": 0.4207429933944715,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=1"
     },
     {
@@ -2563,12 +2563,12 @@
         "norm": 0.2
       },
       "semantic": {
-        "raw": 0.20057363808135,
+        "raw": 0.2005736351353091,
         "cache_reused": true,
-        "norm": 0.020709030170438004
+        "norm": 0.020708838963555274
       },
       "text_hash": "5f61ce9a9a11b01745eb223d9848c42d8a41867a",
-      "final_score": 0.10138996659374092,
+      "final_score": 0.10138986142995542,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=1"
     },
     {
@@ -3368,12 +3368,12 @@
         "norm": 0.2
       },
       "semantic": {
-        "raw": 0.26033614637445085,
+        "raw": 0.26033619169402217,
         "cache_reused": true,
-        "norm": 0.17666337360695905
+        "norm": 0.17666332331440543
       },
       "text_hash": "f5d6765f90edc282d1601b9e34a335e44ba10bbc",
-      "final_score": 0.1871648554838275,
+      "final_score": 0.18716482782292299,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=1"
     },
     {
@@ -3437,12 +3437,12 @@
         "norm": 0.5
       },
       "semantic": {
-        "raw": 0.5446384277718836,
+        "raw": 0.5446386390488231,
         "cache_reused": true,
-        "norm": 0.9185695769976927
+        "norm": 0.9185700309590673
       },
       "text_hash": "bab2bcb046c3e0e46ce5a776b89057c70fa9ab3b",
-      "final_score": 0.730213267348731,
+      "final_score": 0.730213517027487,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=0"
     },
     {
@@ -3670,7 +3670,7 @@
         "norm": 0.2
       },
       "semantic": {
-        "raw": 0.19263783097247886,
+        "raw": 0.19263790205923736,
         "cache_reused": true,
         "norm": 0.0
       },
@@ -3707,12 +3707,12 @@
         "norm": 0.4
       },
       "semantic": {
-        "raw": 0.28741970658273563,
+        "raw": 0.28741984292358286,
         "cache_reused": true,
-        "norm": 0.24733977208560437
+        "norm": 0.24733996609983855
       },
       "text_hash": "848f2481831ff9af5d376c4cba61fe4f0ec3214f",
-      "final_score": 0.3160368746470824,
+      "final_score": 0.3160369813549112,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=1"
     },
     {
@@ -3744,12 +3744,12 @@
         "norm": 0.0
       },
       "semantic": {
-        "raw": 0.28741970658273563,
+        "raw": 0.28741984292358286,
         "cache_reused": true,
-        "norm": 0.24733977208560437
+        "norm": 0.24733996609983855
       },
       "text_hash": "fbd209f73f7cf0be47bfb4681eac2b31ee69151f",
-      "final_score": 0.13603687464708242,
+      "final_score": 0.1360369813549112,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=1"
     },
     {
@@ -3781,12 +3781,12 @@
         "norm": 0.0
       },
       "semantic": {
-        "raw": 0.28741970658273563,
+        "raw": 0.28741984292358286,
         "cache_reused": true,
-        "norm": 0.24733977208560437
+        "norm": 0.24733996609983855
       },
       "text_hash": "fbd209f73f7cf0be47bfb4681eac2b31ee69151f",
-      "final_score": 0.13603687464708242,
+      "final_score": 0.1360369813549112,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=1"
     },
     {
@@ -3816,12 +3816,12 @@
         "norm": 0.2
       },
       "semantic": {
-        "raw": 0.28804975748033324,
+        "raw": 0.2880498216208703,
         "cache_reused": true,
-        "norm": 0.2489839328959994
+        "norm": 0.2489839386563164
       },
       "text_hash": "df525610cc7a6c0b6e34a479e5a222e7ba88ff49",
-      "final_score": 0.2269411630927997,
+      "final_score": 0.22694116626097405,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=1"
     },
     {
@@ -3916,12 +3916,12 @@
         "norm": 0.2
       },
       "semantic": {
-        "raw": 0.3893846273418347,
+        "raw": 0.3893847101556169,
         "cache_reused": true,
-        "norm": 0.5134241906403382
+        "norm": 0.5134242704995697
       },
       "text_hash": "0b2d894e967e8ac0a7003467f02511714d3ae95a",
-      "final_score": 0.37238330485218607,
+      "final_score": 0.3723833487747634,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=1"
     },
     {
@@ -3954,12 +3954,12 @@
         "norm": 0.7
       },
       "semantic": {
-        "raw": 0.36981070041619507,
+        "raw": 0.3698107820632802,
         "cache_reused": true,
-        "norm": 0.46234469265154676
+        "norm": 0.4623447645657507
       },
       "text_hash": "36fd9bb8f14d29ac9601b47b27cdbf30e46da792",
-      "final_score": 0.5692895809583507,
+      "final_score": 0.5692896205111628,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=1"
     },
     {
@@ -3992,12 +3992,12 @@
         "norm": 0.7
       },
       "semantic": {
-        "raw": 0.21998427629355108,
+        "raw": 0.2199843192079632,
         "cache_reused": true,
-        "norm": 0.07136241511909369
+        "norm": 0.07136234844777571
       },
       "text_hash": "10c207d29a2237a365c6c4ca588b2fda7c375906",
-      "final_score": 0.35424932831550154,
+      "final_score": 0.35424929164627667,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=1"
     },
     {
@@ -4030,12 +4030,12 @@
         "norm": 0.7
       },
       "semantic": {
-        "raw": 0.21998427629355108,
+        "raw": 0.2199843192079632,
         "cache_reused": true,
-        "norm": 0.07136241511909369
+        "norm": 0.07136234844777571
       },
       "text_hash": "aad836940e4a0573a224527bd9b359dd3a3b59e3",
-      "final_score": 0.35424932831550154,
+      "final_score": 0.35424929164627667,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=1"
     },
     {
@@ -4068,12 +4068,12 @@
         "norm": 0.7
       },
       "semantic": {
-        "raw": 0.24440197646593448,
+        "raw": 0.24440200593459044,
         "cache_reused": true,
-        "norm": 0.13508206992236257
+        "norm": 0.13508197427654314
       },
       "text_hash": "bbda55331fe2582097cbbea6b29dfc93f0e6491e",
-      "final_score": 0.3892951384572994,
+      "final_score": 0.3892950858520987,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=1"
     },
     {
@@ -4106,12 +4106,12 @@
         "norm": 0.7
       },
       "semantic": {
-        "raw": 0.20615543163728553,
+        "raw": 0.2061554737274342,
         "cache_reused": true,
-        "norm": 0.035275101342430996
+        "norm": 0.035275029058005475
       },
       "text_hash": "7291e73693be2c925f73e3414bd3fdf4059fbb89",
-      "final_score": 0.33440130573833704,
+      "final_score": 0.334401265981903,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=1"
     },
     {
@@ -4428,12 +4428,12 @@
         "norm": 0.1
       },
       "semantic": {
-        "raw": 0.4256120920177018,
+        "raw": 0.42561214718848506,
         "cache_reused": true,
-        "norm": 0.6079622317845523
+        "norm": 0.6079622485772519
       },
       "text_hash": "8919fac1b0e832c524f54a1c94eeb4eba50e1660",
-      "final_score": 0.37937922748150377,
+      "final_score": 0.3793792367174886,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=0"
     },
     {
@@ -4460,12 +4460,12 @@
         "norm": 0.0
       },
       "semantic": {
-        "raw": 0.4585116778912536,
+        "raw": 0.45851179710055023,
         "cache_reused": true,
-        "norm": 0.6938159461079105
+        "norm": 0.6938161382501087
       },
       "text_hash": "abf624f8d65cf1cc7c90265336d88a7b857a081b",
-      "final_score": 0.3815987703593508,
+      "final_score": 0.3815988760375598,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=0"
     },
     {
@@ -4908,12 +4908,12 @@
         "norm": 0.0
       },
       "semantic": {
-        "raw": 0.4882112436415585,
+        "raw": 0.4882113621481975,
         "cache_reused": true,
-        "norm": 0.7713189895582021
+        "norm": 0.7713191873022341
       },
       "text_hash": "b7b72cd269a84281da7cb2bab8020dc2e9a7d9cf",
-      "final_score": 0.4242254442570112,
+      "final_score": 0.42422555301622883,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=0"
     },
     {
