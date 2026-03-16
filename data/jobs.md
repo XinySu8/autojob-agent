@@ -1,16 +1,18 @@
 # Job feed (current)
-Generated at (UTC): 2026-03-15T15:51:11.178359+00:00
-Today (UTC): 2026-03-15
+Generated at (UTC): 2026-03-16T16:38:02.163293+00:00
+Today (UTC): 2026-03-16
 Total jobs: 155
 
 ## Errors
 - [config] auto-fixed target for company='notion' -> source='ashby'
 - [config] auto-fixed target for company='square' -> source='greenhouse'
 - [config] auto-fixed target for company='slack' -> source='workday'
+- cfsenergy (lever) failed: TimeoutError('The read operation timed out')
 - redis (greenhouse) failed: <HTTPError 404: 'Not Found'>
 - slack (workday) failed: <HTTPError 400: 'Bad Request'>
 
 ## Jobs
+- [stripe] University Recruiter (Fixed Term Contract) (Dublin) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7684280
 - [asana] Software Engineering Intern - Summer 2026 (Reykjavik) (Reykjavík) 鈥?greenhouse 鈥?https://www.asana.com/jobs/apply/7490314?gh_jid=7490314
 - [asana] Software Engineering Intern - Summer 2026 (Warsaw) (Warsaw) 鈥?greenhouse 鈥?https://www.asana.com/jobs/apply/7490274?gh_jid=7490274
 - [asana] Product Design Intern - Summer 2026 (New York) (New York City) 鈥?greenhouse 鈥?https://www.asana.com/jobs/apply/7490328?gh_jid=7490328
@@ -20,9 +22,9 @@ Total jobs: 155
 - [stripe] Data Analyst, Intern (Master's degree) (Toronto, Ontario, Canada) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7285986
 - [stripe] PhD Data Scientist, Intern (Toronto, Ontario, Canada) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7285974
 - [stripe] PhD Machine Learning Engineer, Intern (San Francisco, New York City, Seattle) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7216664
-- [stripe] Software Engineer, Intern (Dublin) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7206494
-- [stripe] Software Engineer, Intern (Singapore) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7206401
 - [stripe] Software Engineer, Intern (London) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7360840
+- [stripe] Software Engineer, Intern (Singapore) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7206401
+- [stripe] Software Engineer, Intern (Dublin) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7206494
 - [stripe] Software Engineer, Intern (Summer) (San Francisco, Seattle, New York City) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7210115
 - [stripe] University Recruiter (Mexico City, MX) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7476012
 - [cloudflare] Data and Technology - Operations and AI Innovation Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7675578?gh_jid=7675578
@@ -96,13 +98,13 @@ Total jobs: 155
 - [cloudflare] GRC Team Intern (Summer 2026)  (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7574862?gh_jid=7574862
 - [cloudflare] GRC Team Intern (Summer 2026)  (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7578549?gh_jid=7578549
 - [cloudflare] Physical Security Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7577080?gh_jid=7577080
-- [cloudflare] Product Design Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7492740?gh_jid=7492740
 - [cloudflare] Product Design Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7494477?gh_jid=7494477
+- [cloudflare] Product Design Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7492740?gh_jid=7492740
 - [cloudflare] Product Manager Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7362103?gh_jid=7362103
 - [cloudflare] Product Manager Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7362080?gh_jid=7362080
-- [cloudflare] Research Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7359147?gh_jid=7359147
-- [cloudflare] Research Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7359136?gh_jid=7359136
 - [cloudflare] Research Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7358525?gh_jid=7358525
+- [cloudflare] Research Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7359136?gh_jid=7359136
+- [cloudflare] Research Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7359147?gh_jid=7359147
 - [cloudflare] Security Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7582150?gh_jid=7582150
 - [cloudflare] Security Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7582169?gh_jid=7582169
 - [cloudflare] Security Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7582157?gh_jid=7582157
@@ -136,7 +138,6 @@ Total jobs: 155
 - [zoox] Part-time Student Worker – Autonomous Driving & New Geofence Expansion (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/14095fed-899c-4b33-a286-23d64f95c663
 - [zoox] Part-Time Student Worker – Applied AI & LLM Workflows (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/a0185c33-76f1-4516-bec2-a5501c49b081
 - [mistral] HR People Ops EMEA (Internship) (Paris) 鈥?lever 鈥?https://jobs.lever.co/mistral/d0a88d6f-266f-45d1-a93e-e4633186f404
-- [cfsenergy] Intern - Manufacturing Engineer - Fall Co-op 2026 (Devens, MA) 鈥?lever 鈥?https://jobs.lever.co/cfsenergy/983efa7e-a6fa-4102-af52-687c9c6ef6fd
 - [zoox] Lidar Engineer Intern (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/b28f4bc1-226d-471d-a868-1062bbe85614
 - [zoox] Technical Program Management Intern, Autonomy & Product Software (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/6e8beebf-6251-4ea9-af88-6cdc9b2a7bcc
 - [mistral] Finance Operations & Systems (Internship) (Paris) 鈥?lever 鈥?https://jobs.lever.co/mistral/d1e53ff6-6df7-4645-9524-32dca5d72153
