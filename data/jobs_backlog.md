@@ -1,9 +1,19 @@
 # Job feed (backlog)
-Generated at (UTC): 2026-03-23T16:16:57.135110+00:00
-Today (UTC): 2026-03-23
-Total jobs: 151
+Generated at (UTC): 2026-03-24T16:36:36.698566+00:00
+Today (UTC): 2026-03-24
+Total jobs: 135
 
 ## Jobs
+- [okta] Marketing Intern (Sydney, Australia) 鈥?greenhouse 鈥?https://www.okta.com/company/careers/opportunity/7704320?gh_jid=7704320
+- [scaleai] Software Engineering Intern (Summer 2026)  (San Francisco, CA) 鈥?greenhouse 鈥?https://job-boards.greenhouse.io/scaleai/jobs/4606014005
+- [scaleai] Technical Advisor Specialist (Part-Time Internship)  (San Francisco, CA) 鈥?greenhouse 鈥?https://job-boards.greenhouse.io/scaleai/jobs/4611533005
+- [okta] Business Analyst Intern (Summer 2026) (Chicago, Illinois) 鈥?greenhouse 鈥?https://www.okta.com/company/careers/opportunity/7617090?gh_jid=7617090
+- [okta] Communications AI Strategy & Operations Intern (Summer 2026) (San Francisco, California) 鈥?greenhouse 鈥?https://www.okta.com/company/careers/opportunity/7665195?gh_jid=7665195
+- [okta] Company Planning & Operations Intern (Summer 2026) (Bellevue, Washington) 鈥?greenhouse 鈥?https://www.okta.com/company/careers/opportunity/7630315?gh_jid=7630315
+- [okta] Customer Success Intern (Summer 2026) (Chicago, Illinois) 鈥?greenhouse 鈥?https://www.okta.com/company/careers/opportunity/7565237?gh_jid=7565237
+- [okta] Data Analyst Intern (Summer 2026) (San Francisco, California) 鈥?greenhouse 鈥?https://www.okta.com/company/careers/opportunity/7561055?gh_jid=7561055
+- [okta] IT Support Intern (Summer 2026) (San Francisco, California) 鈥?greenhouse 鈥?https://www.okta.com/company/careers/opportunity/7558024?gh_jid=7558024
+- [okta] Technical Account Management Intern (Summer 2026) (Chicago, Illinois) 鈥?greenhouse 鈥?https://www.okta.com/company/careers/opportunity/7549331?gh_jid=7549331
 - [cloudflare] IT Product Manager Intern (Hybrid) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7740215?gh_jid=7740215
 - [asana] Product Design Intern - Summer 2026 (New York) (New York City) 鈥?greenhouse 鈥?https://www.asana.com/jobs/apply/7490328?gh_jid=7490328
 - [asana] Product Design Intern - Summer 2026 (San Francisco) (San Francisco) 鈥?greenhouse 鈥?https://www.asana.com/jobs/apply/7490322?gh_jid=7490322
@@ -27,10 +37,8 @@ Total jobs: 151
 - [togetherai] Product Marketing Intern (Summer 2026) (San Francisco) 鈥?greenhouse 鈥?https://job-boards.greenhouse.io/togetherai/jobs/5014289007
 - [cloudflare] Data and Technology - Operations and AI Innovation Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7674785?gh_jid=7674785
 - [cloudflare] Network Deployment Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7714657?gh_jid=7714657
-- [okta] Marketing Internship  (Sydney, Australia) 鈥?greenhouse 鈥?https://www.okta.com/company/careers/opportunity/7704320?gh_jid=7704320
 - [togetherai] GTM Systems Analyst Intern (Summer 2026) (San Francisco) 鈥?greenhouse 鈥?https://job-boards.greenhouse.io/togetherai/jobs/5014290007
 - [figma] Early Career Recruiter (San Francisco, CA • New York, NY) 鈥?greenhouse 鈥?https://boards.greenhouse.io/figma/jobs/5828494004?gh_jid=5828494004
-- [scaleai] Technical Advisor Specialist (Part-Time Internship)  (San Francisco, CA) 鈥?greenhouse 鈥?https://job-boards.greenhouse.io/scaleai/jobs/4611533005
 - [stripe] University Recruiter (Fixed Term Contract) (Dublin) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7684280
 - [stripe] Software Engineer, Intern (London) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7360840
 - [stripe] Data Analyst, Intern (Master's degree) (Toronto, Ontario, Canada) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7285986
@@ -48,35 +56,16 @@ Total jobs: 151
 - [cloudflare] GRC Team Intern (Summer 2026)  (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7577564?gh_jid=7577564
 - [brex] Software Engineer, Internship - 2026 (São Paulo, São Paulo, Brazil) 鈥?greenhouse 鈥?https://www.brex.com/careers/8434385002?gh_jid=8434385002
 - [cloudflare] Software Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7296929?gh_jid=7296929
-- [scaleai] Machine Learning Research Intern (Summer 2026) (San Francisco, CA) 鈥?greenhouse 鈥?https://job-boards.greenhouse.io/scaleai/jobs/4606060005
-- [scaleai] Software Engineering Intern (Summer 2026)  (San Francisco, CA) 鈥?greenhouse 鈥?https://job-boards.greenhouse.io/scaleai/jobs/4606014005
-- [cloudflare] Threat Detection and Incident Response Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7578913?gh_jid=7578913
 - [cloudflare] Technical Program Manager Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7702476?gh_jid=7702476
 - [cloudflare] Technical Program Manager Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7702175?gh_jid=7702175
 - [cohere] Safety Research Internship (Spring/Summer 2026) (Canada) 鈥?ashby 鈥?https://jobs.ashbyhq.com/cohere/f172c484-071a-4a90-a138-e064d69608ba/application
-- [okta] IT Support Intern (Summer 2026) (San Francisco, California) 鈥?greenhouse 鈥?https://www.okta.com/company/careers/opportunity/7558024?gh_jid=7558024
-- [coinbase] Business Controller Intern (Hybrid - New York, NY) 鈥?greenhouse 鈥?https://www.coinbase.com/careers/positions/7434684?gh_jid=7434684
-- [coinbase] Tax Information Reporting Intern (Hybrid - New York, NY) 鈥?greenhouse 鈥?https://www.coinbase.com/careers/positions/7317551?gh_jid=7317551
-- [coinbase] Machine Learning Engineer Intern (Hybrid - San Francisco, CA) 鈥?greenhouse 鈥?https://www.coinbase.com/careers/positions/7294075?gh_jid=7294075
-- [coinbase] Product Design Intern (Hybrid - San Francisco, CA) 鈥?greenhouse 鈥?https://www.coinbase.com/careers/positions/7325051?gh_jid=7325051
-- [coinbase] Associate Product Manager Intern (Hybrid - San Francisco, CA) 鈥?greenhouse 鈥?https://www.coinbase.com/careers/positions/7269743?gh_jid=7269743
-- [coinbase] Software Engineer Intern (Hybrid - San Francisco, CA) 鈥?greenhouse 鈥?https://www.coinbase.com/careers/positions/7268895?gh_jid=7268895
-- [coinbase] User Researcher Intern (Hybrid - San Francisco, CA) 鈥?greenhouse 鈥?https://www.coinbase.com/careers/positions/7269775?gh_jid=7269775
 - [cloudflare] Data Analytics Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7668989?gh_jid=7668989
-- [okta] Business Analyst Intern (Summer 2026) (Chicago, Illinois) 鈥?greenhouse 鈥?https://www.okta.com/company/careers/opportunity/7617090?gh_jid=7617090
-- [okta] Communications AI Strategy & Operations Intern (Summer 2026) (San Francisco, California) 鈥?greenhouse 鈥?https://www.okta.com/company/careers/opportunity/7665195?gh_jid=7665195
-- [okta] Company Planning & Operations Intern (Summer 2026) (Bellevue, Washington) 鈥?greenhouse 鈥?https://www.okta.com/company/careers/opportunity/7630315?gh_jid=7630315
-- [okta] Customer First Strategy and Operations Intern (Summer 2026) (San Francisco, California) 鈥?greenhouse 鈥?https://www.okta.com/company/careers/opportunity/7561036?gh_jid=7561036
-- [okta] Customer Success Intern (Summer 2026) (Chicago, Illinois) 鈥?greenhouse 鈥?https://www.okta.com/company/careers/opportunity/7565237?gh_jid=7565237
-- [okta] Data Analyst Intern (Summer 2026) (San Francisco, California) 鈥?greenhouse 鈥?https://www.okta.com/company/careers/opportunity/7561055?gh_jid=7561055
-- [okta] Technical Account Management Intern (Summer 2026) (Chicago, Illinois) 鈥?greenhouse 鈥?https://www.okta.com/company/careers/opportunity/7549331?gh_jid=7549331
 - [cloudflare] Threat Detection and Incident Response Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7578761?gh_jid=7578761
 - [cloudflare] People Team Intern - HR Operations & AI Innovation (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7606240?gh_jid=7606240
 - [cloudflare] Growth Marketing Intern, Self-Serve (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7669081?gh_jid=7669081
 - [cloudflare] Data and Technology - Legal Privacy Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7659508?gh_jid=7659508
 - [databricks] MBA Intern - Workforce Intelligence (San Francisco, California) 鈥?greenhouse 鈥?https://databricks.com/company/careers/open-positions/job?gh_jid=8402613002
 - [databricks] MBA Intern - Commercial Transformation (San Francisco, California) 鈥?greenhouse 鈥?https://databricks.com/company/careers/open-positions/job?gh_jid=8402617002
-- [openai] Software Engineer Systems Research Internship, Applied Emerging Talent (Summer 2026) (San Francisco) 鈥?ashby 鈥?https://jobs.ashbyhq.com/openai/13a9e4e4-505b-4545-8b2b-b0bcc09c2b4f/application
 - [cloudflare] Product Manager Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7362113?gh_jid=7362113
 - [databricks] MBA Intern - Product Pricing & Commercialization (San Francisco, California) 鈥?greenhouse 鈥?https://databricks.com/company/careers/open-positions/job?gh_jid=8402615002
 - [databricks] MBA Intern - Strategic Finance (San Francisco, California) 鈥?greenhouse 鈥?https://databricks.com/company/careers/open-positions/job?gh_jid=8402610002
@@ -97,16 +86,16 @@ Total jobs: 151
 - [cloudflare] GRC Team Intern (Summer 2026)  (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7574862?gh_jid=7574862
 - [cloudflare] GRC Team Intern (Summer 2026)  (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7578549?gh_jid=7578549
 - [cloudflare] Physical Security Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7577080?gh_jid=7577080
-- [cloudflare] Product Design Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7494477?gh_jid=7494477
 - [cloudflare] Product Design Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7492740?gh_jid=7492740
-- [cloudflare] Product Manager Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7362080?gh_jid=7362080
+- [cloudflare] Product Design Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7494477?gh_jid=7494477
 - [cloudflare] Product Manager Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7362103?gh_jid=7362103
-- [cloudflare] Research Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7359147?gh_jid=7359147
+- [cloudflare] Product Manager Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7362080?gh_jid=7362080
 - [cloudflare] Research Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7359136?gh_jid=7359136
+- [cloudflare] Research Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7359147?gh_jid=7359147
 - [cloudflare] Research Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7358525?gh_jid=7358525
+- [cloudflare] Security Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7582169?gh_jid=7582169
 - [cloudflare] Security Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7582157?gh_jid=7582157
 - [cloudflare] Security Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7582150?gh_jid=7582150
-- [cloudflare] Security Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7582169?gh_jid=7582169
 - [cloudflare] Software Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7296923?gh_jid=7296923
 - [cloudflare] Software Engineer Intern (Summer 2026) - Austin, TX (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7206269?gh_jid=7206269
 - [cloudflare] Threat Detection and Incident Response Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7577205?gh_jid=7577205
@@ -141,17 +130,12 @@ Total jobs: 151
 - [magnetforensics] Cloud FinOps Co-op (Summer 2026) (Waterloo / Ontario) 鈥?lever 鈥?https://jobs.lever.co/magnetforensics/17b0e272-6e67-40bb-9373-1d30e4c2ebf5
 - [magnetforensics] Software Developer Co-op (Summer 2026) (Waterloo / Ottawa / Ontario) 鈥?lever 鈥?https://jobs.lever.co/magnetforensics/c1b6a556-e988-4d43-bd57-7441a0a3654e
 - [waabi] Safety Methodologies Internship/Co-op, Summer 2026 (Toronto, ON) 鈥?lever 鈥?https://jobs.lever.co/waabi/871bdec0-6347-4878-9e12-36d5d8d0615e
-- [zoox] Software Engineer Intern – Test Infrastructures (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/1fcd743b-6bba-4e6e-b926-a164fff73654
-- [zoox] Data Governance Intern (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/e63f6b8f-bd1a-4822-9b61-22576c01f64f
 - [waabi] Research Internship/Co-op (Toronto, ON) 鈥?lever 鈥?https://jobs.lever.co/waabi/0fd4e30b-9bd1-4b53-9043-6088457363cb
 - [waabi] 2026 Intern, PhD Research Scientist (Toronto, ON) 鈥?lever 鈥?https://jobs.lever.co/waabi/62700386-b9db-4c78-aec3-5ef59cbe841e
-- [zoox] Hardware Integration and Test Intern (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/98429957-337e-459f-94b6-fa6acfce82b9
-- [zoox] Signal Processing Intern (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/96857e0b-d39c-4505-b0b4-9a14c7d9db58
 - [shieldai] Graphic Design Intern - 2026 Summer Intern (R4111) (Washington, DC) 鈥?lever 鈥?https://jobs.lever.co/shieldai/872e86e8-f5b7-4dd5-948a-df606a253334
 - [zoox] Machine Learning Engineer Intern, Autonomy Behavior (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/74ef6bb8-ec8a-4c6c-8618-544717f40e2d
 - [zoox] Machine Learning Engineer Intern (Ph.D), Perception (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/9b3ab3ee-b130-49b6-8413-7d8fd9c33ed3
 - [zoox] Machine Learning Engineer Intern, Simulation (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/f24a2d0c-bda7-48ff-9c83-9a96900128b7
 - [zoox] Motion Planning Intern (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/d355532c-5e18-4eaf-9da1-0571c2cbbc96
-- [zoox] Mapping Software Intern (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/f318f39e-c089-4240-b341-ebb021d86b4f
 - [shieldai] Electrical Engineering Fall Co-op (June 2026) (R4473) (Dallas, Texas) 鈥?lever 鈥?https://jobs.lever.co/shieldai/7b4e2234-fa9a-4945-8a20-0c16d176c702
 - [mistral] Applied Scientist / Research Engineer (Internship) (Paris) 鈥?lever 鈥?https://jobs.lever.co/mistral/426ef8c0-eb26-4004-a690-f33c62b445a7
