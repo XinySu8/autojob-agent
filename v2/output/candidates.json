@@ -2,9 +2,9 @@
   "meta": {
     "engine_name": "AutoJob-Agent Feeder",
     "version": 2,
-    "generated_at": "2026-03-27T16:13:38.594476+00:00",
-    "source_jobs_count": 136,
-    "candidates_count": 36,
+    "generated_at": "2026-03-28T15:53:51.134840+00:00",
+    "source_jobs_count": 138,
+    "candidates_count": 35,
     "candidates_topN_total": 150,
     "thresholds": {
       "apply": 0.72,
@@ -540,41 +540,6 @@
         "reason": ""
       },
       "jd_excerpt": "RDQ227R1172 &nbsp; At Databricks, we are passionate about helping data teams solve the world's toughest problems — from making the next mode of transportation a reality to accelerating the development of medical breakthroughs. We do this by building and running the world's best data and AI infrastructure platform so our customers can use deep data insights to improve their business. As a Product Pricing &amp; Commercialization Intern, you will join our world-class Commercialization team to help shape the monetization strategies that power Databricks’ hyper-growth. During your 12-week internshi"
-    },
-    {
-      "job_uid": "f3754782a3cf48aa",
-      "source": "greenhouse",
-      "job_id": "f3754782a3cf48aa",
-      "company": "okta",
-      "title": "Data Analyst Intern (Summer 2026)",
-      "location": "San Francisco, California",
-      "url": "https://www.okta.com/company/careers/opportunity/7561055?gh_jid=7561055",
-      "departments": [
-        "Business Operations-150"
-      ],
-      "created_at": null,
-      "updated_at": "2026-03-23T15:50:52-04:00",
-      "scores": {
-        "hard_raw": 2.0,
-        "hard_norm": 0.25,
-        "semantic_raw": 0.4546001851554139,
-        "semantic_norm": 0.6910962488095667,
-        "final": 0.4926029368452617
-      },
-      "signals": {
-        "must_hits": [
-          "machine learning"
-        ],
-        "nice_hits": [],
-        "neg_hits": []
-      },
-      "text_hash": "023a3f86c44ca37c80da30a15fa55f50c80b8d07",
-      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=0",
-      "hard_gate": {
-        "hit": false,
-        "reason": ""
-      },
-      "jd_excerpt": "Secure Every Identity, from AI to Human Identity is the key to unlocking the potential of AI. Okta secures AI by building the trusted, neutral infrastructure that enables organizations to safely embrace this new era. This work requires a relentless drive to solve complex challenges with real-world stakes. We are looking for builders and owners who operate with speed and urgency and execute with excellence. This is an opportunity to do career-defining work. We're all in on this mission. If you are too, let's talk. About the Internship : As a Summer Intern in Okta’s GTM Strategy &amp; Operations"
     },
     {
       "job_uid": "5c98c9a4fc5ce4d5",
