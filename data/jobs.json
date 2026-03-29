@@ -1,18 +1,18 @@
 {
-  "generated_at_utc": "2026-03-28T15:53:44.481489+00:00",
-  "today_utc": "2026-03-28",
-  "fetched_count": 6856,
-  "filtered_count": 138,
-  "count": 138,
-  "today_count": 5,
-  "backlog_count": 133,
+  "generated_at_utc": "2026-03-29T15:54:01.766794+00:00",
+  "today_utc": "2026-03-29",
+  "fetched_count": 6854,
+  "filtered_count": 139,
+  "count": 139,
+  "today_count": 0,
+  "backlog_count": 139,
   "per_company_fetched": {
     "openai": 661,
-    "anthropic": 449,
+    "anthropic": 446,
     "databricks": 836,
     "cohere": 124,
     "perplexity": 79,
-    "langchain": 94,
+    "langchain": 95,
     "cognition": 52,
     "vellum": 3,
     "replit": 76,
@@ -28,7 +28,7 @@
     "linear": 19,
     "plain": 13,
     "serval": 26,
-    "mistral": 144,
+    "mistral": 143,
     "waabi": 54,
     "magnetforensics": 45,
     "shieldai": 261,
@@ -42,15 +42,15 @@
     "cloudflare": 524,
     "coinbase": 219,
     "asana": 158,
-    "brex": 242,
+    "brex": 243,
     "okta": 368,
     "vercel": 78,
     "square": 43
   },
   "per_source_fetched": {
-    "ashby": 1802,
-    "greenhouse": 4268,
-    "lever": 786
+    "ashby": 1803,
+    "greenhouse": 4266,
+    "lever": 785
   },
   "errors": [
     "[config] auto-fixed target for company='notion' -> source='ashby'",
@@ -362,6 +362,21 @@
     }
   ],
   "jobs": [
+    {
+      "id": "c742d96a7ece3898",
+      "source": "greenhouse",
+      "company": "brex",
+      "title": "Software Engineer, Internship - 2026",
+      "location": "São Paulo, São Paulo, Brazil",
+      "url": "https://www.brex.com/careers/8434385002?gh_jid=8434385002",
+      "updated_at": "2026-03-28T15:22:18-04:00",
+      "created_at": null,
+      "departments": [
+        "Engineering"
+      ],
+      "content_text": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;Why join us&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Brex is the AI-powered spend platform. We help companies spend with confidence with integrated corporate cards, banking, and global payments, plus intuitive software for travel and expenses. Tens of thousands of companies from startups to enterprises — including DoorDash, Flexport, and Compass — use Brex to proactively control spend, reduce costs, and increase efficiency on a global scale.&lt;/p&gt;\n&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Working at Brex allows you to push your limits, challenge the status quo, and collaborate with some of the brightest minds in the industry. We’re committed to building a diverse team and inclusive culture and believe your potential should only be limited by how big you can dream. We make this a reality by empowering you with the tools, resources, and support you need to grow your career.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Engineering at Brex&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Engineering at Brex is about building systems that scale with speed and intention. Our teams span Software, Data, Security, and IT, and operate with high autonomy and deep collaboration. We tackle hard technical problems, own our outcomes, and push for excellence at every level — from architecture to deployment. It’s an environment where engineering is a craft, and builders become leaders.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;What you’ll do&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;We’re looking for folks with an interest in building products, services, and infrastructure, comfortable in dealing with lots of moving pieces. In partnership with your mentor and team, you’ll be building solutions that will drive direct business impact and shape our long-term technical vision with a high-quality bar. You&#39;ll have the opportunity to learn and push the frontier of providing the best financial software experience to help companies grow. You’ll be encouraged to be metric and data-driven and to think creatively to help Brex scale and prepare for the new markets we are about to enter.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;Where you’ll work&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;This role will be remote.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;Requirements&lt;/strong&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;Graduating from a BA/BS program in 2026 - Computer Science or Computer Engineering or Software Engineering&lt;/li&gt;\n&lt;li&gt;Availability to participate in the program from April to December 2026&lt;/li&gt;\n&lt;li&gt;Strong knowledge of CS fundamentals&lt;/li&gt;\n&lt;li&gt;Strong communication, interpersonal skills, and eagerness to learn from others&lt;/li&gt;\n&lt;li&gt;Are excited about working in a high-paced environment with other high quality engineers&lt;/li&gt;\n&lt;li&gt;Familiarity with software engineering development cycles&lt;/li&gt;\n&lt;li&gt;Experience working with backend programming languages (i.e. Java, Kotlin, Python)&lt;/li&gt;\n&lt;li&gt;Experience working with SQL or NoSQL databases&lt;/li&gt;\n&lt;li&gt;Ability to hold yourself and the team to high standards&lt;/li&gt;\n&lt;li&gt;Advanced English communication skills&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;strong&gt;Bonus points&lt;/strong&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;Experience collaborating with experts in product, design, and operations&lt;/li&gt;\n&lt;li&gt;Familiarity with functional programming languages&amp;nbsp;&lt;/li&gt;\n&lt;li&gt;Strong writing skills&lt;/li&gt;\n&lt;li&gt;Proactive approach&lt;/li&gt;\n&lt;li&gt;Experience with corporate financial systems or concepts&lt;/li&gt;\n&lt;li&gt;Experience with cloud computing systems &amp;amp; services&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;Must be based in São Paulo (state), Brazil during internship program&lt;/li&gt;\n&lt;/ul&gt;&lt;div class=&quot;content-conclusion&quot;&gt;&lt;p&gt;&lt;em&gt;Please be aware, job-seekers may be at risk of targeting by malicious actors looking for personal data. Brex recruiters will only reach out via LinkedIn or email with a&amp;nbsp;&lt;a class=&quot;c-link&quot; href=&quot;http://brex.com/&quot; target=&quot;_blank&quot; data-stringify-link=&quot;http://brex.com&quot; data-sk=&quot;tooltip_parent&quot;&gt;brex.com&lt;/a&gt;&amp;nbsp;domain. Any outreach claiming to be from Brex via other sources should be ignored.&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;",
+      "content_plain": "Why join us Brex is the AI-powered spend platform. We help companies spend with confidence with integrated corporate cards, banking, and global payments, plus intuitive software for travel and expenses. Tens of thousands of companies from startups to enterprises — including DoorDash, Flexport, and Compass — use Brex to proactively control spend, reduce costs, and increase efficiency on a global scale. Working at Brex allows you to push your limits, challenge the status quo, and collaborate with some of the brightest minds in the industry. We’re committed to building a diverse team and inclusive culture and believe your potential should only be limited by how big you can dream. We make this a reality by empowering you with the tools, resources, and support you need to grow your career. Engineering at Brex Engineering at Brex is about building systems that scale with speed and intention. Our teams span Software, Data, Security, and IT, and operate with high autonomy and deep collaboration. We tackle hard technical problems, own our outcomes, and push for excellence at every level — from architecture to deployment. It’s an environment where engineering is a craft, and builders become leaders. What you’ll do We’re looking for folks with an interest in building products, services, and infrastructure, comfortable in dealing with lots of moving pieces. In partnership with your mentor and team, you’ll be building solutions that will drive direct business impact and shape our long-term technical vision with a high-quality bar. You'll have the opportunity to learn and push the frontier of providing the best financial software experience to help companies grow. You’ll be encouraged to be metric and data-driven and to think creatively to help Brex scale and prepare for the new markets we are about to enter. Where you’ll work This role will be remote. Requirements Graduating from a BA/BS program in 2026 - Computer Science or Computer Engineering or Software Engineering Availability to participate in the program from April to December 2026 Strong knowledge of CS fundamentals Strong communication, interpersonal skills, and eagerness to learn from others Are excited about working in a high-paced environment with other high quality engineers Familiarity with software engineering development cycles Experience working with backend programming languages (i.e. Java, Kotlin, Python) Experience working with SQL or NoSQL databases Ability to hold yourself and the team to high standards Advanced English communication skills Bonus points Experience collaborating with experts in product, design, and operations Familiarity with functional programming languages&nbsp; Strong writing skills Proactive approach Experience with corporate financial systems or concepts Experience with cloud computing systems &amp; services Location Must be based in São Paulo (state), Brazil during internship program Please be aware, job-seekers may be at risk of targeting by malicious actors looking for personal data. Brex recruiters will only reach out via LinkedIn or email with a&nbsp; brex.com &nbsp;domain. Any outreach claiming to be from Brex via other sources should be ignored."
+    },
     {
       "id": "72b6ca3369d5ba3c",
       "source": "greenhouse",

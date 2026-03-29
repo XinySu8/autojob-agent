@@ -2,11 +2,43 @@
   "meta": {
     "version": 2,
     "model_name": "sentence-transformers/all-MiniLM-L6-v2",
-    "jobs_total": 138,
-    "jobs_scored": 138,
+    "jobs_total": 139,
+    "jobs_scored": 139,
     "non_gated_count": 40
   },
   "scored_jobs": [
+    {
+      "job_uid": "c742d96a7ece3898",
+      "source": "greenhouse",
+      "company": "brex",
+      "title": "Software Engineer, Internship - 2026",
+      "location": "São Paulo, São Paulo, Brazil",
+      "url": "https://www.brex.com/careers/8434385002?gh_jid=8434385002",
+      "updated_at": "2026-03-28T15:22:18-04:00",
+      "created_at": null,
+      "departments": [
+        "Engineering"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "c1ea63b9e7b440f042c4d0bbaf79882398c93399",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
+    },
     {
       "job_uid": "72b6ca3369d5ba3c",
       "source": "greenhouse",

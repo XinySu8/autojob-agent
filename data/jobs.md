@@ -1,7 +1,7 @@
 # Job feed (current)
-Generated at (UTC): 2026-03-28T15:53:44.481489+00:00
-Today (UTC): 2026-03-28
-Total jobs: 138
+Generated at (UTC): 2026-03-29T15:54:01.766794+00:00
+Today (UTC): 2026-03-29
+Total jobs: 139
 
 ## Errors
 - [config] auto-fixed target for company='notion' -> source='ashby'
@@ -11,6 +11,7 @@ Total jobs: 138
 - slack (workday) failed: <HTTPError 400: 'Bad Request'>
 
 ## Jobs
+- [brex] Software Engineer, Internship - 2026 (São Paulo, São Paulo, Brazil) 鈥?greenhouse 鈥?https://www.brex.com/careers/8434385002?gh_jid=8434385002
 - [cloudflare] Business Analyst Intern, Revenue Operations (AI Innovation) (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7761468?gh_jid=7761468
 - [cloudflare] Revenue Operations Intern - Enablement (AI Innovation) (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7761397?gh_jid=7761397
 - [cloudflare] Infrastructure Deployment Engineer Intern (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7759602?gh_jid=7759602

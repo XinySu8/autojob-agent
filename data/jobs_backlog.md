@@ -1,9 +1,14 @@
 # Job feed (backlog)
-Generated at (UTC): 2026-03-28T15:53:44.481489+00:00
-Today (UTC): 2026-03-28
-Total jobs: 133
+Generated at (UTC): 2026-03-29T15:54:01.766794+00:00
+Today (UTC): 2026-03-29
+Total jobs: 139
 
 ## Jobs
+- [brex] Software Engineer, Internship - 2026 (São Paulo, São Paulo, Brazil) 鈥?greenhouse 鈥?https://www.brex.com/careers/8434385002?gh_jid=8434385002
+- [cloudflare] Business Analyst Intern, Revenue Operations (AI Innovation) (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7761468?gh_jid=7761468
+- [cloudflare] Revenue Operations Intern - Enablement (AI Innovation) (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7761397?gh_jid=7761397
+- [cloudflare] Infrastructure Deployment Engineer Intern (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7759602?gh_jid=7759602
+- [cloudflare] DCSC Automation Coordinator Intern (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7751595?gh_jid=7751595
 - [stripe] Data Analyst, Intern (Master's degree) (Toronto, Ontario, Canada) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7285986
 - [stripe] PhD Data Scientist, Intern (Toronto, Ontario, Canada) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7285974
 - [stripe] PhD Machine Learning Engineer, Intern (San Francisco, New York City, Seattle) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7216664
@@ -118,6 +123,7 @@ Total jobs: 133
 - [ramp] Software Engineer Internship, iOS (New York, NY (HQ)) 鈥?ashby 鈥?https://jobs.ashbyhq.com/ramp/8c155b55-3e7e-48a8-ac98-f988a2b6f4da/application
 - [ramp] University Grad | Software Engineer | Frontend (New York, NY (HQ)) 鈥?ashby 鈥?https://jobs.ashbyhq.com/ramp/a1229aec-1105-4c47-8533-b912e732ed89/application
 - [ramp] Software Engineer Internship, Frontend (New York, NY (HQ)) 鈥?ashby 鈥?https://jobs.ashbyhq.com/ramp/31f7e045-9a51-4a75-9ffc-d815d6db6daa/application
+- [zoox] Part-Time Student Worker - Test Engineering (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/d3e43085-86b6-4cfb-8348-d9fd8ca8dfb2
 - [shieldai] Summer 2026 - Electrical Engineering Intern - Hardware Test (Dallas, Texas) 鈥?lever 鈥?https://jobs.lever.co/shieldai/1c88f1db-4372-42a7-a0a4-0fa1919be3de
 - [cfsenergy] Intern - Cryogenics Engineer - Fall Co-op 2026 (Devens, MA) 鈥?lever 鈥?https://jobs.lever.co/cfsenergy/e97e1a0e-2a5a-474c-8950-981a00efb2ae
 - [waabi] Commercial Product MBA Intern, Summer 2026 (San Francisco, CA) 鈥?lever 鈥?https://jobs.lever.co/waabi/6a45cf5e-b199-4ade-b02c-2d69eb6104a7
