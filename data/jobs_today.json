@@ -1,6 +1,22 @@
 {
-  "generated_at_utc": "2026-03-29T15:54:01.766794+00:00",
-  "today_utc": "2026-03-29",
-  "count": 0,
-  "jobs": []
+  "generated_at_utc": "2026-03-30T16:33:53.842668+00:00",
+  "today_utc": "2026-03-30",
+  "count": 1,
+  "jobs": [
+    {
+      "id": "f8835600c4bd7ba0",
+      "source": "lever",
+      "company": "shieldai",
+      "title": "Embedded Software Engineering Intern - 2026 Summer Intern (Boston, MA)",
+      "location": "Boston, MA",
+      "url": "https://jobs.lever.co/shieldai/6b9de151-1090-47c0-a245-85b601295966",
+      "updated_at": 1774885466369,
+      "created_at": 1774885466369,
+      "departments": [
+        "Embedded"
+      ],
+      "content_text": "Founded in 2015, Shield AI is a venture-backed deep-tech company with the mission of protecting service members and civilians with intelligent systems. Its products include the V-BAT and X-BAT aircraft, Hivemind Enterprise, and the Hivemind Vision product lines. With offices and facilities across the U.S., Europe, the Middle East, and the Asia-Pacific, Shield AI’s technology actively supports operations worldwide. For more information, visit www.shield.ai. Follow Shield AI on LinkedIn, X, Instagram, and YouTube. \n\nOur 2026 Summer Internship program is a wonderful opportunity for Fall 2026 and Spring 2027 graduates to immerse themselves in an innovative and mission driven culture. Our 10-week paid internship program will provide you with hands on mentorship, an opportunity to add real contribution to our company via your internship project, and a possible job offer at the end. You will have the chance to make lifelong friendships, expand your network, and learn all about what it's like to work in a high-growth, fast scaling tech unicorn. You'll take part in company sponsored events and enjoy exploring a new city. Read on below to learn more about this unique internship!\n\n\nJob Description:\nOur 2026 Summer Internship program is a wonderful opportunity for rising 2027 graduates to immerse themselves in an innovative and mission driven culture. Our 10-week paid internship program will provide you with hands on mentorship, an opportunity to add real contribution to our company via your internship project, and a possible job offer at the end. You will have the chance to make lifelong friendships, expand your network, and learn all about what it's like to work in a high-growth, fast scaling tech unicorn. You'll take part in company sponsored events and enjoy exploring a new city. Read on below to learn more about this unique internship!\n\nThe Embedded team contributes to this effort by developing real-time software that controls our advanced UAV while in flight. You will write embedded firmware in C/C++, develop tests and reporters in Python, and work cross-functionally with electrical and mechanical engineers to determine software requirements. Help us save lives as we strive to deliver the most highly reliable aerospace hardware in the industry.",
+      "content_plain": "Founded in 2015, Shield AI is a venture-backed deep-tech company with the mission of protecting service members and civilians with intelligent systems. Its products include the V-BAT and X-BAT aircraft, Hivemind Enterprise, and the Hivemind Vision product lines. With offices and facilities across the U.S., Europe, the Middle East, and the Asia-Pacific, Shield AI’s technology actively supports operations worldwide. For more information, visit www.shield.ai. Follow Shield AI on LinkedIn, X, Instagram, and YouTube. \n\nOur 2026 Summer Internship program is a wonderful opportunity for Fall 2026 and Spring 2027 graduates to immerse themselves in an innovative and mission driven culture. Our 10-week paid internship program will provide you with hands on mentorship, an opportunity to add real contribution to our company via your internship project, and a possible job offer at the end. You will have the chance to make lifelong friendships, expand your network, and learn all about what it's like to work in a high-growth, fast scaling tech unicorn. You'll take part in company sponsored events and enjoy exploring a new city. Read on below to learn more about this unique internship!\n\n\nJob Description:\nOur 2026 Summer Internship program is a wonderful opportunity for rising 2027 graduates to immerse themselves in an innovative and mission driven culture. Our 10-week paid internship program will provide you with hands on mentorship, an opportunity to add real contribution to our company via your internship project, and a possible job offer at the end. You will have the chance to make lifelong friendships, expand your network, and learn all about what it's like to work in a high-growth, fast scaling tech unicorn. You'll take part in company sponsored events and enjoy exploring a new city. Read on below to learn more about this unique internship!\n\nThe Embedded team contributes to this effort by developing real-time software that controls our advanced UAV while in flight. You will write embedded firmware in C/C++, develop tests and reporters in Python, and work cross-functionally with electrical and mechanical engineers to determine software requirements. Help us save lives as we strive to deliver the most highly reliable aerospace hardware in the industry."
+    }
+  ]
 }
