@@ -1,7 +1,9 @@
 # Job feed (today)
-Generated at (UTC): 2026-03-30T16:33:53.842668+00:00
-Today (UTC): 2026-03-30
-Total jobs: 1
+Generated at (UTC): 2026-03-31T16:36:24.759414+00:00
+Today (UTC): 2026-03-31
+Total jobs: 3
 
 ## Jobs
-- [shieldai] Embedded Software Engineering Intern - 2026 Summer Intern (Boston, MA) (Boston, MA) 鈥?lever 鈥?https://jobs.lever.co/shieldai/6b9de151-1090-47c0-a245-85b601295966
+- [databricks] University Recruiter (Berlin, Germany; Munich, Germany) 鈥?greenhouse 鈥?https://databricks.com/company/careers/open-positions/job?gh_jid=8486945002
+- [cloudflare] Business Analyst Intern, Marketing (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7729700?gh_jid=7729700
+- [cloudflare] Legal Compliance Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7766813?gh_jid=7766813
