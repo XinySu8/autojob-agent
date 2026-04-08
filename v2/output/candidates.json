@@ -2,9 +2,9 @@
   "meta": {
     "engine_name": "AutoJob-Agent Feeder",
     "version": 2,
-    "generated_at": "2026-04-07T16:35:37.394559+00:00",
-    "source_jobs_count": 139,
-    "candidates_count": 28,
+    "generated_at": "2026-04-08T16:42:45.239341+00:00",
+    "source_jobs_count": 135,
+    "candidates_count": 27,
     "candidates_topN_total": 150,
     "thresholds": {
       "apply": 0.72,
@@ -13,46 +13,6 @@
     "config_digest": "950e4199f55bc19790176655adee8be3bae56523"
   },
   "candidates": [
-    {
-      "job_uid": "3fcd39dbfc402fc7",
-      "source": "greenhouse",
-      "job_id": "3fcd39dbfc402fc7",
-      "company": "togetherai",
-      "title": "Software Engineer - Storage & Observability (Early Career)",
-      "location": "San Francisco",
-      "url": "https://job-boards.greenhouse.io/togetherai/jobs/5073769007",
-      "departments": [
-        "Engineering"
-      ],
-      "created_at": null,
-      "updated_at": "2026-03-17T12:08:22-04:00",
-      "scores": {
-        "hard_raw": 8.0,
-        "hard_norm": 1.0,
-        "semantic_raw": 0.5012938976282828,
-        "semantic_norm": 0.8142813134485007,
-        "final": 0.8978547223966755
-      },
-      "signals": {
-        "must_hits": [
-          "python",
-          "git",
-          "docker",
-          "cloud"
-        ],
-        "nice_hits": [
-          "rag"
-        ],
-        "neg_hits": []
-      },
-      "text_hash": "df1a1a167e4e23a7c8478a6a6513ca0a61547cad",
-      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=4, nice_hits=1",
-      "hard_gate": {
-        "hit": false,
-        "reason": ""
-      },
-      "jd_excerpt": "About the Role Together AI is building the AI Acceleration Cloud , an end-to-end platform for the full generative AI lifecycle. Our AI Infrastructure team is at the forefront of scaling the foundational systems that power this platform. We are looking for an Early Career Software Engineer to join our Storage and Observability team , where you will help design and maintain robust distributed storage solutions and develop comprehensive observability platforms. In this role, you will work on the systems that provide critical insights into GPU utilization and system performance, ensuring seamless "
-    },
     {
       "job_uid": "64e8cd9ce5039875",
       "source": "greenhouse",
@@ -65,7 +25,7 @@
         "Engineering"
       ],
       "created_at": null,
-      "updated_at": "2026-03-30T10:28:01-04:00",
+      "updated_at": "2026-04-07T16:17:24-04:00",
       "scores": {
         "hard_raw": 8.0,
         "hard_norm": 1.0,
@@ -978,7 +938,7 @@
         ],
         "neg_hits": []
       },
-      "text_hash": "d152a6550f20c0b35bfb5d841e155d1bffc37e77",
+      "text_hash": "1c1b1bdc98b6d08ad3dffa345b916dff972d8b67",
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=1",
       "hard_gate": {
         "hit": false,
