@@ -2,8 +2,8 @@
   "meta": {
     "engine_name": "AutoJob-Agent Feeder",
     "version": 2,
-    "generated_at": "2026-04-09T16:48:14.395572+00:00",
-    "source_jobs_count": 138,
+    "generated_at": "2026-04-10T16:15:34.252709+00:00",
+    "source_jobs_count": 139,
     "candidates_count": 27,
     "candidates_topN_total": 150,
     "thresholds": {
@@ -141,7 +141,7 @@
         "University Recruiting"
       ],
       "created_at": null,
-      "updated_at": "2026-04-06T17:32:38-04:00",
+      "updated_at": "2026-04-09T16:51:25-04:00",
       "scores": {
         "hard_raw": 8.0,
         "hard_norm": 1.0,
@@ -215,7 +215,7 @@
         "BT Operations-165"
       ],
       "created_at": null,
-      "updated_at": "2026-04-03T17:29:41-04:00",
+      "updated_at": "2026-04-09T13:51:41-04:00",
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.375,
@@ -231,7 +231,7 @@
         "nice_hits": [],
         "neg_hits": []
       },
-      "text_hash": "b487a94e10d77b8be9525078d83a08d2152d4119",
+      "text_hash": "a78678a45285729c71c418db11cda8fe362f19d2",
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=0",
       "hard_gate": {
         "hit": false,
@@ -290,7 +290,7 @@
         "Business Strategy and Ops"
       ],
       "created_at": null,
-      "updated_at": "2026-03-03T13:01:30-05:00",
+      "updated_at": "2026-04-09T16:51:26-04:00",
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.375,
@@ -327,7 +327,7 @@
         "People"
       ],
       "created_at": null,
-      "updated_at": "2026-03-03T13:08:17-05:00",
+      "updated_at": "2026-04-09T18:32:19-04:00",
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.375,
@@ -364,7 +364,7 @@
         "University Recruiting"
       ],
       "created_at": null,
-      "updated_at": "2026-02-19T14:47:26-05:00",
+      "updated_at": "2026-04-09T16:51:10-04:00",
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.375,
@@ -401,7 +401,7 @@
         "Business Strategy and Ops"
       ],
       "created_at": null,
-      "updated_at": "2026-02-25T14:25:17-05:00",
+      "updated_at": "2026-04-09T16:51:25-04:00",
       "scores": {
         "hard_raw": 4.0,
         "hard_norm": 0.5,
@@ -549,7 +549,7 @@
         "University Recruiting"
       ],
       "created_at": null,
-      "updated_at": "2026-02-19T14:47:26-05:00",
+      "updated_at": "2026-04-09T16:51:09-04:00",
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.375,
@@ -586,7 +586,7 @@
         "Internship"
       ],
       "created_at": null,
-      "updated_at": "2026-04-02T13:52:45-04:00",
+      "updated_at": "2026-04-09T16:50:14-04:00",
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.25,
@@ -621,7 +621,7 @@
         "Finance"
       ],
       "created_at": null,
-      "updated_at": "2026-02-25T14:25:01-05:00",
+      "updated_at": "2026-04-09T16:51:25-04:00",
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.375,
@@ -697,7 +697,7 @@
         "Internship"
       ],
       "created_at": null,
-      "updated_at": "2026-04-02T13:52:45-04:00",
+      "updated_at": "2026-04-09T16:50:14-04:00",
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.25,
@@ -771,7 +771,7 @@
         "University Recruiting"
       ],
       "created_at": null,
-      "updated_at": "2026-04-06T17:32:33-04:00",
+      "updated_at": "2026-04-09T16:51:25-04:00",
       "scores": {
         "hard_raw": 5.0,
         "hard_norm": 0.625,
