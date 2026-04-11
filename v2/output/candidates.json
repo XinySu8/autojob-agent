@@ -2,9 +2,9 @@
   "meta": {
     "engine_name": "AutoJob-Agent Feeder",
     "version": 2,
-    "generated_at": "2026-04-10T16:15:34.252709+00:00",
-    "source_jobs_count": 139,
-    "candidates_count": 27,
+    "generated_at": "2026-04-11T15:55:27.131365+00:00",
+    "source_jobs_count": 138,
+    "candidates_count": 26,
     "candidates_topN_total": 150,
     "thresholds": {
       "apply": 0.72,
@@ -128,45 +128,6 @@
         "reason": ""
       },
       "jd_excerpt": "About the Program OpenAI is hiring a small cohort of exceptional early-career researchers and engineers to join OpenAI Research. This opportunity is designed primarily for current undergraduate students and recent graduates who have demonstrated technical ability through elite competitions and challenges. Participants join OpenAI directly as full-time Research Scientists / Research Engineers and begin with an intensive one-month research bootcamp designed to immerse them in the core problems behind modern AI systems. Many of the strongest researchers at OpenAI first distinguished themselves th"
-    },
-    {
-      "job_uid": "9de287370f90d99a",
-      "source": "greenhouse",
-      "job_id": "9de287370f90d99a",
-      "company": "databricks",
-      "title": "MBA Intern - Technical Program Management (TPM)",
-      "location": "Mountain View, California; San Francisco, California",
-      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8399537002",
-      "departments": [
-        "University Recruiting"
-      ],
-      "created_at": null,
-      "updated_at": "2026-04-09T16:51:25-04:00",
-      "scores": {
-        "hard_raw": 8.0,
-        "hard_norm": 1.0,
-        "semantic_raw": 0.35671383142435636,
-        "semantic_norm": 0.4328572660206915,
-        "final": 0.6880714963113803
-      },
-      "signals": {
-        "must_hits": [
-          "python",
-          "sql"
-        ],
-        "nice_hits": [
-          "rag",
-          "mlflow"
-        ],
-        "neg_hits": []
-      },
-      "text_hash": "9f644998fa2ce6b582c49feaa719daab5ac96ab7",
-      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=2",
-      "hard_gate": {
-        "hit": false,
-        "reason": ""
-      },
-      "jd_excerpt": "RDQ227R1171 At Databricks, we are passionate about helping data teams solve the world's toughest problems - from making the next mode of transportation a reality to accelerating the development of medical breakthroughs. We do this by building and running the world's best data and AI infrastructure platform so our customers can use deep data insights to improve their business. As a TPM Intern, you will be the primary driver behind the successful delivery of complex technical initiatives. You will navigate the lifecycle of a program - from initial scoping and requirement gathering to final launc"
     },
     {
       "job_uid": "e7c78b9db66d7e52",
@@ -621,7 +582,7 @@
         "Finance"
       ],
       "created_at": null,
-      "updated_at": "2026-04-09T16:51:25-04:00",
+      "updated_at": "2026-04-10T17:32:00-04:00",
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.375,
