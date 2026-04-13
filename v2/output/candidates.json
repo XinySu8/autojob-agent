@@ -2,8 +2,8 @@
   "meta": {
     "engine_name": "AutoJob-Agent Feeder",
     "version": 2,
-    "generated_at": "2026-04-12T15:58:39.960804+00:00",
-    "source_jobs_count": 138,
+    "generated_at": "2026-04-13T16:43:45.665793+00:00",
+    "source_jobs_count": 139,
     "candidates_count": 26,
     "candidates_topN_total": 150,
     "thresholds": {
@@ -25,7 +25,7 @@
         "5112 General University"
       ],
       "created_at": null,
-      "updated_at": "2026-04-01T11:46:05-04:00",
+      "updated_at": "2026-04-13T11:24:15-04:00",
       "scores": {
         "hard_raw": 8.0,
         "hard_norm": 1.0,
@@ -806,7 +806,7 @@
         "5112 General University"
       ],
       "created_at": null,
-      "updated_at": "2026-04-01T11:46:05-04:00",
+      "updated_at": "2026-04-13T11:24:15-04:00",
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.375,
