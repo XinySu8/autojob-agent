@@ -2,9 +2,9 @@
   "meta": {
     "engine_name": "AutoJob-Agent Feeder",
     "version": 2,
-    "generated_at": "2026-04-17T16:32:10.969078+00:00",
-    "source_jobs_count": 150,
-    "candidates_count": 28,
+    "generated_at": "2026-04-18T16:00:08.036108+00:00",
+    "source_jobs_count": 151,
+    "candidates_count": 29,
     "candidates_topN_total": 150,
     "thresholds": {
       "apply": 0.72,
@@ -104,7 +104,7 @@
         "Customer Acceleration-731"
       ],
       "created_at": null,
-      "updated_at": "2026-04-16T15:13:13-04:00",
+      "updated_at": "2026-04-17T13:50:10-04:00",
       "scores": {
         "hard_raw": 5.0,
         "hard_norm": 0.625,
@@ -332,9 +332,9 @@
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.375,
-        "semantic_raw": 0.48726212826467047,
-        "semantic_norm": 0.7772627864237943,
-        "final": 0.596244532533087
+        "semantic_raw": 0.4872620992215827,
+        "semantic_norm": 0.7772627098037838,
+        "final": 0.5962444903920812
       },
       "signals": {
         "must_hits": [
@@ -345,7 +345,7 @@
         ],
         "neg_hits": []
       },
-      "text_hash": "df5f9191fa7d6cade11b0a1a29a3549507fd088f",
+      "text_hash": "6c62aebc25953efaaf3779bbf08cd38eac112bdd",
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=1",
       "hard_gate": {
         "hit": false,
@@ -365,7 +365,7 @@
         "Customer Acceleration-731"
       ],
       "created_at": null,
-      "updated_at": "2026-04-17T10:30:25-04:00",
+      "updated_at": "2026-04-17T13:51:07-04:00",
       "scores": {
         "hard_raw": 4.0,
         "hard_norm": 0.5,
@@ -406,9 +406,9 @@
       "scores": {
         "hard_raw": 4.0,
         "hard_norm": 0.5,
-        "semantic_raw": 0.39330230871427174,
-        "semantic_norm": 0.5293827254518325,
-        "final": 0.5161604989985079
+        "semantic_raw": 0.39330234487627425,
+        "semantic_norm": 0.5293828208526052,
+        "final": 0.5161605514689329
       },
       "signals": {
         "must_hits": [
@@ -420,7 +420,7 @@
         ],
         "neg_hits": []
       },
-      "text_hash": "5af9236c90e407f4febaf64290d186a425bf9280",
+      "text_hash": "74653d00ae62fa99557cd119549a606c506cf2af",
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=1",
       "hard_gate": {
         "hit": false,
@@ -629,9 +629,9 @@
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.375,
-        "semantic_raw": 0.3917254974510922,
-        "semantic_norm": 0.5252228614383798,
-        "final": 0.45762257379110893
+        "semantic_raw": 0.3917254741024317,
+        "semantic_norm": 0.5252227998411202,
+        "final": 0.45762253991261614
       },
       "signals": {
         "must_hits": [
@@ -642,7 +642,7 @@
         ],
         "neg_hits": []
       },
-      "text_hash": "9c743cdd01fff062a6c9a9a55dbbaf3be92d8890",
+      "text_hash": "063c2c3c89b88382484348dd7eebbfa3c6f66dfd",
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=1",
       "hard_gate": {
         "hit": false,
@@ -662,7 +662,7 @@
         "Internship"
       ],
       "created_at": null,
-      "updated_at": "2026-04-13T17:21:43-04:00",
+      "updated_at": "2026-04-17T16:27:10-04:00",
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.25,
@@ -701,9 +701,9 @@
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.375,
-        "semantic_raw": 0.3882524535953041,
-        "semantic_norm": 0.5160604521569392,
-        "final": 0.4525832486863166
+        "semantic_raw": 0.388252400651329,
+        "semantic_norm": 0.5160603124828121,
+        "final": 0.4525831718655467
       },
       "signals": {
         "must_hits": [
@@ -714,7 +714,7 @@
         ],
         "neg_hits": []
       },
-      "text_hash": "0697e7259779553c54de04dcb4a9f6d1bcdbf150",
+      "text_hash": "8b1581af0e9febff32b28f104737dda889b5f02e",
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=1",
       "hard_gate": {
         "hit": false,
@@ -808,7 +808,7 @@
         "Internship"
       ],
       "created_at": null,
-      "updated_at": "2026-04-13T17:21:43-04:00",
+      "updated_at": "2026-04-17T16:27:10-04:00",
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.25,
@@ -830,6 +830,41 @@
         "reason": ""
       },
       "jd_excerpt": "At Asana we’re looking for curious, collaborative, and creative students to join our 12-week summer Product Design internship program. This program focuses on bringing students currently studying at a college or university into our Design team to develop and work on complex and challenging problems. During this internship, you’ll work directly with dedicated Design mentors who are trained and motivated to ensure your success. You’ll also have the opportunity to work with Engineering, User Research, Product Management, Data Science, and the rest of our amazing Design crew to ship experiences th"
+    },
+    {
+      "job_uid": "c275ec712b8e8539",
+      "source": "greenhouse",
+      "job_id": "c275ec712b8e8539",
+      "company": "okta",
+      "title": "Social Media Engagement Intern (Summer 2026)",
+      "location": "Chicago, Illinois",
+      "url": "https://www.okta.com/company/careers/opportunity/7818811?gh_jid=7818811",
+      "departments": [
+        "Customer Acceleration-731"
+      ],
+      "created_at": null,
+      "updated_at": "2026-04-17T15:14:02-04:00",
+      "scores": {
+        "hard_raw": 2.0,
+        "hard_norm": 0.25,
+        "semantic_raw": 0.4028390588064373,
+        "semantic_norm": 0.5545420989545919,
+        "final": 0.4174981544250256
+      },
+      "signals": {
+        "must_hits": [
+          "machine learning"
+        ],
+        "nice_hits": [],
+        "neg_hits": []
+      },
+      "text_hash": "55d62e08b65dee2e9c561454d8e66807f8e3bad1",
+      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=0",
+      "hard_gate": {
+        "hit": false,
+        "reason": ""
+      },
+      "jd_excerpt": "Secure Every Identity, from AI to Human Identity is the key to unlocking the potential of AI. Okta secures AI by building the trusted, neutral infrastructure that enables organizations to safely embrace this new era. This work requires a relentless drive to solve complex challenges with real-world stakes. We are looking for builders and owners who operate with speed and urgency and execute with excellence. This is an opportunity to do career-defining work. We're all in on this mission. If you are too, let's talk. About the Internship: The Social Media Engagement Intern will be an integral part"
     },
     {
       "job_uid": "609c9f7aff473916",
