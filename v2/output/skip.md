@@ -24,6 +24,12 @@
   - nice_hits: rag
   - reason: Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=1
 
+- datadog | Software Engineer - Early Career | Lisbon, Portugal | score=0.000 [HARD-GATE: location_not_allowed (allowlist: US/China/Singapore)]
+  - url: https://careers.datadoghq.com/detail/7646452/?gh_jid=7646452
+  - must_hits: None
+  - nice_hits: None
+  - reason: Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)
+
 - asana | Product Design Intern - Summer 2026 (Warsaw) | Warsaw | score=0.000 [HARD-GATE: location_not_allowed (allowlist: US/China/Singapore)]
   - url: https://www.asana.com/jobs/apply/7490332?gh_jid=7490332
   - must_hits: None
@@ -78,14 +84,14 @@
   - nice_hits: None
   - reason: Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)
 
-- stripe | Software Engineer, Intern | London | score=0.000 [HARD-GATE: location_not_allowed (allowlist: US/China/Singapore)]
-  - url: https://stripe.com/jobs/search?gh_jid=7360840
+- stripe | Software Engineer, Intern | Sydney, Australia | score=0.000 [HARD-GATE: location_not_allowed (allowlist: US/China/Singapore)]
+  - url: https://stripe.com/jobs/search?gh_jid=7532256
   - must_hits: None
   - nice_hits: None
   - reason: Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)
 
-- stripe | Software Engineer, Intern | Sydney, Australia | score=0.000 [HARD-GATE: location_not_allowed (allowlist: US/China/Singapore)]
-  - url: https://stripe.com/jobs/search?gh_jid=7532256
+- stripe | Software Engineer, Intern | London | score=0.000 [HARD-GATE: location_not_allowed (allowlist: US/China/Singapore)]
+  - url: https://stripe.com/jobs/search?gh_jid=7360840
   - must_hits: None
   - nice_hits: None
   - reason: Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)
@@ -146,12 +152,6 @@
 
 - cloudflare | Developer GTM Intern – Enterprise Sales & AI Automation (Summer 2026) | In-Office | score=0.000 [HARD-GATE: location_not_allowed (allowlist: US/China/Singapore)]
   - url: https://boards.greenhouse.io/cloudflare/jobs/7789256?gh_jid=7789256
-  - must_hits: None
-  - nice_hits: None
-  - reason: Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)
-
-- cloudflare | Professional Services Project Intern (Summer 2026) - 3 months | In-Office | score=0.000 [HARD-GATE: location_not_allowed (allowlist: US/China/Singapore)]
-  - url: https://boards.greenhouse.io/cloudflare/jobs/7796077?gh_jid=7796077
   - must_hits: None
   - nice_hits: None
   - reason: Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)
@@ -284,12 +284,6 @@
 
 - cloudflare | Marketing Events and Campaigns Intern (Summer 2026) | In-Office | score=0.000 [HARD-GATE: location_not_allowed (allowlist: US/China/Singapore)]
   - url: https://boards.greenhouse.io/cloudflare/jobs/7733327?gh_jid=7733327
-  - must_hits: None
-  - nice_hits: None
-  - reason: Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)
-
-- datadog | Software Engineer - Early Career | Lisbon, Portugal | score=0.000 [HARD-GATE: location_not_allowed (allowlist: US/China/Singapore)]
-  - url: https://careers.datadoghq.com/detail/7646452/?gh_jid=7646452
   - must_hits: None
   - nice_hits: None
   - reason: Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)
@@ -565,13 +559,13 @@
   - reason: Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)
 
 - cloudflare | Research Engineer Intern (Summer 2026) | In-Office | score=0.000 [HARD-GATE: location_not_allowed (allowlist: US/China/Singapore)]
-  - url: https://boards.greenhouse.io/cloudflare/jobs/7359136?gh_jid=7359136
+  - url: https://boards.greenhouse.io/cloudflare/jobs/7358525?gh_jid=7358525
   - must_hits: None
   - nice_hits: None
   - reason: Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)
 
 - cloudflare | Research Engineer Intern (Summer 2026) | In-Office | score=0.000 [HARD-GATE: location_not_allowed (allowlist: US/China/Singapore)]
-  - url: https://boards.greenhouse.io/cloudflare/jobs/7358525?gh_jid=7358525
+  - url: https://boards.greenhouse.io/cloudflare/jobs/7359136?gh_jid=7359136
   - must_hits: None
   - nice_hits: None
   - reason: Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)
@@ -583,13 +577,13 @@
   - reason: Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)
 
 - cloudflare | Security Engineer Intern (Summer 2026) | In-Office | score=0.000 [HARD-GATE: location_not_allowed (allowlist: US/China/Singapore)]
-  - url: https://boards.greenhouse.io/cloudflare/jobs/7582150?gh_jid=7582150
+  - url: https://boards.greenhouse.io/cloudflare/jobs/7582157?gh_jid=7582157
   - must_hits: None
   - nice_hits: None
   - reason: Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)
 
 - cloudflare | Security Engineer Intern (Summer 2026) | In-Office | score=0.000 [HARD-GATE: location_not_allowed (allowlist: US/China/Singapore)]
-  - url: https://boards.greenhouse.io/cloudflare/jobs/7582157?gh_jid=7582157
+  - url: https://boards.greenhouse.io/cloudflare/jobs/7582150?gh_jid=7582150
   - must_hits: None
   - nice_hits: None
   - reason: Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)
@@ -728,6 +722,12 @@
 
 - zoox | PhD Research Intern, Mapping Software | Foster City, CA | score=0.000 [HARD-GATE: location_not_allowed (allowlist: US/China/Singapore)]
   - url: https://jobs.lever.co/zoox/f318f39e-c089-4240-b341-ebb021d86b4f
+  - must_hits: None
+  - nice_hits: None
+  - reason: Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)
+
+- shieldai | Intern Summer 2026 - Data Analyst Intern (R4094) | Dallas, Texas | score=0.000 [HARD-GATE: location_not_allowed (allowlist: US/China/Singapore)]
+  - url: https://jobs.lever.co/shieldai/d00348c2-18a8-4580-a084-be602d455fcf
   - must_hits: None
   - nice_hits: None
   - reason: Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)

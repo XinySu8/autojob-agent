@@ -2,9 +2,9 @@
   "meta": {
     "engine_name": "AutoJob-Agent Feeder",
     "version": 2,
-    "generated_at": "2026-04-19T16:00:03.978040+00:00",
-    "source_jobs_count": 152,
-    "candidates_count": 29,
+    "generated_at": "2026-04-20T16:41:46.929889+00:00",
+    "source_jobs_count": 149,
+    "candidates_count": 26,
     "candidates_topN_total": 150,
     "thresholds": {
       "apply": 0.72,
@@ -13,46 +13,6 @@
     "config_digest": "950e4199f55bc19790176655adee8be3bae56523"
   },
   "candidates": [
-    {
-      "job_uid": "3fcd39dbfc402fc7",
-      "source": "greenhouse",
-      "job_id": "3fcd39dbfc402fc7",
-      "company": "togetherai",
-      "title": "Software Engineer - Storage & Observability (Early Career)",
-      "location": "San Francisco",
-      "url": "https://job-boards.greenhouse.io/togetherai/jobs/5073769007",
-      "departments": [
-        "Engineering"
-      ],
-      "created_at": null,
-      "updated_at": "2026-04-15T19:05:31-04:00",
-      "scores": {
-        "hard_raw": 8.0,
-        "hard_norm": 1.0,
-        "semantic_raw": 0.5012938976282828,
-        "semantic_norm": 0.8142813134485007,
-        "final": 0.8978547223966755
-      },
-      "signals": {
-        "must_hits": [
-          "python",
-          "git",
-          "docker",
-          "cloud"
-        ],
-        "nice_hits": [
-          "rag"
-        ],
-        "neg_hits": []
-      },
-      "text_hash": "df1a1a167e4e23a7c8478a6a6513ca0a61547cad",
-      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=4, nice_hits=1",
-      "hard_gate": {
-        "hit": false,
-        "reason": ""
-      },
-      "jd_excerpt": "About the Role Together AI is building the AI Acceleration Cloud , an end-to-end platform for the full generative AI lifecycle. Our AI Infrastructure team is at the forefront of scaling the foundational systems that power this platform. We are looking for an Early Career Software Engineer to join our Storage and Observability team , where you will help design and maintain robust distributed storage solutions and develop comprehensive observability platforms. In this role, you will work on the systems that provide critical insights into GPU utilization and system performance, ensuring seamless "
-    },
     {
       "job_uid": "5936ffed28038e5d",
       "source": "greenhouse",
@@ -130,6 +90,44 @@
       "jd_excerpt": "Secure Every Identity, from AI to Human Identity is the key to unlocking the potential of AI. Okta secures AI by building the trusted, neutral infrastructure that enables organizations to safely embrace this new era. This work requires a relentless drive to solve complex challenges with real-world stakes. We are looking for builders and owners who operate with speed and urgency and execute with excellence. This is an opportunity to do career-defining work. We're all in on this mission. If you are too, let's talk. About the Internship: We are looking for an inquisitive and detail-oriented AI Co"
     },
     {
+      "job_uid": "a8cacd3df10146bd",
+      "source": "greenhouse",
+      "job_id": "a8cacd3df10146bd",
+      "company": "datadog",
+      "title": "IT Support Technician Intern",
+      "location": "Boston, Massachusetts, USA",
+      "url": "https://careers.datadoghq.com/detail/7391788/?gh_jid=7391788",
+      "departments": [
+        "Engineering Interns"
+      ],
+      "created_at": null,
+      "updated_at": "2026-04-20T11:30:54-04:00",
+      "scores": {
+        "hard_raw": 4.0,
+        "hard_norm": 0.5,
+        "semantic_raw": 0.5519044399255955,
+        "semantic_norm": 0.9477995666379095,
+        "final": 0.7462897616508503
+      },
+      "signals": {
+        "must_hits": [
+          "git",
+          "cloud"
+        ],
+        "nice_hits": [
+          "rag"
+        ],
+        "neg_hits": []
+      },
+      "text_hash": "d261e828f3ac29dfcc6a7c9ced64bf3bd859763e",
+      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=1",
+      "hard_gate": {
+        "hit": false,
+        "reason": ""
+      },
+      "jd_excerpt": "We're looking for IT support interns to join Datadog's Enterprise IT organization — the team responsible for managing the internal tools, systems, and services that keep Datadog running smoothly as we scale. As part of this team, you'll work alongside IT professionals to troubleshoot issues, support employee onboarding and offboarding, manage SaaS applications, and help maintain the infrastructure that internal teams rely on every day. This means providing excellent customer service to our employees to support thousands of endpoint devices such as macOS, iOS, Chrome OS and Windows. In addition"
+    },
+    {
       "job_uid": "64e8cd9ce5039875",
       "source": "greenhouse",
       "job_id": "64e8cd9ce5039875",
@@ -167,44 +165,6 @@
         "reason": ""
       },
       "jd_excerpt": "Why join us Brex is the intelligent finance platform that enables companies to spend smarter and move faster in more than 200 markets. By combining global corporate cards and banking with intuitive spend management, bill pay, and travel software, Brex enables founders and finance teams to accelerate operations, gain real-time visibility, and control spend effortlessly. Brex’s AI-native automation and world-class service eliminate manual expense and accounting tasks for customers so they can focus on what matters most. Tens of thousands of the world's best companies run on Brex, including DoorD"
-    },
-    {
-      "job_uid": "6932e9d57bf5ef44",
-      "source": "ashby",
-      "job_id": "6932e9d57bf5ef44",
-      "company": "openai",
-      "title": "Research Scientist / Research Engineer — Early Career Cohort",
-      "location": "San Francisco",
-      "url": "https://jobs.ashbyhq.com/openai/4476b271-4987-4bd4-aa1e-0e68ea683b10/application",
-      "departments": [
-        "Research",
-        "Research"
-      ],
-      "created_at": "2026-03-19T20:59:28.241+00:00",
-      "updated_at": "2026-03-19T20:59:28.241+00:00",
-      "scores": {
-        "hard_raw": 4.0,
-        "hard_norm": 0.5,
-        "semantic_raw": 0.5372523985650173,
-        "semantic_norm": 0.9091452689496738,
-        "final": 0.7250298979223206
-      },
-      "signals": {
-        "must_hits": [
-          "machine learning"
-        ],
-        "nice_hits": [
-          "rag"
-        ],
-        "neg_hits": []
-      },
-      "text_hash": "a80687ce75017d3f41536dba8d6f4e368a7d8c8a",
-      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=1",
-      "hard_gate": {
-        "hit": false,
-        "reason": ""
-      },
-      "jd_excerpt": "About the Program OpenAI is hiring a small cohort of exceptional early-career researchers and engineers to join OpenAI Research. This opportunity is designed primarily for current undergraduate students and recent graduates who have demonstrated technical ability through elite competitions and challenges. Participants join OpenAI directly as full-time Research Scientists / Research Engineers and begin with an intensive one-month research bootcamp designed to immerse them in the core problems behind modern AI systems. Many of the strongest researchers at OpenAI first distinguished themselves th"
     },
     {
       "job_uid": "58195c1d3ea24d7d",
@@ -537,42 +497,6 @@
         "reason": ""
       },
       "jd_excerpt": "ABOUT RAMP Ramp is building the smart infrastructure for finance teams, embedded in the transaction flow of every dollar a business spends. We automate how over $100B in annualized spend flows in and out of 50,000+ companies: authorizing payments, flagging risk, categorizing spend, and closing books. The problems are high-stakes, data-dense, and unforgiving. We hire people with high agency and high urgency. We look for slope over intercept. We care less about where you trained and more about what you’ve built. At Ramp, everyone is a builder who owns problems end to end and makes consequential "
-    },
-    {
-      "job_uid": "74dae1e815400054",
-      "source": "ashby",
-      "job_id": "74dae1e815400054",
-      "company": "openai",
-      "title": "Business Insights Intern",
-      "location": "San Francisco",
-      "url": "https://jobs.ashbyhq.com/openai/821168d6-c97c-457a-9187-88a2cb95ba32/application",
-      "departments": [
-        "Marketing",
-        "Marketing"
-      ],
-      "created_at": "2026-04-14T16:46:25.673+00:00",
-      "updated_at": "2026-04-14T16:46:25.673+00:00",
-      "scores": {
-        "hard_raw": 2.0,
-        "hard_norm": 0.25,
-        "semantic_raw": 0.43629080057100533,
-        "semantic_norm": 0.6427933274078902,
-        "final": 0.46603633007433964
-      },
-      "signals": {
-        "must_hits": [],
-        "nice_hits": [
-          "rag"
-        ],
-        "neg_hits": []
-      },
-      "text_hash": "10470d09aabc9f62b7b8603a182fdcf64fe5577d",
-      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=1",
-      "hard_gate": {
-        "hit": false,
-        "reason": ""
-      },
-      "jd_excerpt": "About the Team The Business Insights team monitors competitors, generates actionable insights, and supports decision-making across GTM and product. The team also builds and applies OpenAI’s own technologies to develop internal intelligence systems, tools, and workflows that improve how competitive insight is generated, analyzed, and operationalized. These systems help OpenAI understand competitive dynamics, respond quickly to market developments, and surface high-quality intelligence across the organization. About the Role As a Business Insights Intern, you will help improve and extend OpenAI’"
     },
     {
       "job_uid": "1e24bd723ca2390a",
@@ -1051,42 +975,6 @@
         "reason": ""
       },
       "jd_excerpt": "Figma is growing our team of passionate creatives and builders on a mission to make design accessible to all. Figma’s platform helps teams bring ideas to life—whether you're brainstorming, creating a prototype, translating designs into code, or iterating with AI. From idea to product, Figma empowers teams to streamline workflows, move faster, and work together in real time from anywhere in the world. If you're excited to shape the future of design and collaboration, join us! The Early Career team at Figma is shaping the future by finding and nurturing the next generation of talent - Figma’s fu"
-    },
-    {
-      "job_uid": "6a37b4fca05c2c26",
-      "source": "ashby",
-      "job_id": "6a37b4fca05c2c26",
-      "company": "openai",
-      "title": "Go to Market Strategy Internship / Co-op, Emerging Talent (Summer 2026)",
-      "location": "San Francisco",
-      "url": "https://jobs.ashbyhq.com/openai/d6d4fbf8-1976-4745-bf48-1a3cca5503b9/application",
-      "departments": [
-        "Go To Market",
-        "Go To Market"
-      ],
-      "created_at": "2026-04-03T02:39:34.652+00:00",
-      "updated_at": "2026-04-03T02:39:34.652+00:00",
-      "scores": {
-        "hard_raw": 2.0,
-        "hard_norm": 0.25,
-        "semantic_raw": 0.35068267583811974,
-        "semantic_norm": 0.4169461668299876,
-        "final": 0.3418203917564932
-      },
-      "signals": {
-        "must_hits": [],
-        "nice_hits": [
-          "rag"
-        ],
-        "neg_hits": []
-      },
-      "text_hash": "cecf913cefe63191c041e18c9a647755f62de425",
-      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=1",
-      "hard_gate": {
-        "hit": false,
-        "reason": ""
-      },
-      "jd_excerpt": "ABOUT THE TEAM: OpenAI’s mission is to build safe artificial general intelligence (AGI) which benefits all of humanity. This long-term undertaking brings the world’s best scientists, engineers, and business professionals into one lab together to accomplish this. In pursuit of this mission, our Go To Market (GTM) team is responsible for helping customers learn how to leverage and deploy our highly capable AI products across their business. The team is made of Sales, Solutions, Support, Marketing, and Partnership professionals that work together to create valuable solutions that will help bring "
     }
   ]
 }
