@@ -1,8 +1,9 @@
 # Job feed (today)
-Generated at (UTC): 2026-04-20T16:41:38.451619+00:00
-Today (UTC): 2026-04-20
-Total jobs: 2
+Generated at (UTC): 2026-04-21T16:38:55.398162+00:00
+Today (UTC): 2026-04-21
+Total jobs: 3
 
 ## Jobs
-- [datadog] IT Support Technician Intern (Boston, Massachusetts, USA) 鈥?greenhouse 鈥?https://careers.datadoghq.com/detail/7391788/?gh_jid=7391788
-- [shieldai] Intern Summer 2026 - Data Analyst Intern (R4094) (Dallas, Texas) 鈥?lever 鈥?https://jobs.lever.co/shieldai/d00348c2-18a8-4580-a084-be602d455fcf
+- [cloudflare] Content Marketing Intern (July to December 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7834688?gh_jid=7834688
+- [zoox] PhD Research Intern, Multi-Modal Foundation Encoder for Perception (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/44721ec7-87ce-4b24-95a1-b949c6d9b17c
+- [zoox] PhD Research Intern, Vision Language Action Models (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/2a00b538-3c7c-4217-a14b-3e7881f2a8a0
