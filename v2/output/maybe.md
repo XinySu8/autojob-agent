@@ -24,6 +24,12 @@
   - nice_hits: rag
   - reason: Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=1
 
+- scaleai | ICLR 2026 - University Recruiting | San Francisco, CA | score=0.537
+  - url: https://job-boards.greenhouse.io/scaleai/jobs/4678035005
+  - must_hits: machine learning
+  - nice_hits: None
+  - reason: Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=0
+
 - databricks | MBA Intern - Product Pricing & Commercialization | San Francisco, California | score=0.516
   - url: https://databricks.com/company/careers/open-positions/job?gh_jid=8402615002
   - must_hits: sql, cloud
@@ -122,6 +128,12 @@
 
 - figma | Early Career Recruiter | San Francisco, CA • New York, NY • United States | score=0.361
   - url: https://boards.greenhouse.io/figma/jobs/5828494004?gh_jid=5828494004
+  - must_hits: None
+  - nice_hits: rag
+  - reason: Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=1
+
+- openai | Go to Market Strategy Internship / Co-op, Emerging Talent (Summer 2026) | San Francisco | score=0.342
+  - url: https://jobs.ashbyhq.com/openai/d6d4fbf8-1976-4745-bf48-1a3cca5503b9/application
   - must_hits: None
   - nice_hits: rag
   - reason: Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=1
