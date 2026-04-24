@@ -2,78 +2,42 @@
   "meta": {
     "version": 2,
     "model_name": "sentence-transformers/all-MiniLM-L6-v2",
-    "jobs_total": 150,
-    "jobs_scored": 150,
+    "jobs_total": 148,
+    "jobs_scored": 148,
     "non_gated_count": 33
   },
   "scored_jobs": [
     {
-      "job_uid": "812b3343de19d747",
+      "job_uid": "84d676899abd4e20",
       "source": "greenhouse",
-      "company": "scaleai",
-      "title": "ICLR 2026 - University Recruiting",
-      "location": "San Francisco, CA",
-      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4678035005",
-      "updated_at": "2026-04-23T11:23:35-04:00",
+      "company": "cloudflare",
+      "title": "Marketing Campaigns & Account-Based Marketing (ABM) Intern - 3 months (Fall 2026)",
+      "location": "In-Office",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7838607?gh_jid=7838607",
+      "updated_at": "2026-04-24T08:44:16-04:00",
       "created_at": null,
       "departments": [
         "University"
       ],
       "hard_gate": {
-        "hit": false,
-        "reason": ""
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
       },
       "hard": {
-        "raw": 2.0,
-        "must_hits": [
-          "machine learning"
-        ],
+        "raw": 0.0,
+        "must_hits": [],
         "nice_hits": [],
         "neg_hits": [],
-        "norm": 0.25
+        "norm": 0.0
       },
       "semantic": {
-        "raw": 0.4849216955988689,
+        "raw": 0.0,
         "cache_reused": false,
-        "norm": 0.7710889721574351
+        "norm": 0.0
       },
-      "text_hash": "5869be1914ef5346c067e4a162f5902822707a6c",
-      "final_score": 0.5365989346865894,
-      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=0"
-    },
-    {
-      "job_uid": "b7a414440c94e440",
-      "source": "greenhouse",
-      "company": "figma",
-      "title": "Inside Sales Representative - Early Career (2026)",
-      "location": "San Francisco, CA • New York, NY",
-      "url": "https://boards.greenhouse.io/figma/jobs/5977327004?gh_jid=5977327004",
-      "updated_at": "2026-04-23T00:32:19-04:00",
-      "created_at": null,
-      "departments": [
-        "Sales"
-      ],
-      "hard_gate": {
-        "hit": false,
-        "reason": ""
-      },
-      "hard": {
-        "raw": 2.0,
-        "must_hits": [],
-        "nice_hits": [
-          "rag"
-        ],
-        "neg_hits": [],
-        "norm": 0.25
-      },
-      "semantic": {
-        "raw": 0.30933967232673226,
-        "cache_reused": false,
-        "norm": 0.3078770804326037
-      },
-      "text_hash": "50ca310d0dc25f47feee47e403a71aa73c2880bc",
-      "final_score": 0.28183239423793205,
-      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=1"
+      "text_hash": "4f847893df9f3102dec149cac81b4d6896be20d9",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
       "job_uid": "83a840a31a86892a",
@@ -82,7 +46,7 @@
       "title": "AI Content Operations Intern (Summer 2026)",
       "location": "Chicago, Illinois",
       "url": "https://www.okta.com/company/careers/opportunity/7818807?gh_jid=7818807",
-      "updated_at": "2026-04-22T18:12:02-04:00",
+      "updated_at": "2026-04-23T14:39:13-04:00",
       "created_at": null,
       "departments": [
         "Customer Acceleration-731"
@@ -118,7 +82,7 @@
       "title": "Customer Success Intern (Summer 2026)",
       "location": "Dublin, Ireland",
       "url": "https://www.okta.com/company/careers/opportunity/7646155?gh_jid=7646155",
-      "updated_at": "2026-04-22T18:12:02-04:00",
+      "updated_at": "2026-04-23T14:39:13-04:00",
       "created_at": null,
       "departments": [
         "Customer Success Management-750"
@@ -150,7 +114,7 @@
       "title": "Digital Success Intern (Summer 2026)",
       "location": "Bellevue, Washington",
       "url": "https://www.okta.com/company/careers/opportunity/7791786?gh_jid=7791786",
-      "updated_at": "2026-04-22T18:12:02-04:00",
+      "updated_at": "2026-04-23T14:39:13-04:00",
       "created_at": null,
       "departments": [
         "Customer Acceleration - Digital Growth-761"
@@ -182,7 +146,7 @@
       "title": "Early Career Marketing Associate (12-Month Contract)",
       "location": "London, United Kingdom",
       "url": "https://www.okta.com/company/careers/opportunity/7731570?gh_jid=7731570",
-      "updated_at": "2026-04-22T18:12:02-04:00",
+      "updated_at": "2026-04-23T14:39:13-04:00",
       "created_at": null,
       "departments": [
         "Demand Gen-420"
@@ -214,7 +178,7 @@
       "title": "Enablement Communications & Events Coordinator Intern",
       "location": "Bellevue, Washington; Chicago, Illinois",
       "url": "https://www.okta.com/company/careers/opportunity/7818817?gh_jid=7818817",
-      "updated_at": "2026-04-22T18:12:02-04:00",
+      "updated_at": "2026-04-23T14:39:13-04:00",
       "created_at": null,
       "departments": [
         "Customer Acceleration-731"
@@ -250,7 +214,7 @@
       "title": "Marketing Intern",
       "location": "Sydney, Australia",
       "url": "https://www.okta.com/company/careers/opportunity/7704320?gh_jid=7704320",
-      "updated_at": "2026-04-22T18:12:02-04:00",
+      "updated_at": "2026-04-23T14:39:13-04:00",
       "created_at": null,
       "departments": [
         "Customer Marketing-460"
@@ -282,7 +246,7 @@
       "title": "Product Marketing Intern, Orchestration (Summer 2026)",
       "location": "San Francisco, California",
       "url": "https://www.okta.com/company/careers/opportunity/7821767?gh_jid=7821767",
-      "updated_at": "2026-04-22T18:12:02-04:00",
+      "updated_at": "2026-04-23T14:39:13-04:00",
       "created_at": null,
       "departments": [
         "Demand Gen-420"
@@ -316,7 +280,7 @@
       "title": "Social Media Engagement Intern (Summer 2026)",
       "location": "Chicago, Illinois",
       "url": "https://www.okta.com/company/careers/opportunity/7818811?gh_jid=7818811",
-      "updated_at": "2026-04-22T18:12:02-04:00",
+      "updated_at": "2026-04-23T14:39:13-04:00",
       "created_at": null,
       "departments": [
         "Customer Acceleration-731"
@@ -350,7 +314,7 @@
       "title": "Technical Account Management Intern (Summer 2026)",
       "location": "Chicago, Illinois",
       "url": "https://www.okta.com/company/careers/opportunity/7549331?gh_jid=7549331",
-      "updated_at": "2026-04-22T18:12:02-04:00",
+      "updated_at": "2026-04-23T14:39:13-04:00",
       "created_at": null,
       "departments": [
         "Interns - Customer First"
@@ -377,6 +341,175 @@
       "text_hash": "be56d7b636036fa5cb719b529a3bb06c92d03d72",
       "final_score": 0.4915115992797364,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=0"
+    },
+    {
+      "job_uid": "ba031358dcd95da9",
+      "source": "greenhouse",
+      "company": "datadog",
+      "title": "IT Support Technician Intern",
+      "location": "Paris, France",
+      "url": "https://careers.datadoghq.com/detail/7826176/?gh_jid=7826176",
+      "updated_at": "2026-04-23T13:41:00-04:00",
+      "created_at": null,
+      "departments": [
+        "Engineering Interns"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "53aa36e99c97a827311e087517dd0416bd3d8a57",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
+    },
+    {
+      "job_uid": "a8cacd3df10146bd",
+      "source": "greenhouse",
+      "company": "datadog",
+      "title": "IT Support Technician Intern",
+      "location": "Boston, Massachusetts, USA",
+      "url": "https://careers.datadoghq.com/detail/7391788/?gh_jid=7391788",
+      "updated_at": "2026-04-23T13:41:00-04:00",
+      "created_at": null,
+      "departments": [
+        "Engineering Interns"
+      ],
+      "hard_gate": {
+        "hit": false,
+        "reason": ""
+      },
+      "hard": {
+        "raw": 4.0,
+        "must_hits": [
+          "git",
+          "cloud"
+        ],
+        "nice_hits": [
+          "rag"
+        ],
+        "neg_hits": [],
+        "norm": 0.5
+      },
+      "semantic": {
+        "raw": 0.5347860496975856,
+        "cache_reused": true,
+        "norm": 0.9026386681983786
+      },
+      "text_hash": "d7d3cf98693fabd7fe201384b112de4890b07fd0",
+      "final_score": 0.7214512675091083,
+      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=1"
+    },
+    {
+      "job_uid": "baa94a1b6635a7aa",
+      "source": "greenhouse",
+      "company": "datadog",
+      "title": "Software Engineer - Early Career",
+      "location": "Lisbon, Portugal",
+      "url": "https://careers.datadoghq.com/detail/7646452/?gh_jid=7646452",
+      "updated_at": "2026-04-23T13:41:00-04:00",
+      "created_at": null,
+      "departments": [
+        "Early Career"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "a6a1635f2cdee5cb0e5945204477531bc0b0305b",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
+    },
+    {
+      "job_uid": "812b3343de19d747",
+      "source": "greenhouse",
+      "company": "scaleai",
+      "title": "ICLR 2026 - University Recruiting",
+      "location": "San Francisco, CA",
+      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4678035005",
+      "updated_at": "2026-04-23T11:23:35-04:00",
+      "created_at": null,
+      "departments": [
+        "University"
+      ],
+      "hard_gate": {
+        "hit": false,
+        "reason": ""
+      },
+      "hard": {
+        "raw": 2.0,
+        "must_hits": [
+          "machine learning"
+        ],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.25
+      },
+      "semantic": {
+        "raw": 0.4849216955988689,
+        "cache_reused": true,
+        "norm": 0.7710889721574351
+      },
+      "text_hash": "5869be1914ef5346c067e4a162f5902822707a6c",
+      "final_score": 0.5365989346865894,
+      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=0"
+    },
+    {
+      "job_uid": "b7a414440c94e440",
+      "source": "greenhouse",
+      "company": "figma",
+      "title": "Inside Sales Representative - Early Career (2026)",
+      "location": "San Francisco, CA • New York, NY",
+      "url": "https://boards.greenhouse.io/figma/jobs/5977327004?gh_jid=5977327004",
+      "updated_at": "2026-04-23T00:32:19-04:00",
+      "created_at": null,
+      "departments": [
+        "Sales"
+      ],
+      "hard_gate": {
+        "hit": false,
+        "reason": ""
+      },
+      "hard": {
+        "raw": 2.0,
+        "must_hits": [],
+        "nice_hits": [
+          "rag"
+        ],
+        "neg_hits": [],
+        "norm": 0.25
+      },
+      "semantic": {
+        "raw": 0.30933967232673226,
+        "cache_reused": true,
+        "norm": 0.3078770804326037
+      },
+      "text_hash": "50ca310d0dc25f47feee47e403a71aa73c2880bc",
+      "final_score": 0.28183239423793205,
+      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=1"
     },
     {
       "job_uid": "d80a8c04f2a66a45",
@@ -641,38 +774,6 @@
         "norm": 0.0
       },
       "text_hash": "4a29d8e2cc8c26650e6861a3e8b2b3599901da7c",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
-      "job_uid": "ba031358dcd95da9",
-      "source": "greenhouse",
-      "company": "datadog",
-      "title": "IT Support Technician Intern",
-      "location": "Paris, France",
-      "url": "https://careers.datadoghq.com/detail/7826176/?gh_jid=7826176",
-      "updated_at": "2026-04-22T09:48:04-04:00",
-      "created_at": null,
-      "departments": [
-        "Engineering Interns"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "53aa36e99c97a827311e087517dd0416bd3d8a57",
       "final_score": 0.0,
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
@@ -1094,38 +1195,6 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
-      "job_uid": "5917dcfcdfb6ef21",
-      "source": "greenhouse",
-      "company": "cloudflare",
-      "title": "Data Engineer Intern (Summer 2026)",
-      "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7374706?gh_jid=7374706",
-      "updated_at": "2026-04-21T15:53:17-04:00",
-      "created_at": null,
-      "departments": [
-        "Business Intelligence"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "d6922165b021b102ae9d595b7805dd3f7731c31f",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
       "job_uid": "6d60a0c4fc37416b",
       "source": "greenhouse",
       "company": "cloudflare",
@@ -1190,16 +1259,16 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
-      "job_uid": "a7df6d1778b0bdaa",
+      "job_uid": "925a02e54fc23cc1",
       "source": "greenhouse",
       "company": "cloudflare",
-      "title": "Global Customer Services - AI Builder Intern (Summer 2026)",
+      "title": "Global Trade Compliance Intern (Summer 2026)",
       "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7736663?gh_jid=7736663",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7799138?gh_jid=7799138",
       "updated_at": "2026-04-21T15:53:17-04:00",
       "created_at": null,
       "departments": [
-        "University"
+        "Legal, Policy, Trust & Safety"
       ],
       "hard_gate": {
         "hit": true,
@@ -1217,7 +1286,7 @@
         "cache_reused": false,
         "norm": 0.0
       },
-      "text_hash": "b6ce088406f5e18846b3dbc9703b3a20315993d5",
+      "text_hash": "97f0996cf762d57fffc6b9b5677076d362a5e114",
       "final_score": 0.0,
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
@@ -1250,38 +1319,6 @@
         "norm": 0.0
       },
       "text_hash": "6cd20efcd441c051151d42c77a42a5af4c48d58c",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
-      "job_uid": "925a02e54fc23cc1",
-      "source": "greenhouse",
-      "company": "cloudflare",
-      "title": "Global Trade Compliance Intern (Summer 2026)",
-      "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7799138?gh_jid=7799138",
-      "updated_at": "2026-04-21T15:53:17-04:00",
-      "created_at": null,
-      "departments": [
-        "Legal, Policy, Trust & Safety"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "97f0996cf762d57fffc6b9b5677076d362a5e114",
       "final_score": 0.0,
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
@@ -2278,38 +2315,6 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
-      "job_uid": "a69b027a9f170de6",
-      "source": "greenhouse",
-      "company": "cloudflare",
-      "title": "Security Engineer Intern (Summer 2026)",
-      "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7582150?gh_jid=7582150",
-      "updated_at": "2026-04-21T15:53:17-04:00",
-      "created_at": null,
-      "departments": [
-        "University"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "b692e84bf8f2c348585fb30aab9e673005736002",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
       "job_uid": "27fa7db8097260ad",
       "source": "greenhouse",
       "company": "cloudflare",
@@ -2338,6 +2343,38 @@
         "norm": 0.0
       },
       "text_hash": "49b0839169c459ffc686b229d0dea7e7f685db0a",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
+    },
+    {
+      "job_uid": "a69b027a9f170de6",
+      "source": "greenhouse",
+      "company": "cloudflare",
+      "title": "Security Engineer Intern (Summer 2026)",
+      "location": "In-Office",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7582150?gh_jid=7582150",
+      "updated_at": "2026-04-21T15:53:17-04:00",
+      "created_at": null,
+      "departments": [
+        "University"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "b692e84bf8f2c348585fb30aab9e673005736002",
       "final_score": 0.0,
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
@@ -2374,38 +2411,6 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
-      "job_uid": "7ff08fc55f14924a",
-      "source": "greenhouse",
-      "company": "cloudflare",
-      "title": "Software Engineer Intern (Summer 2026)",
-      "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7296923?gh_jid=7296923",
-      "updated_at": "2026-04-21T15:53:17-04:00",
-      "created_at": null,
-      "departments": [
-        "University"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "57cb411291fac736b4c8ee60835b48f020ed7ef4",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
       "job_uid": "d3ae49c0279183ff",
       "source": "greenhouse",
       "company": "cloudflare",
@@ -2438,6 +2443,38 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
+      "job_uid": "7ff08fc55f14924a",
+      "source": "greenhouse",
+      "company": "cloudflare",
+      "title": "Software Engineer Intern (Summer 2026)",
+      "location": "In-Office",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7296923?gh_jid=7296923",
+      "updated_at": "2026-04-21T15:53:17-04:00",
+      "created_at": null,
+      "departments": [
+        "University"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "57cb411291fac736b4c8ee60835b48f020ed7ef4",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
+    },
+    {
       "job_uid": "8a83deff873f0036",
       "source": "greenhouse",
       "company": "cloudflare",
@@ -2466,6 +2503,38 @@
         "norm": 0.0
       },
       "text_hash": "1153b7fa96387694c88d341e648fc60069442a20",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
+    },
+    {
+      "job_uid": "317f941bfe07a06d",
+      "source": "greenhouse",
+      "company": "cloudflare",
+      "title": "Solutions Engineer Intern (Summer 2026)",
+      "location": "In-Office",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7738938?gh_jid=7738938",
+      "updated_at": "2026-04-21T15:53:17-04:00",
+      "created_at": null,
+      "departments": [
+        "Solution Engineering"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "46d5b810fa430fe256e0d6d1a94fbf25f2571439",
       "final_score": 0.0,
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
@@ -2530,38 +2599,6 @@
         "norm": 0.0
       },
       "text_hash": "566721001806914b3ce8575e3c7879c73814b268",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
-      "job_uid": "317f941bfe07a06d",
-      "source": "greenhouse",
-      "company": "cloudflare",
-      "title": "Solutions Engineer Intern (Summer 2026)",
-      "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7738938?gh_jid=7738938",
-      "updated_at": "2026-04-21T15:53:17-04:00",
-      "created_at": null,
-      "departments": [
-        "Solution Engineering"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "46d5b810fa430fe256e0d6d1a94fbf25f2571439",
       "final_score": 0.0,
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
@@ -2662,38 +2699,6 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
-      "job_uid": "6cf1094c2066f75b",
-      "source": "greenhouse",
-      "company": "cloudflare",
-      "title": "Technical Program Manager Intern (Summer 2026)",
-      "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7702175?gh_jid=7702175",
-      "updated_at": "2026-04-21T15:53:17-04:00",
-      "created_at": null,
-      "departments": [
-        "Engineering"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "ebf5dd350d2a485448af04e1a1e4db9f9fc8f3da",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
       "job_uid": "4629fb3760bfecee",
       "source": "greenhouse",
       "company": "cloudflare",
@@ -2726,16 +2731,16 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
-      "job_uid": "1003bed5d158833c",
+      "job_uid": "6cf1094c2066f75b",
       "source": "greenhouse",
       "company": "cloudflare",
-      "title": "Technical Support Engineer Intern (Summer 2026)",
+      "title": "Technical Program Manager Intern (Summer 2026)",
       "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7726977?gh_jid=7726977",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7702175?gh_jid=7702175",
       "updated_at": "2026-04-21T15:53:17-04:00",
       "created_at": null,
       "departments": [
-        "Customer Support"
+        "Engineering"
       ],
       "hard_gate": {
         "hit": true,
@@ -2753,39 +2758,7 @@
         "cache_reused": false,
         "norm": 0.0
       },
-      "text_hash": "9fc7dfb8bf45c1f810dd43ede68f4ec09c4b2bd8",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
-      "job_uid": "7950393738c7965e",
-      "source": "greenhouse",
-      "company": "cloudflare",
-      "title": "Technical Support Engineer Intern (Summer 2026)",
-      "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7726879?gh_jid=7726879",
-      "updated_at": "2026-04-21T15:53:17-04:00",
-      "created_at": null,
-      "departments": [
-        "Customer Support"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "6379683bdb0aa2b7f86615d4e167e79db849e6fc",
+      "text_hash": "ebf5dd350d2a485448af04e1a1e4db9f9fc8f3da",
       "final_score": 0.0,
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
@@ -2822,16 +2795,16 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
-      "job_uid": "bfd0141092a4e750",
+      "job_uid": "7950393738c7965e",
       "source": "greenhouse",
       "company": "cloudflare",
-      "title": "Threat Detection and Incident Response Intern (Summer 2026)",
+      "title": "Technical Support Engineer Intern (Summer 2026)",
       "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7577205?gh_jid=7577205",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7726879?gh_jid=7726879",
       "updated_at": "2026-04-21T15:53:17-04:00",
       "created_at": null,
       "departments": [
-        "Security"
+        "Customer Support"
       ],
       "hard_gate": {
         "hit": true,
@@ -2849,7 +2822,39 @@
         "cache_reused": false,
         "norm": 0.0
       },
-      "text_hash": "461812349a27374326edddf9da0d61559cbd747f",
+      "text_hash": "6379683bdb0aa2b7f86615d4e167e79db849e6fc",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
+    },
+    {
+      "job_uid": "1003bed5d158833c",
+      "source": "greenhouse",
+      "company": "cloudflare",
+      "title": "Technical Support Engineer Intern (Summer 2026)",
+      "location": "In-Office",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7726977?gh_jid=7726977",
+      "updated_at": "2026-04-21T15:53:17-04:00",
+      "created_at": null,
+      "departments": [
+        "Customer Support"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "9fc7dfb8bf45c1f810dd43ede68f4ec09c4b2bd8",
       "final_score": 0.0,
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
@@ -2886,6 +2891,38 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
+      "job_uid": "bfd0141092a4e750",
+      "source": "greenhouse",
+      "company": "cloudflare",
+      "title": "Threat Detection and Incident Response Intern (Summer 2026)",
+      "location": "In-Office",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7577205?gh_jid=7577205",
+      "updated_at": "2026-04-21T15:53:17-04:00",
+      "created_at": null,
+      "departments": [
+        "Security"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "461812349a27374326edddf9da0d61559cbd747f",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
+    },
+    {
       "job_uid": "6b20b95a7ca3551a",
       "source": "greenhouse",
       "company": "cloudflare",
@@ -2916,43 +2953,6 @@
       "text_hash": "c32bb20355b5d13b778a9d4c9192175c4ec1de50",
       "final_score": 0.0,
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
-      "job_uid": "a8cacd3df10146bd",
-      "source": "greenhouse",
-      "company": "datadog",
-      "title": "IT Support Technician Intern",
-      "location": "Boston, Massachusetts, USA",
-      "url": "https://careers.datadoghq.com/detail/7391788/?gh_jid=7391788",
-      "updated_at": "2026-04-21T09:26:33-04:00",
-      "created_at": null,
-      "departments": [
-        "Engineering Interns"
-      ],
-      "hard_gate": {
-        "hit": false,
-        "reason": ""
-      },
-      "hard": {
-        "raw": 4.0,
-        "must_hits": [
-          "git",
-          "cloud"
-        ],
-        "nice_hits": [
-          "rag"
-        ],
-        "neg_hits": [],
-        "norm": 0.5
-      },
-      "semantic": {
-        "raw": 0.5347860496975856,
-        "cache_reused": true,
-        "norm": 0.9026386681983786
-      },
-      "text_hash": "d7d3cf98693fabd7fe201384b112de4890b07fd0",
-      "final_score": 0.7214512675091083,
-      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=1"
     },
     {
       "job_uid": "bc183bb0685ead5e",
@@ -3115,38 +3115,6 @@
         "norm": 0.0
       },
       "text_hash": "9634866656e3b846bc4a6c6a66ff070fb0fa625b",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
-      "job_uid": "baa94a1b6635a7aa",
-      "source": "greenhouse",
-      "company": "datadog",
-      "title": "Software Engineer - Early Career",
-      "location": "Lisbon, Portugal",
-      "url": "https://careers.datadoghq.com/detail/7646452/?gh_jid=7646452",
-      "updated_at": "2026-04-20T09:34:41-04:00",
-      "created_at": null,
-      "departments": [
-        "Early Career"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "a6a1635f2cdee5cb0e5945204477531bc0b0305b",
       "final_score": 0.0,
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
@@ -4722,38 +4690,6 @@
         "norm": 0.0
       },
       "text_hash": "4b62d744c197cbf3126ffd80065d2ad618bec286",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
-      "job_uid": "68eb4c2788ede144",
-      "source": "lever",
-      "company": "waabi",
-      "title": "Safety Methodologies Internship/Co-op, Summer 2026",
-      "location": "Toronto, ON",
-      "url": "https://jobs.lever.co/waabi/871bdec0-6347-4878-9e12-36d5d8d0615e",
-      "updated_at": 1768514185493,
-      "created_at": 1768514185493,
-      "departments": [
-        "Safety, Systems Engineering, & Security"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "172f2546d3cca2de0ec474c1363211b8dff67ce4",
       "final_score": 0.0,
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },

@@ -2,8 +2,8 @@
   "meta": {
     "engine_name": "AutoJob-Agent Feeder",
     "version": 2,
-    "generated_at": "2026-04-23T16:59:34.719050+00:00",
-    "source_jobs_count": 150,
+    "generated_at": "2026-04-24T16:33:50.805304+00:00",
+    "source_jobs_count": 148,
     "candidates_count": 28,
     "candidates_topN_total": 150,
     "thresholds": {
@@ -64,7 +64,7 @@
         "Customer Acceleration-731"
       ],
       "created_at": null,
-      "updated_at": "2026-04-22T18:12:02-04:00",
+      "updated_at": "2026-04-23T14:39:13-04:00",
       "scores": {
         "hard_raw": 5.0,
         "hard_norm": 0.625,
@@ -178,7 +178,7 @@
         "Engineering Interns"
       ],
       "created_at": null,
-      "updated_at": "2026-04-21T09:26:33-04:00",
+      "updated_at": "2026-04-23T13:41:00-04:00",
       "scores": {
         "hard_raw": 4.0,
         "hard_norm": 0.5,
@@ -327,7 +327,7 @@
         "Customer Acceleration-731"
       ],
       "created_at": null,
-      "updated_at": "2026-04-22T18:12:02-04:00",
+      "updated_at": "2026-04-23T14:39:13-04:00",
       "scores": {
         "hard_raw": 4.0,
         "hard_norm": 0.5,
@@ -437,7 +437,7 @@
         "Interns - Customer First"
       ],
       "created_at": null,
-      "updated_at": "2026-04-22T18:12:02-04:00",
+      "updated_at": "2026-04-23T14:39:13-04:00",
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.375,
@@ -695,7 +695,7 @@
         "Demand Gen-420"
       ],
       "created_at": null,
-      "updated_at": "2026-04-22T18:12:02-04:00",
+      "updated_at": "2026-04-23T14:39:13-04:00",
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.25,
@@ -804,7 +804,7 @@
         "Customer Acceleration-731"
       ],
       "created_at": null,
-      "updated_at": "2026-04-22T18:12:02-04:00",
+      "updated_at": "2026-04-23T14:39:13-04:00",
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.25,
