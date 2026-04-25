@@ -2,11 +2,245 @@
   "meta": {
     "version": 2,
     "model_name": "sentence-transformers/all-MiniLM-L6-v2",
-    "jobs_total": 148,
-    "jobs_scored": 148,
-    "non_gated_count": 33
+    "jobs_total": 146,
+    "jobs_scored": 146,
+    "non_gated_count": 32
   },
   "scored_jobs": [
+    {
+      "job_uid": "36c23753093aa256",
+      "source": "greenhouse",
+      "company": "stripe",
+      "title": "University Recruiter (Fixed Term Contract)",
+      "location": "Dublin",
+      "url": "https://stripe.com/jobs/search?gh_jid=7684280",
+      "updated_at": "2026-04-24T17:25:57-04:00",
+      "created_at": null,
+      "departments": [
+        "6526 University Recruiting"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "4a29d8e2cc8c26650e6861a3e8b2b3599901da7c",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
+    },
+    {
+      "job_uid": "8b6b0a9b6e604956",
+      "source": "greenhouse",
+      "company": "stripe",
+      "title": "Software Engineer, Intern",
+      "location": "Sydney, Australia",
+      "url": "https://stripe.com/jobs/search?gh_jid=7532256",
+      "updated_at": "2026-04-24T17:25:31-04:00",
+      "created_at": null,
+      "departments": [
+        "5112 General University"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "2b1d064990c9520a7e0f962a687e84161edd81d2",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
+    },
+    {
+      "job_uid": "5936ffed28038e5d",
+      "source": "greenhouse",
+      "company": "stripe",
+      "title": "PhD Machine Learning Engineer, Intern",
+      "location": "San Francisco, New York City, Seattle",
+      "url": "https://stripe.com/jobs/search?gh_jid=7216664",
+      "updated_at": "2026-04-24T17:24:31-04:00",
+      "created_at": null,
+      "departments": [
+        "5112 General University"
+      ],
+      "hard_gate": {
+        "hit": false,
+        "reason": ""
+      },
+      "hard": {
+        "raw": 8.0,
+        "must_hits": [
+          "python",
+          "machine learning",
+          "git"
+        ],
+        "nice_hits": [
+          "rag"
+        ],
+        "neg_hits": [],
+        "norm": 1.0
+      },
+      "semantic": {
+        "raw": 0.4216968072467883,
+        "cache_reused": true,
+        "norm": 0.6042921692053074
+      },
+      "text_hash": "a03354be29cb2c91a80e9131f92d4251e6d276b3",
+      "final_score": 0.7823606930629191,
+      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=3, nice_hits=1"
+    },
+    {
+      "job_uid": "b35597b79d3ae32f",
+      "source": "greenhouse",
+      "company": "stripe",
+      "title": "Software Engineer, Intern (Summer)",
+      "location": "San Francisco, Seattle, New York City",
+      "url": "https://stripe.com/jobs/search?gh_jid=7210115",
+      "updated_at": "2026-04-24T17:24:30-04:00",
+      "created_at": null,
+      "departments": [
+        "5112 General University"
+      ],
+      "hard_gate": {
+        "hit": false,
+        "reason": ""
+      },
+      "hard": {
+        "raw": 3.0,
+        "must_hits": [
+          "git"
+        ],
+        "nice_hits": [
+          "rag"
+        ],
+        "neg_hits": [],
+        "norm": 0.375
+      },
+      "semantic": {
+        "raw": 0.3415982425209444,
+        "cache_reused": true,
+        "norm": 0.3929800599149601
+      },
+      "text_hash": "23045855f57a04cda6dd2a02b162d64170aae71b",
+      "final_score": 0.38488903295322807,
+      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=1"
+    },
+    {
+      "job_uid": "0df98beef0fc10f8",
+      "source": "greenhouse",
+      "company": "stripe",
+      "title": "Data Analyst, Intern (Master's degree)",
+      "location": "Toronto, Ontario, Canada",
+      "url": "https://stripe.com/jobs/search?gh_jid=7285986",
+      "updated_at": "2026-04-24T17:22:48-04:00",
+      "created_at": null,
+      "departments": [
+        "5112 General University"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "a7ca264d946a84d653e696e840ff1c6150b7698d",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
+    },
+    {
+      "job_uid": "40436a0e8ed94e54",
+      "source": "greenhouse",
+      "company": "stripe",
+      "title": "PhD Data Scientist, Intern",
+      "location": "Toronto, Ontario, Canada",
+      "url": "https://stripe.com/jobs/search?gh_jid=7285974",
+      "updated_at": "2026-04-24T17:22:48-04:00",
+      "created_at": null,
+      "departments": [
+        "5112 General University"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "84e6015f50a7fddcf8a2a8097788a3ede0c2320e",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
+    },
+    {
+      "job_uid": "6cf1094c2066f75b",
+      "source": "greenhouse",
+      "company": "cloudflare",
+      "title": "Technical Program Manager Intern (Summer 2026)",
+      "location": "In-Office",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7702175?gh_jid=7702175",
+      "updated_at": "2026-04-24T14:08:45-04:00",
+      "created_at": null,
+      "departments": [
+        "Engineering"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "9d5d35d05293e1e49f50d632703fda309d20cc41",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
+    },
     {
       "job_uid": "84d676899abd4e20",
       "source": "greenhouse",
@@ -576,208 +810,6 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
-      "job_uid": "0df98beef0fc10f8",
-      "source": "greenhouse",
-      "company": "stripe",
-      "title": "Data Analyst, Intern (Master's degree)",
-      "location": "Toronto, Ontario, Canada",
-      "url": "https://stripe.com/jobs/search?gh_jid=7285986",
-      "updated_at": "2026-04-22T12:24:13-04:00",
-      "created_at": null,
-      "departments": [
-        "5112 General University"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "a7ca264d946a84d653e696e840ff1c6150b7698d",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
-      "job_uid": "40436a0e8ed94e54",
-      "source": "greenhouse",
-      "company": "stripe",
-      "title": "PhD Data Scientist, Intern",
-      "location": "Toronto, Ontario, Canada",
-      "url": "https://stripe.com/jobs/search?gh_jid=7285974",
-      "updated_at": "2026-04-22T12:24:13-04:00",
-      "created_at": null,
-      "departments": [
-        "5112 General University"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "84e6015f50a7fddcf8a2a8097788a3ede0c2320e",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
-      "job_uid": "5936ffed28038e5d",
-      "source": "greenhouse",
-      "company": "stripe",
-      "title": "PhD Machine Learning Engineer, Intern",
-      "location": "San Francisco, New York City, Seattle",
-      "url": "https://stripe.com/jobs/search?gh_jid=7216664",
-      "updated_at": "2026-04-22T12:24:13-04:00",
-      "created_at": null,
-      "departments": [
-        "5112 General University"
-      ],
-      "hard_gate": {
-        "hit": false,
-        "reason": ""
-      },
-      "hard": {
-        "raw": 8.0,
-        "must_hits": [
-          "python",
-          "machine learning",
-          "git"
-        ],
-        "nice_hits": [
-          "rag"
-        ],
-        "neg_hits": [],
-        "norm": 1.0
-      },
-      "semantic": {
-        "raw": 0.4216968072467883,
-        "cache_reused": true,
-        "norm": 0.6042921692053074
-      },
-      "text_hash": "a03354be29cb2c91a80e9131f92d4251e6d276b3",
-      "final_score": 0.7823606930629191,
-      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=3, nice_hits=1"
-    },
-    {
-      "job_uid": "8b6b0a9b6e604956",
-      "source": "greenhouse",
-      "company": "stripe",
-      "title": "Software Engineer, Intern",
-      "location": "Sydney, Australia",
-      "url": "https://stripe.com/jobs/search?gh_jid=7532256",
-      "updated_at": "2026-04-22T12:24:13-04:00",
-      "created_at": null,
-      "departments": [
-        "5112 General University"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "2b1d064990c9520a7e0f962a687e84161edd81d2",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
-      "job_uid": "b35597b79d3ae32f",
-      "source": "greenhouse",
-      "company": "stripe",
-      "title": "Software Engineer, Intern (Summer)",
-      "location": "San Francisco, Seattle, New York City",
-      "url": "https://stripe.com/jobs/search?gh_jid=7210115",
-      "updated_at": "2026-04-22T12:24:13-04:00",
-      "created_at": null,
-      "departments": [
-        "5112 General University"
-      ],
-      "hard_gate": {
-        "hit": false,
-        "reason": ""
-      },
-      "hard": {
-        "raw": 3.0,
-        "must_hits": [
-          "git"
-        ],
-        "nice_hits": [
-          "rag"
-        ],
-        "neg_hits": [],
-        "norm": 0.375
-      },
-      "semantic": {
-        "raw": 0.3415982425209444,
-        "cache_reused": true,
-        "norm": 0.3929800599149601
-      },
-      "text_hash": "23045855f57a04cda6dd2a02b162d64170aae71b",
-      "final_score": 0.38488903295322807,
-      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=1"
-    },
-    {
-      "job_uid": "36c23753093aa256",
-      "source": "greenhouse",
-      "company": "stripe",
-      "title": "University Recruiter (Fixed Term Contract)",
-      "location": "Dublin",
-      "url": "https://stripe.com/jobs/search?gh_jid=7684280",
-      "updated_at": "2026-04-22T12:24:13-04:00",
-      "created_at": null,
-      "departments": [
-        "6526 University Recruiting"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "4a29d8e2cc8c26650e6861a3e8b2b3599901da7c",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
       "job_uid": "6fd914cd3b9a2110",
       "source": "ashby",
       "company": "cohere",
@@ -939,12 +971,12 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
-      "job_uid": "53b0458fada070f9",
+      "job_uid": "11b3efa06fa10eda",
       "source": "greenhouse",
       "company": "cloudflare",
       "title": "Content Marketing Intern (July to December 2026)",
       "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7733168?gh_jid=7733168",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7834688?gh_jid=7834688",
       "updated_at": "2026-04-21T15:53:17-04:00",
       "created_at": null,
       "departments": [
@@ -971,12 +1003,12 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
-      "job_uid": "11b3efa06fa10eda",
+      "job_uid": "53b0458fada070f9",
       "source": "greenhouse",
       "company": "cloudflare",
       "title": "Content Marketing Intern (July to December 2026)",
       "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7834688?gh_jid=7834688",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7733168?gh_jid=7733168",
       "updated_at": "2026-04-21T15:53:17-04:00",
       "created_at": null,
       "departments": [
@@ -1035,38 +1067,6 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
-      "job_uid": "1b305ba196d259ae",
-      "source": "greenhouse",
-      "company": "cloudflare",
-      "title": "Customer Advocacy Intern (Summer 2026)",
-      "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7743202?gh_jid=7743202",
-      "updated_at": "2026-04-21T15:53:17-04:00",
-      "created_at": null,
-      "departments": [
-        "University"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "4be4b3fbb48060cecd8bf6c235301af2551a29f3",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
       "job_uid": "d6a26d45a3bd7422",
       "source": "greenhouse",
       "company": "cloudflare",
@@ -1095,6 +1095,38 @@
         "norm": 0.0
       },
       "text_hash": "948e16b18aec4d52e0795707aaf720d6bfed6f67",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
+    },
+    {
+      "job_uid": "1b305ba196d259ae",
+      "source": "greenhouse",
+      "company": "cloudflare",
+      "title": "Customer Advocacy Intern (Summer 2026)",
+      "location": "In-Office",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7743202?gh_jid=7743202",
+      "updated_at": "2026-04-21T15:53:17-04:00",
+      "created_at": null,
+      "departments": [
+        "University"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "4be4b3fbb48060cecd8bf6c235301af2551a29f3",
       "final_score": 0.0,
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
@@ -1259,38 +1291,6 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
-      "job_uid": "925a02e54fc23cc1",
-      "source": "greenhouse",
-      "company": "cloudflare",
-      "title": "Global Trade Compliance Intern (Summer 2026)",
-      "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7799138?gh_jid=7799138",
-      "updated_at": "2026-04-21T15:53:17-04:00",
-      "created_at": null,
-      "departments": [
-        "Legal, Policy, Trust & Safety"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "97f0996cf762d57fffc6b9b5677076d362a5e114",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
       "job_uid": "ff929f51ee96652f",
       "source": "greenhouse",
       "company": "cloudflare",
@@ -1319,6 +1319,38 @@
         "norm": 0.0
       },
       "text_hash": "6cd20efcd441c051151d42c77a42a5af4c48d58c",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
+    },
+    {
+      "job_uid": "925a02e54fc23cc1",
+      "source": "greenhouse",
+      "company": "cloudflare",
+      "title": "Global Trade Compliance Intern (Summer 2026)",
+      "location": "In-Office",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7799138?gh_jid=7799138",
+      "updated_at": "2026-04-21T15:53:17-04:00",
+      "created_at": null,
+      "departments": [
+        "Legal, Policy, Trust & Safety"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "97f0996cf762d57fffc6b9b5677076d362a5e114",
       "final_score": 0.0,
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
@@ -2027,38 +2059,6 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
-      "job_uid": "204693732bd8fb17",
-      "source": "greenhouse",
-      "company": "cloudflare",
-      "title": "Research Engineer Intern (Summer 2026)",
-      "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7359136?gh_jid=7359136",
-      "updated_at": "2026-04-21T15:53:17-04:00",
-      "created_at": null,
-      "departments": [
-        "Technology Research"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "83f9912aef29fe76cc29fd7b86038a167a9e1b13",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
       "job_uid": "f8130720f1e526c2",
       "source": "greenhouse",
       "company": "cloudflare",
@@ -2087,6 +2087,38 @@
         "norm": 0.0
       },
       "text_hash": "a4fdab4a5c97689df052839e8c7481a7c62f7e64",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
+    },
+    {
+      "job_uid": "204693732bd8fb17",
+      "source": "greenhouse",
+      "company": "cloudflare",
+      "title": "Research Engineer Intern (Summer 2026)",
+      "location": "In-Office",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7359136?gh_jid=7359136",
+      "updated_at": "2026-04-21T15:53:17-04:00",
+      "created_at": null,
+      "departments": [
+        "Technology Research"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "83f9912aef29fe76cc29fd7b86038a167a9e1b13",
       "final_score": 0.0,
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
@@ -2347,38 +2379,6 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
-      "job_uid": "a69b027a9f170de6",
-      "source": "greenhouse",
-      "company": "cloudflare",
-      "title": "Security Engineer Intern (Summer 2026)",
-      "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7582150?gh_jid=7582150",
-      "updated_at": "2026-04-21T15:53:17-04:00",
-      "created_at": null,
-      "departments": [
-        "University"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "b692e84bf8f2c348585fb30aab9e673005736002",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
       "job_uid": "119fb7f9439c736c",
       "source": "greenhouse",
       "company": "cloudflare",
@@ -2407,6 +2407,38 @@
         "norm": 0.0
       },
       "text_hash": "a4ba11071b2eae0830b8c79139a5bec720f95568",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
+    },
+    {
+      "job_uid": "a69b027a9f170de6",
+      "source": "greenhouse",
+      "company": "cloudflare",
+      "title": "Security Engineer Intern (Summer 2026)",
+      "location": "In-Office",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7582150?gh_jid=7582150",
+      "updated_at": "2026-04-21T15:53:17-04:00",
+      "created_at": null,
+      "departments": [
+        "University"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "b692e84bf8f2c348585fb30aab9e673005736002",
       "final_score": 0.0,
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
@@ -2507,6 +2539,38 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
+      "job_uid": "407978ce577dfdd3",
+      "source": "greenhouse",
+      "company": "cloudflare",
+      "title": "Solutions Engineer Intern (Summer 2026)",
+      "location": "In-Office",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7765500?gh_jid=7765500",
+      "updated_at": "2026-04-21T15:53:17-04:00",
+      "created_at": null,
+      "departments": [
+        "University"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "566721001806914b3ce8575e3c7879c73814b268",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
+    },
+    {
       "job_uid": "317f941bfe07a06d",
       "source": "greenhouse",
       "company": "cloudflare",
@@ -2567,38 +2631,6 @@
         "norm": 0.0
       },
       "text_hash": "80837342c40c3d669a8032e3063fd5e04ea9e11c",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
-      "job_uid": "407978ce577dfdd3",
-      "source": "greenhouse",
-      "company": "cloudflare",
-      "title": "Solutions Engineer Intern (Summer 2026)",
-      "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7765500?gh_jid=7765500",
-      "updated_at": "2026-04-21T15:53:17-04:00",
-      "created_at": null,
-      "departments": [
-        "University"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "566721001806914b3ce8575e3c7879c73814b268",
       "final_score": 0.0,
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
@@ -2731,16 +2763,16 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
-      "job_uid": "6cf1094c2066f75b",
+      "job_uid": "7950393738c7965e",
       "source": "greenhouse",
       "company": "cloudflare",
-      "title": "Technical Program Manager Intern (Summer 2026)",
+      "title": "Technical Support Engineer Intern (Summer 2026)",
       "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7702175?gh_jid=7702175",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7726879?gh_jid=7726879",
       "updated_at": "2026-04-21T15:53:17-04:00",
       "created_at": null,
       "departments": [
-        "Engineering"
+        "Customer Support"
       ],
       "hard_gate": {
         "hit": true,
@@ -2758,7 +2790,7 @@
         "cache_reused": false,
         "norm": 0.0
       },
-      "text_hash": "ebf5dd350d2a485448af04e1a1e4db9f9fc8f3da",
+      "text_hash": "6379683bdb0aa2b7f86615d4e167e79db849e6fc",
       "final_score": 0.0,
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
@@ -2795,38 +2827,6 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
-      "job_uid": "7950393738c7965e",
-      "source": "greenhouse",
-      "company": "cloudflare",
-      "title": "Technical Support Engineer Intern (Summer 2026)",
-      "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7726879?gh_jid=7726879",
-      "updated_at": "2026-04-21T15:53:17-04:00",
-      "created_at": null,
-      "departments": [
-        "Customer Support"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "6379683bdb0aa2b7f86615d4e167e79db849e6fc",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
       "job_uid": "1003bed5d158833c",
       "source": "greenhouse",
       "company": "cloudflare",
@@ -2859,38 +2859,6 @@
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
-      "job_uid": "9512fc6c152f2bec",
-      "source": "greenhouse",
-      "company": "cloudflare",
-      "title": "Threat Detection and Incident Response Intern (Summer 2026)",
-      "location": "In-Office",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/7578761?gh_jid=7578761",
-      "updated_at": "2026-04-21T15:53:17-04:00",
-      "created_at": null,
-      "departments": [
-        "Security"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "7e8f22fd1c6ed40e9d59249de77604d9d6a93115",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
-    },
-    {
       "job_uid": "bfd0141092a4e750",
       "source": "greenhouse",
       "company": "cloudflare",
@@ -2919,6 +2887,38 @@
         "norm": 0.0
       },
       "text_hash": "461812349a27374326edddf9da0d61559cbd747f",
+      "final_score": 0.0,
+      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
+    },
+    {
+      "job_uid": "9512fc6c152f2bec",
+      "source": "greenhouse",
+      "company": "cloudflare",
+      "title": "Threat Detection and Incident Response Intern (Summer 2026)",
+      "location": "In-Office",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/7578761?gh_jid=7578761",
+      "updated_at": "2026-04-21T15:53:17-04:00",
+      "created_at": null,
+      "departments": [
+        "Security"
+      ],
+      "hard_gate": {
+        "hit": true,
+        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
+      },
+      "hard": {
+        "raw": 0.0,
+        "must_hits": [],
+        "nice_hits": [],
+        "neg_hits": [],
+        "norm": 0.0
+      },
+      "semantic": {
+        "raw": 0.0,
+        "cache_reused": false,
+        "norm": 0.0
+      },
+      "text_hash": "7e8f22fd1c6ed40e9d59249de77604d9d6a93115",
       "final_score": 0.0,
       "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
@@ -3085,38 +3085,6 @@
       "text_hash": "4085c4b7198e58d55fa17e8fec5d2a53c89a58c1",
       "final_score": 0.4527026706057536,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=1"
-    },
-    {
-      "job_uid": "a5861061367b4e31",
-      "source": "greenhouse",
-      "company": "asana",
-      "title": "Software Engineering Intern - Summer 2026 (Reykjavik)",
-      "location": "Reykjavík",
-      "url": "https://www.asana.com/jobs/apply/7490314?gh_jid=7490314",
-      "updated_at": "2026-04-20T12:42:26-04:00",
-      "created_at": null,
-      "departments": [
-        "Internship"
-      ],
-      "hard_gate": {
-        "hit": true,
-        "reason": "location_not_allowed (allowlist: US/China/Singapore)"
-      },
-      "hard": {
-        "raw": 0.0,
-        "must_hits": [],
-        "nice_hits": [],
-        "neg_hits": [],
-        "norm": 0.0
-      },
-      "semantic": {
-        "raw": 0.0,
-        "cache_reused": false,
-        "norm": 0.0
-      },
-      "text_hash": "9634866656e3b846bc4a6c6a66ff070fb0fa625b",
-      "final_score": 0.0,
-      "final_reason": "Hard gate hit: location_not_allowed (allowlist: US/China/Singapore)"
     },
     {
       "job_uid": "9df691459bcd1052",
@@ -3509,41 +3477,6 @@
       "text_hash": "9822a2c19ffa79334ffdcdccf3fd99ccce7fbed9",
       "final_score": 0.60439907396199,
       "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=1"
-    },
-    {
-      "job_uid": "6a37b4fca05c2c26",
-      "source": "ashby",
-      "company": "openai",
-      "title": "Go to Market Strategy Internship / Co-op, Emerging Talent (Summer 2026)",
-      "location": "San Francisco",
-      "url": "https://jobs.ashbyhq.com/openai/d6d4fbf8-1976-4745-bf48-1a3cca5503b9/application",
-      "updated_at": "2026-04-03T02:39:34.652+00:00",
-      "created_at": "2026-04-03T02:39:34.652+00:00",
-      "departments": [
-        "Strategy & Operations",
-        "Strategy & Operations"
-      ],
-      "hard_gate": {
-        "hit": false,
-        "reason": ""
-      },
-      "hard": {
-        "raw": 2.0,
-        "must_hits": [],
-        "nice_hits": [
-          "rag"
-        ],
-        "neg_hits": [],
-        "norm": 0.25
-      },
-      "semantic": {
-        "raw": 0.35068267583811974,
-        "cache_reused": true,
-        "norm": 0.4169461668299876
-      },
-      "text_hash": "cecf913cefe63191c041e18c9a647755f62de425",
-      "final_score": 0.3418203917564932,
-      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=1"
     },
     {
       "job_uid": "f786bdd2cda47cba",
