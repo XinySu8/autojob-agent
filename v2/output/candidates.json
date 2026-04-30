@@ -2,9 +2,9 @@
   "meta": {
     "engine_name": "AutoJob-Agent Feeder",
     "version": 2,
-    "generated_at": "2026-04-29T17:01:03.464692+00:00",
-    "source_jobs_count": 137,
-    "candidates_count": 21,
+    "generated_at": "2026-04-30T16:56:49.971748+00:00",
+    "source_jobs_count": 135,
+    "candidates_count": 19,
     "candidates_topN_total": 150,
     "thresholds": {
       "apply": 0.72,
@@ -29,9 +29,9 @@
       "scores": {
         "hard_raw": 8.0,
         "hard_norm": 1.0,
-        "semantic_raw": 0.42169692178885754,
-        "semantic_norm": 0.6042920912943734,
-        "final": 0.7823606502119054
+        "semantic_raw": 0.4216969171216295,
+        "semantic_norm": 0.6042919504479011,
+        "final": 0.7823605727463456
       },
       "signals": {
         "must_hits": [
@@ -68,9 +68,9 @@
       "scores": {
         "hard_raw": 5.0,
         "hard_norm": 0.625,
-        "semantic_raw": 0.5319120883936331,
-        "semantic_norm": 0.8950561613104729,
-        "final": 0.7735308887207601
+        "semantic_raw": 0.5319121200980661,
+        "semantic_norm": 0.8950561448084714,
+        "final": 0.7735308796446594
       },
       "signals": {
         "must_hits": [
@@ -90,44 +90,6 @@
       "jd_excerpt": "Secure Every Identity, from AI to Human Identity is the key to unlocking the potential of AI. Okta secures AI by building the trusted, neutral infrastructure that enables organizations to safely embrace this new era. This work requires a relentless drive to solve complex challenges with real-world stakes. We are looking for builders and owners who operate with speed and urgency and execute with excellence. This is an opportunity to do career-defining work. We're all in on this mission. If you are too, let's talk. About the Internship: We are looking for an inquisitive and detail-oriented AI Co"
     },
     {
-      "job_uid": "a8cacd3df10146bd",
-      "source": "greenhouse",
-      "job_id": "a8cacd3df10146bd",
-      "company": "datadog",
-      "title": "IT Support Technician Intern",
-      "location": "Boston, Massachusetts, USA",
-      "url": "https://careers.datadoghq.com/detail/7391788/?gh_jid=7391788",
-      "departments": [
-        "Engineering Interns"
-      ],
-      "created_at": null,
-      "updated_at": "2026-04-23T13:41:00-04:00",
-      "scores": {
-        "hard_raw": 4.0,
-        "hard_norm": 0.5,
-        "semantic_raw": 0.5347860178218511,
-        "semantic_norm": 0.9026380163602796,
-        "final": 0.7214509089981539
-      },
-      "signals": {
-        "must_hits": [
-          "git",
-          "cloud"
-        ],
-        "nice_hits": [
-          "rag"
-        ],
-        "neg_hits": []
-      },
-      "text_hash": "d7d3cf98693fabd7fe201384b112de4890b07fd0",
-      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=1",
-      "hard_gate": {
-        "hit": false,
-        "reason": ""
-      },
-      "jd_excerpt": "We're looking for IT support interns to join Datadog's Enterprise IT organization — the team responsible for managing the internal tools, systems, and services that keep Datadog running smoothly as we scale. As part of this team, you'll work alongside IT professionals to troubleshoot issues, support employee onboarding and offboarding, manage SaaS applications, and help maintain the infrastructure that internal teams rely on every day. This means providing excellent customer service to our employees to support thousands of endpoint devices such as macOS, iOS, Chrome OS and Windows. In addition"
-    },
-    {
       "job_uid": "e7c78b9db66d7e52",
       "source": "greenhouse",
       "job_id": "e7c78b9db66d7e52",
@@ -143,7 +105,7 @@
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.25,
-        "semantic_raw": 0.5716914279271267,
+        "semantic_raw": 0.5716914620025952,
         "semantic_norm": 1.0,
         "final": 0.6625000000000001
       },
@@ -163,6 +125,41 @@
       "jd_excerpt": "About the Program The Scale AI Technical Advisor Specialist (Part-Time Internship) role is a summer semester opportunity designed for university students, ideally with experience in competitive coding, mathematics, and STEM disciplines. These Specialists will immerse themselves in real-world projects that push the boundaries of generative AI, gaining firsthand exposure to cutting-edge research and technology. Throughout the program, you’ll have the freedom to work flexibly around your academic schedule, the chance to connect directly with AI experts, and the support of a team that values your "
     },
     {
+      "job_uid": "a8cacd3df10146bd",
+      "source": "greenhouse",
+      "job_id": "a8cacd3df10146bd",
+      "company": "datadog",
+      "title": "IT Support Technician Intern",
+      "location": "Boston, Massachusetts, USA",
+      "url": "https://careers.datadoghq.com/detail/7391788/?gh_jid=7391788",
+      "departments": [
+        "Engineering Interns"
+      ],
+      "created_at": null,
+      "updated_at": "2026-04-23T13:41:00-04:00",
+      "scores": {
+        "hard_raw": 2.0,
+        "hard_norm": 0.25,
+        "semantic_raw": 0.5347861093022375,
+        "semantic_norm": 0.9026381582964883,
+        "final": 0.6089509870630686
+      },
+      "signals": {
+        "must_hits": [],
+        "nice_hits": [
+          "rag"
+        ],
+        "neg_hits": []
+      },
+      "text_hash": "250a71396f83dfa1e4540be9bafad92cd94efb1b",
+      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=0, nice_hits=1",
+      "hard_gate": {
+        "hit": false,
+        "reason": ""
+      },
+      "jd_excerpt": "We're looking for IT support interns to join Datadog's Enterprise IT organization — the team responsible for managing the internal tools, systems, and services that keep Datadog running smoothly as we scale. As part of this team, you'll work alongside IT professionals to troubleshoot issues, support employee onboarding and offboarding, manage SaaS applications, and help maintain the infrastructure that internal teams rely on every day. This means providing excellent customer service to our employees to support thousands of endpoint devices such as macOS, iOS, Chrome OS and Windows. In addition"
+    },
+    {
       "job_uid": "d34d7d626a0a1cfe",
       "source": "ashby",
       "job_id": "d34d7d626a0a1cfe",
@@ -179,9 +176,9 @@
       "scores": {
         "hard_raw": 7.0,
         "hard_norm": 0.875,
-        "semantic_raw": 0.33781462907757354,
-        "semantic_norm": 0.38299807539476927,
-        "final": 0.6043989414671231
+        "semantic_raw": 0.3378146492128957,
+        "semantic_norm": 0.3829979783736952,
+        "final": 0.6043988881055323
       },
       "signals": {
         "must_hits": [
@@ -217,9 +214,9 @@
       "scores": {
         "hard_raw": 4.0,
         "hard_norm": 0.5,
-        "semantic_raw": 0.42937227662593563,
-        "semantic_norm": 0.6245408236603044,
-        "final": 0.5684974530131675
+        "semantic_raw": 0.4293723320208466,
+        "semantic_norm": 0.6245408432438534,
+        "final": 0.5684974637841194
       },
       "signals": {
         "must_hits": [
@@ -254,9 +251,9 @@
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.25,
-        "semantic_raw": 0.4849218744127819,
-        "semantic_norm": 0.7710889588927278,
-        "final": 0.5365989273910003
+        "semantic_raw": 0.48492190241765165,
+        "semantic_norm": 0.7710889205264038,
+        "final": 0.5365989062895221
       },
       "signals": {
         "must_hits": [
@@ -274,44 +271,6 @@
       "jd_excerpt": "This posting is for candidates (interested in research intern roles) who attended ICLR '26 and met with a member of our team. It was great meeting you at ICLR 2026! Whether we chatted at our booth, during a poster session, or one of the workshops – we’re thrilled to connect with people who are passionate about pushing the boundaries of machine learning and AI. At Scale AI, our mission is to develop reliable AI systems for the world's most important decisions. For 9 years, Scale has been the leading AI data foundry, helping fuel the most exciting advancements in AI, including: generative AI, de"
     },
     {
-      "job_uid": "b9687758003a7afe",
-      "source": "greenhouse",
-      "job_id": "b9687758003a7afe",
-      "company": "databricks",
-      "title": "MBA Intern - Product Pricing & Commercialization",
-      "location": "San Francisco, California",
-      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8402615002",
-      "departments": [
-        "Business Strategy and Ops"
-      ],
-      "created_at": null,
-      "updated_at": "2026-04-26T17:42:14-04:00",
-      "scores": {
-        "hard_raw": 4.0,
-        "hard_norm": 0.5,
-        "semantic_raw": 0.39330232143362764,
-        "semantic_norm": 0.5293828948552557,
-        "final": 0.5161605921703907
-      },
-      "signals": {
-        "must_hits": [
-          "sql",
-          "cloud"
-        ],
-        "nice_hits": [
-          "mlflow"
-        ],
-        "neg_hits": []
-      },
-      "text_hash": "74653d00ae62fa99557cd119549a606c506cf2af",
-      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=2, nice_hits=1",
-      "hard_gate": {
-        "hit": false,
-        "reason": ""
-      },
-      "jd_excerpt": "RDQ227R1172 &nbsp; At Databricks, we are passionate about helping data teams solve the world's toughest problems — from making the next mode of transportation a reality to accelerating the development of medical breakthroughs. We do this by building and running the world's best data and AI infrastructure platform so our customers can use deep data insights to improve their business. As a Product Pricing &amp; Commercialization Intern, you will join our world-class Commercialization team to help shape the monetization strategies that power Databricks’ hyper-growth. During your 12-week internshi"
-    },
-    {
       "job_uid": "5c98c9a4fc5ce4d5",
       "source": "greenhouse",
       "job_id": "5c98c9a4fc5ce4d5",
@@ -327,9 +286,9 @@
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.375,
-        "semantic_raw": 0.4150812575265344,
-        "semantic_norm": 0.5868389809282564,
-        "final": 0.49151143951054105
+        "semantic_raw": 0.41508134187196016,
+        "semantic_norm": 0.5868390732063369,
+        "final": 0.49151149026348534
       },
       "signals": {
         "must_hits": [
@@ -363,9 +322,9 @@
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.25,
-        "semantic_raw": 0.4462468890094401,
-        "semantic_norm": 0.6690585713326036,
-        "final": 0.480482214232932
+        "semantic_raw": 0.44624688580550465,
+        "semantic_norm": 0.6690584406704007,
+        "final": 0.4804821423687204
       },
       "signals": {
         "must_hits": [
@@ -399,9 +358,9 @@
       "scores": {
         "hard_raw": 7.0,
         "hard_norm": 0.875,
-        "semantic_raw": 0.24440196156477328,
-        "semantic_norm": 0.13656150741787523,
-        "final": 0.46885882907983134
+        "semantic_raw": 0.24440200593459044,
+        "semantic_norm": 0.13656145026863276,
+        "final": 0.468858797647748
       },
       "signals": {
         "must_hits": [
@@ -437,9 +396,9 @@
       "scores": {
         "hard_raw": 1.0,
         "hard_norm": 0.125,
-        "semantic_raw": 0.469589471816547,
-        "semantic_norm": 0.7306397909665641,
-        "final": 0.4581018850316103
+        "semantic_raw": 0.46958958921323485,
+        "semantic_norm": 0.7306399844797197,
+        "final": 0.4581019914638459
       },
       "signals": {
         "must_hits": [
@@ -476,9 +435,9 @@
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.375,
-        "semantic_raw": 0.3917254209514515,
-        "semantic_norm": 0.5252227958749397,
-        "final": 0.45762253773121686
+        "semantic_raw": 0.3917254741024317,
+        "semantic_norm": 0.5252227998411202,
+        "final": 0.45762253991261614
       },
       "signals": {
         "must_hits": [
@@ -513,9 +472,9 @@
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.25,
-        "semantic_raw": 0.42710143327670297,
-        "semantic_norm": 0.6185499997570969,
-        "final": 0.4527024998664033
+        "semantic_raw": 0.4271014587339338,
+        "semantic_norm": 0.6185499397756149,
+        "final": 0.4527024668765882
       },
       "signals": {
         "must_hits": [],
@@ -531,41 +490,6 @@
         "reason": ""
       },
       "jd_excerpt": "At Asana we’re looking for curious, collaborative, and creative students to join our 12-week summer Product Design internship program. This program focuses on bringing students currently studying at a college or university into our Design team to develop and work on complex and challenging problems. During this internship, you’ll work directly with dedicated Design mentors who are trained and motivated to ensure your success. You’ll also have the opportunity to work with Engineering, User Research, Product Management, Data Science, and the rest of our amazing Design crew to ship experiences th"
-    },
-    {
-      "job_uid": "050a6501fa108492",
-      "source": "greenhouse",
-      "job_id": "050a6501fa108492",
-      "company": "okta",
-      "title": "Product Marketing Intern, Orchestration (Summer 2026)",
-      "location": "San Francisco, California",
-      "url": "https://www.okta.com/company/careers/opportunity/7821767?gh_jid=7821767",
-      "departments": [
-        "Product Marketing-530"
-      ],
-      "created_at": null,
-      "updated_at": "2026-04-29T12:24:52-04:00",
-      "scores": {
-        "hard_raw": 2.0,
-        "hard_norm": 0.25,
-        "semantic_raw": 0.4247719049449487,
-        "semantic_norm": 0.6124043561054605,
-        "final": 0.4493223958580033
-      },
-      "signals": {
-        "must_hits": [
-          "machine learning"
-        ],
-        "nice_hits": [],
-        "neg_hits": []
-      },
-      "text_hash": "b481ea7c482cfa41d901164d51acb8ff6bc05514",
-      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=0",
-      "hard_gate": {
-        "hit": false,
-        "reason": ""
-      },
-      "jd_excerpt": "Secure Every Identity, from AI to Human Identity is the key to unlocking the potential of AI. Okta secures AI by building the trusted, neutral infrastructure that enables organizations to safely embrace this new era. This work requires a relentless drive to solve complex challenges with real-world stakes. We are looking for builders and owners who operate with speed and urgency and execute with excellence. This is an opportunity to do career-defining work. We're all in on this mission. If you are too, let's talk. Okta is The World’s Identity Company. We free everyone to safely use any technolo"
     },
     {
       "job_uid": "b230852d1c35c17a",
@@ -584,9 +508,9 @@
       "scores": {
         "hard_raw": 7.0,
         "hard_norm": 0.875,
-        "semantic_raw": 0.21998427629355108,
-        "semantic_norm": 0.07214400691821983,
-        "final": 0.4334292038050209
+        "semantic_raw": 0.2199843192079632,
+        "semantic_norm": 0.0721439396395914,
+        "final": 0.43342916680177523
       },
       "signals": {
         "must_hits": [
@@ -622,9 +546,9 @@
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.25,
-        "semantic_raw": 0.4066547155376182,
-        "semantic_norm": 0.56460850466681,
-        "final": 0.4230346775667455
+        "semantic_raw": 0.4066547397761296,
+        "semantic_norm": 0.5646084362032449,
+        "final": 0.4230346399117847
       },
       "signals": {
         "must_hits": [],
@@ -657,9 +581,9 @@
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.25,
-        "semantic_raw": 0.4028390049930358,
-        "semantic_norm": 0.5545420903780703,
-        "final": 0.4174981497079387
+        "semantic_raw": 0.4028390588064373,
+        "semantic_norm": 0.5545420989545919,
+        "final": 0.4174981544250256
       },
       "signals": {
         "must_hits": [
@@ -693,9 +617,9 @@
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.25,
-        "semantic_raw": 0.3893846273418347,
-        "semantic_norm": 0.5190474327378453,
-        "final": 0.3979760880058149
+        "semantic_raw": 0.3893847101556169,
+        "semantic_norm": 0.5190475143559645,
+        "final": 0.3979761328957805
       },
       "signals": {
         "must_hits": [],
@@ -728,9 +652,9 @@
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.375,
-        "semantic_raw": 0.34159839153255633,
-        "semantic_norm": 0.3929802058517334,
-        "final": 0.3848891132184534
+        "semantic_raw": 0.34159835228876,
+        "semantic_norm": 0.3929799531543296,
+        "final": 0.38488897423488133
       },
       "signals": {
         "must_hits": [
@@ -766,9 +690,9 @@
       "scores": {
         "hard_raw": 4.0,
         "hard_norm": 0.5,
-        "semantic_raw": 0.2915545701977675,
-        "semantic_norm": 0.2609571311814345,
-        "final": 0.368526422149789
+        "semantic_raw": 0.2915546769827477,
+        "semantic_norm": 0.2609572508388827,
+        "final": 0.36852648796138554
       },
       "signals": {
         "must_hits": [
