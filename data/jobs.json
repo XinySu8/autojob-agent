@@ -1,15 +1,15 @@
 {
-  "generated_at_utc": "2026-05-02T16:07:52.984443+00:00",
-  "today_utc": "2026-05-02",
-  "fetched_count": 6731,
+  "generated_at_utc": "2026-05-03T16:08:09.610342+00:00",
+  "today_utc": "2026-05-03",
+  "fetched_count": 6729,
   "filtered_count": 134,
   "count": 134,
-  "today_count": 3,
-  "backlog_count": 131,
+  "today_count": 0,
+  "backlog_count": 134,
   "per_company_fetched": {
-    "openai": 672,
-    "anthropic": 442,
-    "databricks": 822,
+    "openai": 671,
+    "anthropic": 443,
+    "databricks": 823,
     "cohere": 124,
     "perplexity": 68,
     "langchain": 89,
@@ -18,7 +18,7 @@
     "replit": 84,
     "ramp": 116,
     "zapier": 25,
-    "sierra": 131,
+    "sierra": 129,
     "elevenlabs": 137,
     "ashby": 60,
     "notion": 140,
@@ -33,7 +33,7 @@
     "magnetforensics": 36,
     "shieldai": 286,
     "cfsenergy": 65,
-    "zoox": 218,
+    "zoox": 217,
     "stripe": 503,
     "scaleai": 170,
     "figma": 159,
@@ -48,9 +48,9 @@
     "square": 170
   },
   "per_source_fetched": {
-    "ashby": 1818,
-    "greenhouse": 4085,
-    "lever": 828
+    "ashby": 1815,
+    "greenhouse": 4087,
+    "lever": 827
   },
   "errors": [
     "[config] auto-fixed target for company='notion' -> source='ashby'",

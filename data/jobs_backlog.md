@@ -1,9 +1,12 @@
 # Job feed (backlog)
-Generated at (UTC): 2026-05-02T16:07:52.984443+00:00
-Today (UTC): 2026-05-02
-Total jobs: 131
+Generated at (UTC): 2026-05-03T16:08:09.610342+00:00
+Today (UTC): 2026-05-03
+Total jobs: 134
 
 ## Jobs
+- [cohere] Research Internship (Fall / Winter 2026) (Canada) 鈥?ashby 鈥?https://jobs.ashbyhq.com/cohere/73bd3e2b-6597-4124-b64b-1e5dbc32e785/application
+- [cohere] Software Engineer Intern (Fall / Winter 2026) (Canada) 鈥?ashby 鈥?https://jobs.ashbyhq.com/cohere/8c035d3d-081d-4c8a-914a-72f4efaad254/application
+- [stripe] PhD Data Scientist, Intern (San Francisco, New York City, Seattle, Chicago) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7874965
 - [openai] Business Insights Intern (San Francisco) 鈥?ashby 鈥?https://jobs.ashbyhq.com/openai/821168d6-c97c-457a-9187-88a2cb95ba32/application
 - [stripe] PhD Machine Learning Engineer, Intern (San Francisco, New York City, Seattle) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7216664
 - [stripe] PhD Data Scientist, Intern (Toronto, Ontario, Canada) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7285974
