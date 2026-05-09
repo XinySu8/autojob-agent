@@ -1,6 +1,22 @@
 {
-  "generated_at_utc": "2026-05-08T16:50:49.118418+00:00",
-  "today_utc": "2026-05-08",
-  "count": 0,
-  "jobs": []
+  "generated_at_utc": "2026-05-09T16:14:39.183611+00:00",
+  "today_utc": "2026-05-09",
+  "count": 1,
+  "jobs": [
+    {
+      "id": "6233f3131208be6e",
+      "source": "lever",
+      "company": "zoox",
+      "title": "PT Student Worker-AI Driven trouble shooting Robot",
+      "location": "Foster City, CA",
+      "url": "https://jobs.lever.co/zoox/0bb2dd41-e6a9-41a5-bafc-8a438f0a7cca",
+      "updated_at": 1776461154764,
+      "created_at": 1776461154764,
+      "departments": [
+        "Software"
+      ],
+      "content_text": "About Zoox\nZoox is transforming mobility with fully autonomous, electric vehicles designed from the ground up for a driverless future. Our mission is to make transportation safer, more sustainable, and accessible to everyone. At Zoox, innovation, collaboration, and a bold vision for the future drive everything we do.\nAbout Our Part Time Student Worker Program\nZoox’s program offers hands-on experience with cutting-edge technology, mentorship from some of the industry’s brightest minds, and the opportunity to make meaningful contributions to real projects. We seek part time student workers  who demonstrate strong academic performance, engagement beyond the classroom, intellectual curiosity, and a genuine interest in Zoox’s mission.\nProject Overview\nThis opportunity is in the area of Robot validation which includes HW/FW/SW validation. PT Student-Workers on this team will have the chance to work on current and new robot platforms.",
+      "content_plain": "About Zoox\nZoox is transforming mobility with fully autonomous, electric vehicles designed from the ground up for a driverless future. Our mission is to make transportation safer, more sustainable, and accessible to everyone. At Zoox, innovation, collaboration, and a bold vision for the future drive everything we do.\nAbout Our Part Time Student Worker Program\nZoox’s program offers hands-on experience with cutting-edge technology, mentorship from some of the industry’s brightest minds, and the opportunity to make meaningful contributions to real projects. We seek part time student workers  who demonstrate strong academic performance, engagement beyond the classroom, intellectual curiosity, and a genuine interest in Zoox’s mission.\nProject Overview\nThis opportunity is in the area of Robot validation which includes HW/FW/SW validation. PT Student-Workers on this team will have the chance to work on current and new robot platforms."
+    }
+  ]
 }
