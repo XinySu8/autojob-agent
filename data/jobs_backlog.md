@@ -1,7 +1,7 @@
 # Job feed (backlog)
-Generated at (UTC): 2026-05-09T16:14:39.183611+00:00
-Today (UTC): 2026-05-09
-Total jobs: 99
+Generated at (UTC): 2026-05-10T16:16:37.503967+00:00
+Today (UTC): 2026-05-10
+Total jobs: 100
 
 ## Jobs
 - [scaleai] AI Deployment Strategist Intern (New York, NY) 鈥?greenhouse 鈥?https://job-boards.greenhouse.io/scaleai/jobs/4677519005
@@ -82,6 +82,7 @@ Total jobs: 99
 - [ramp] University Grad | Software Engineer | Frontend (New York, NY (HQ)) 鈥?ashby 鈥?https://jobs.ashbyhq.com/ramp/a1229aec-1105-4c47-8533-b912e732ed89/application
 - [zoox] PhD Research Intern, Multi-Modal Foundation Encoder for Perception (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/44721ec7-87ce-4b24-95a1-b949c6d9b17c
 - [zoox] PhD Research Intern, Vision Language Action Models (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/2a00b538-3c7c-4217-a14b-3e7881f2a8a0
+- [zoox] PT Student Worker-AI Driven trouble shooting Robot (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/0bb2dd41-e6a9-41a5-bafc-8a438f0a7cca
 - [zoox] PhD Research Intern, Physical AI in Perception (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/aab5dc76-6ee6-419c-90ce-4a852d9fdeec
 - [magnetforensics] Software Developer Engineer in Test Co-op (Fall 2026) (Halifax, Nova Scotia) 鈥?lever 鈥?https://jobs.lever.co/magnetforensics/f125c8e7-052d-430d-b857-ceba1037f809
 - [magnetforensics] Software Developer Co-op (Fall 2026) (Waterloo / Ottawa / Ontario) 鈥?lever 鈥?https://jobs.lever.co/magnetforensics/b9fdce72-4c58-46bb-b7e2-b4bdc90390e5
