@@ -2,8 +2,8 @@
   "meta": {
     "engine_name": "AutoJob-Agent Feeder",
     "version": 2,
-    "generated_at": "2026-05-11T17:34:55.974532+00:00",
-    "source_jobs_count": 97,
+    "generated_at": "2026-05-12T17:32:53.515660+00:00",
+    "source_jobs_count": 93,
     "candidates_count": 12,
     "candidates_topN_total": 150,
     "thresholds": {
@@ -29,9 +29,9 @@
       "scores": {
         "hard_raw": 8.0,
         "hard_norm": 0.8,
-        "semantic_raw": 0.4216968072467883,
-        "semantic_norm": 0.6298363203863196,
-        "final": 0.7064099762124758
+        "semantic_raw": 0.42169692178885754,
+        "semantic_norm": 0.6298362596997437,
+        "final": 0.7064099428348591
       },
       "signals": {
         "must_hits": [
@@ -68,7 +68,7 @@
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.2,
-        "semantic_raw": 0.5716911895085334,
+        "semantic_raw": 0.5716914279271267,
         "semantic_norm": 1.0,
         "final": 0.64
       },
@@ -99,13 +99,13 @@
         "5112 General University"
       ],
       "created_at": null,
-      "updated_at": "2026-05-04T11:52:00-04:00",
+      "updated_at": "2026-05-11T13:37:07-04:00",
       "scores": {
         "hard_raw": 10.0,
         "hard_norm": 1.0,
-        "semantic_raw": 0.2789721953253457,
-        "semantic_norm": 0.2776133456079498,
-        "final": 0.6026873400843724
+        "semantic_raw": 0.27897220849962945,
+        "semantic_norm": 0.27761326790749224,
+        "final": 0.6026872973491207
       },
       "signals": {
         "must_hits": [
@@ -142,8 +142,8 @@
         "hard_raw": 2.0,
         "hard_norm": 0.2,
         "semantic_raw": 0.5347860178218511,
-        "semantic_norm": 0.908923561387265,
-        "final": 0.5899079587629958
+        "semantic_norm": 0.9089230332923623,
+        "final": 0.5899076683107993
       },
       "signals": {
         "must_hits": [],
@@ -178,8 +178,8 @@
         "hard_raw": 7.0,
         "hard_norm": 0.7,
         "semantic_raw": 0.33781462907757354,
-        "semantic_norm": 0.42282766274910627,
-        "final": 0.5475552145120085
+        "semantic_norm": 0.42282745641499614,
+        "final": 0.5475551010282479
       },
       "signals": {
         "must_hits": [
@@ -215,9 +215,9 @@
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.2,
-        "semantic_raw": 0.4462467133994408,
-        "semantic_norm": 0.6904218133801732,
-        "final": 0.4697319973590953
+        "semantic_raw": 0.4462468890094401,
+        "semantic_norm": 0.690421863296734,
+        "final": 0.4697320248132038
       },
       "signals": {
         "must_hits": [
@@ -250,9 +250,9 @@
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.2,
-        "semantic_raw": 0.4271014034743806,
-        "semantic_norm": 0.6431740547485352,
-        "final": 0.4437457301116944
+        "semantic_raw": 0.42710143327670297,
+        "semantic_norm": 0.6431737761084607,
+        "final": 0.44374557685965343
       },
       "signals": {
         "must_hits": [],
@@ -285,9 +285,9 @@
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.3,
-        "semantic_raw": 0.39172533154448436,
-        "semantic_norm": 0.5558712054125011,
-        "final": 0.44072916297687564
+        "semantic_raw": 0.3917254209514515,
+        "semantic_norm": 0.5558711316559246,
+        "final": 0.44072912241075857
       },
       "signals": {
         "must_hits": [
@@ -323,9 +323,9 @@
       "scores": {
         "hard_raw": 7.0,
         "hard_norm": 0.7,
-        "semantic_raw": 0.24440197646593448,
-        "semantic_norm": 0.19229922100480737,
-        "final": 0.4207645715526441
+        "semantic_raw": 0.24440196156477328,
+        "semantic_norm": 0.19229913049026234,
+        "final": 0.4207645217696443
       },
       "signals": {
         "must_hits": [
@@ -362,8 +362,8 @@
         "hard_raw": 2.0,
         "hard_norm": 0.2,
         "semantic_raw": 0.4066547155376182,
-        "semantic_norm": 0.5927146900146139,
-        "final": 0.41599307950803766
+        "semantic_norm": 0.5927143712274163,
+        "final": 0.415992904175079
       },
       "signals": {
         "must_hits": [],
@@ -398,8 +398,8 @@
         "hard_raw": 7.0,
         "hard_norm": 0.7,
         "semantic_raw": 0.21998427629355108,
-        "semantic_norm": 0.13203999257756877,
-        "final": 0.38762199591766283
+        "semantic_norm": 0.13203997872414291,
+        "final": 0.3876219882982786
       },
       "signals": {
         "must_hits": [
@@ -436,9 +436,9 @@
       "scores": {
         "hard_raw": 4.0,
         "hard_norm": 0.4,
-        "semantic_raw": 0.2915545105931227,
-        "semantic_norm": 0.3086646159778776,
-        "final": 0.3497655387878327
+        "semantic_raw": 0.2915545701977675,
+        "semantic_norm": 0.3086646323067991,
+        "final": 0.3497655477687395
       },
       "signals": {
         "must_hits": [
