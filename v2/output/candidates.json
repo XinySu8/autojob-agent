@@ -2,9 +2,9 @@
   "meta": {
     "engine_name": "AutoJob-Agent Feeder",
     "version": 2,
-    "generated_at": "2026-05-12T17:32:53.515660+00:00",
-    "source_jobs_count": 93,
-    "candidates_count": 12,
+    "generated_at": "2026-05-13T17:34:07.150119+00:00",
+    "source_jobs_count": 89,
+    "candidates_count": 11,
     "candidates_topN_total": 150,
     "thresholds": {
       "apply": 0.72,
@@ -29,9 +29,9 @@
       "scores": {
         "hard_raw": 8.0,
         "hard_norm": 0.8,
-        "semantic_raw": 0.42169692178885754,
-        "semantic_norm": 0.6298362596997437,
-        "final": 0.7064099428348591
+        "semantic_raw": 0.4216968072467883,
+        "semantic_norm": 0.6298363203863196,
+        "final": 0.7064099762124758
       },
       "signals": {
         "must_hits": [
@@ -68,7 +68,7 @@
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.2,
-        "semantic_raw": 0.5716914279271267,
+        "semantic_raw": 0.5716911895085334,
         "semantic_norm": 1.0,
         "final": 0.64
       },
@@ -103,9 +103,9 @@
       "scores": {
         "hard_raw": 10.0,
         "hard_norm": 1.0,
-        "semantic_raw": 0.27897220849962945,
-        "semantic_norm": 0.27761326790749224,
-        "final": 0.6026872973491207
+        "semantic_raw": 0.2789721953253457,
+        "semantic_norm": 0.2776133456079498,
+        "final": 0.6026873400843724
       },
       "signals": {
         "must_hits": [
@@ -142,8 +142,8 @@
         "hard_raw": 2.0,
         "hard_norm": 0.2,
         "semantic_raw": 0.5347860178218511,
-        "semantic_norm": 0.9089230332923623,
-        "final": 0.5899076683107993
+        "semantic_norm": 0.908923561387265,
+        "final": 0.5899079587629958
       },
       "signals": {
         "must_hits": [],
@@ -178,8 +178,8 @@
         "hard_raw": 7.0,
         "hard_norm": 0.7,
         "semantic_raw": 0.33781462907757354,
-        "semantic_norm": 0.42282745641499614,
-        "final": 0.5475551010282479
+        "semantic_norm": 0.42282766274910627,
+        "final": 0.5475552145120085
       },
       "signals": {
         "must_hits": [
@@ -200,41 +200,6 @@
       "jd_excerpt": "ABOUT US: Notion helps you build beautiful tools for your life’s work. In today's world of endless apps and tabs, Notion provides one place for teams to get everything done, seamlessly connecting docs, notes, projects, calendar, and email—with AI built in to find answers and automate work. Millions of users, from individuals to large organizations like Toyota, Figma, and OpenAI, love Notion for its flexibility and choose it because it helps them save time and money. In-person collaboration is essential to Notion's culture. We require all team members to work from our offices on Mondays, Tuesda"
     },
     {
-      "job_uid": "be7eb8d7168d78fa",
-      "source": "greenhouse",
-      "job_id": "be7eb8d7168d78fa",
-      "company": "scaleai",
-      "title": "AI Deployment Strategist Intern",
-      "location": "New York, NY",
-      "url": "https://job-boards.greenhouse.io/scaleai/jobs/4677519005",
-      "departments": [
-        "Enterprise Operations"
-      ],
-      "created_at": null,
-      "updated_at": "2026-05-08T12:41:20-04:00",
-      "scores": {
-        "hard_raw": 2.0,
-        "hard_norm": 0.2,
-        "semantic_raw": 0.4462468890094401,
-        "semantic_norm": 0.690421863296734,
-        "final": 0.4697320248132038
-      },
-      "signals": {
-        "must_hits": [
-          "machine learning"
-        ],
-        "nice_hits": [],
-        "neg_hits": []
-      },
-      "text_hash": "8b4f28da415af4941b87116a7c827c11e65b09ec",
-      "final_reason": "Fusion: 0.45*hard_norm + 0.55*semantic_norm; must_hits=1, nice_hits=0",
-      "hard_gate": {
-        "hit": false,
-        "reason": ""
-      },
-      "jd_excerpt": "Scale’s Enterprise Applications business is growing faster than ever in the quest to develop reliable AI systems for the world’s most important decisions. As an AI Deployment Strategist Intern , you will work alongside our DSG team, helping our largest customers build, launch, and scale groundbreaking GenAI solutions that redefine their industries. You will support deployment success and contribute foundational industry knowledge to our team, helping turn bold ideas into real impact and ensuring engagements run smoothly. In this role, you will work directly with data, engineering, business, an"
-    },
-    {
       "job_uid": "1f97d174e9d7ccca",
       "source": "greenhouse",
       "job_id": "1f97d174e9d7ccca",
@@ -250,9 +215,9 @@
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.2,
-        "semantic_raw": 0.42710143327670297,
-        "semantic_norm": 0.6431737761084607,
-        "final": 0.44374557685965343
+        "semantic_raw": 0.4271014034743806,
+        "semantic_norm": 0.6431740547485352,
+        "final": 0.4437457301116944
       },
       "signals": {
         "must_hits": [],
@@ -285,9 +250,9 @@
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.3,
-        "semantic_raw": 0.3917254209514515,
-        "semantic_norm": 0.5558711316559246,
-        "final": 0.44072912241075857
+        "semantic_raw": 0.39172533154448436,
+        "semantic_norm": 0.5558712054125011,
+        "final": 0.44072916297687564
       },
       "signals": {
         "must_hits": [
@@ -323,9 +288,9 @@
       "scores": {
         "hard_raw": 7.0,
         "hard_norm": 0.7,
-        "semantic_raw": 0.24440196156477328,
-        "semantic_norm": 0.19229913049026234,
-        "final": 0.4207645217696443
+        "semantic_raw": 0.24440197646593448,
+        "semantic_norm": 0.19229922100480737,
+        "final": 0.4207645715526441
       },
       "signals": {
         "must_hits": [
@@ -362,8 +327,8 @@
         "hard_raw": 2.0,
         "hard_norm": 0.2,
         "semantic_raw": 0.4066547155376182,
-        "semantic_norm": 0.5927143712274163,
-        "final": 0.415992904175079
+        "semantic_norm": 0.5927146900146139,
+        "final": 0.41599307950803766
       },
       "signals": {
         "must_hits": [],
@@ -398,8 +363,8 @@
         "hard_raw": 7.0,
         "hard_norm": 0.7,
         "semantic_raw": 0.21998427629355108,
-        "semantic_norm": 0.13203997872414291,
-        "final": 0.3876219882982786
+        "semantic_norm": 0.13203999257756877,
+        "final": 0.38762199591766283
       },
       "signals": {
         "must_hits": [
@@ -436,9 +401,9 @@
       "scores": {
         "hard_raw": 4.0,
         "hard_norm": 0.4,
-        "semantic_raw": 0.2915545701977675,
-        "semantic_norm": 0.3086646323067991,
-        "final": 0.3497655477687395
+        "semantic_raw": 0.2915545105931227,
+        "semantic_norm": 0.3086646159778776,
+        "final": 0.3497655387878327
       },
       "signals": {
         "must_hits": [
