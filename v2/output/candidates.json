@@ -2,8 +2,8 @@
   "meta": {
     "engine_name": "AutoJob-Agent Feeder",
     "version": 2,
-    "generated_at": "2026-05-14T17:18:42.463220+00:00",
-    "source_jobs_count": 86,
+    "generated_at": "2026-05-15T17:09:06.862867+00:00",
+    "source_jobs_count": 87,
     "candidates_count": 10,
     "candidates_topN_total": 150,
     "thresholds": {
