@@ -1,9 +1,10 @@
 # Job feed (backlog)
-Generated at (UTC): 2026-05-16T16:16:34.933328+00:00
-Today (UTC): 2026-05-16
-Total jobs: 85
+Generated at (UTC): 2026-05-17T16:31:53.349378+00:00
+Today (UTC): 2026-05-17
+Total jobs: 86
 
 ## Jobs
+- [databricks] University Recruiter (Contract) (Remote - California) 鈥?greenhouse 鈥?https://databricks.com/company/careers/open-positions/job?gh_jid=7295190002
 - [asana] Product Design Intern - Summer 2026 (Warsaw) (Warsaw) 鈥?greenhouse 鈥?https://www.asana.com/jobs/apply/7490332?gh_jid=7490332
 - [asana] Software Engineering Intern - Summer 2026 (Warsaw) (Warsaw) 鈥?greenhouse 鈥?https://www.asana.com/jobs/apply/7490274?gh_jid=7490274
 - [asana] Product Design Intern - Summer 2026 (New York) (New York City) 鈥?greenhouse 鈥?https://www.asana.com/jobs/apply/7490328?gh_jid=7490328

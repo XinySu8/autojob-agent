@@ -1,18 +1,18 @@
 {
-  "generated_at_utc": "2026-05-16T16:16:34.933328+00:00",
-  "today_utc": "2026-05-16",
-  "fetched_count": 6332,
+  "generated_at_utc": "2026-05-17T16:31:53.349378+00:00",
+  "today_utc": "2026-05-17",
+  "fetched_count": 6328,
   "filtered_count": 86,
   "count": 86,
-  "today_count": 1,
-  "backlog_count": 85,
+  "today_count": 0,
+  "backlog_count": 86,
   "per_company_fetched": {
     "openai": 678,
-    "anthropic": 410,
-    "databricks": 801,
-    "cohere": 129,
+    "anthropic": 408,
+    "databricks": 799,
+    "cohere": 128,
     "perplexity": 62,
-    "langchain": 96,
+    "langchain": 98,
     "cognition": 57,
     "vellum": 1,
     "replit": 79,
@@ -39,7 +39,7 @@
     "figma": 160,
     "togetherai": 56,
     "datadog": 409,
-    "cloudflare": 181,
+    "cloudflare": 180,
     "asana": 134,
     "brex": 232,
     "okta": 375,
@@ -47,8 +47,8 @@
     "square": 161
   },
   "per_source_fetched": {
-    "ashby": 1807,
-    "greenhouse": 3664,
+    "ashby": 1808,
+    "greenhouse": 3659,
     "lever": 861
   },
   "errors": [
