@@ -2,8 +2,8 @@
   "meta": {
     "engine_name": "AutoJob-Agent Feeder",
     "version": 2,
-    "generated_at": "2026-05-19T17:44:43.075872+00:00",
-    "source_jobs_count": 83,
+    "generated_at": "2026-05-20T18:04:56.292179+00:00",
+    "source_jobs_count": 80,
     "candidates_count": 10,
     "candidates_topN_total": 150,
     "thresholds": {
@@ -25,13 +25,13 @@
         "5112 General University"
       ],
       "created_at": null,
-      "updated_at": "2026-05-14T13:08:51-04:00",
+      "updated_at": "2026-05-20T13:09:52-04:00",
       "scores": {
         "hard_raw": 8.0,
         "hard_norm": 0.8,
-        "semantic_raw": 0.4216968072467883,
-        "semantic_norm": 0.5872881789522939,
-        "final": 0.6830084984237617
+        "semantic_raw": 0.4216969171216295,
+        "semantic_norm": 0.5872882128469641,
+        "final": 0.6830085170658303
       },
       "signals": {
         "must_hits": [
@@ -68,9 +68,9 @@
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.2,
-        "semantic_raw": 0.5716911895085334,
-        "semantic_norm": 0.9324457163601994,
-        "final": 0.6028451439981096
+        "semantic_raw": 0.5716914620025952,
+        "semantic_norm": 0.9324460092082728,
+        "final": 0.60284530506455
       },
       "signals": {
         "must_hits": [],
@@ -103,7 +103,7 @@
       "scores": {
         "hard_raw": 1.0,
         "hard_norm": 0.1,
-        "semantic_raw": 0.6010481119149873,
+        "semantic_raw": 0.6010482669495454,
         "semantic_norm": 1.0,
         "final": 0.5950000000000001
       },
@@ -134,13 +134,13 @@
         "5112 General University"
       ],
       "created_at": null,
-      "updated_at": "2026-05-14T13:08:51-04:00",
+      "updated_at": "2026-05-20T13:09:52-04:00",
       "scores": {
         "hard_raw": 10.0,
         "hard_norm": 1.0,
-        "semantic_raw": 0.2789721953253457,
-        "semantic_norm": 0.2588593749165564,
-        "final": 0.5923726562041061
+        "semantic_raw": 0.27897228473231817,
+        "semantic_norm": 0.2588594713812873,
+        "final": 0.592372709259708
       },
       "signals": {
         "must_hits": [
@@ -177,9 +177,9 @@
       "scores": {
         "hard_raw": 7.0,
         "hard_norm": 0.7,
-        "semantic_raw": 0.33781462907757354,
-        "semantic_norm": 0.3942638428889992,
-        "final": 0.5318451135889496
+        "semantic_raw": 0.3378146492128957,
+        "semantic_norm": 0.39426373473581683,
+        "final": 0.5318450541046993
       },
       "signals": {
         "must_hits": [
@@ -215,9 +215,9 @@
       "scores": {
         "hard_raw": 3.0,
         "hard_norm": 0.3,
-        "semantic_raw": 0.39172533154448436,
-        "semantic_norm": 0.5183197243348671,
-        "final": 0.42007584838417694
+        "semantic_raw": 0.3917254741024317,
+        "semantic_norm": 0.5183198564678408,
+        "final": 0.4200759210573125
       },
       "signals": {
         "must_hits": [
@@ -253,9 +253,9 @@
       "scores": {
         "hard_raw": 7.0,
         "hard_norm": 0.7,
-        "semantic_raw": 0.24440197646593448,
-        "semantic_norm": 0.1793085848853359,
-        "final": 0.4136197216869347
+        "semantic_raw": 0.24440200593459044,
+        "semantic_norm": 0.17930856998757955,
+        "final": 0.41361971349316873
       },
       "signals": {
         "must_hits": [
@@ -292,9 +292,9 @@
       "scores": {
         "hard_raw": 7.0,
         "hard_norm": 0.7,
-        "semantic_raw": 0.21998427629355108,
-        "semantic_norm": 0.12312012546718652,
-        "final": 0.3827160690069526
+        "semantic_raw": 0.2199843192079632,
+        "semantic_norm": 0.12312016027246774,
+        "final": 0.38271608814985725
       },
       "signals": {
         "must_hits": [
@@ -331,9 +331,9 @@
       "scores": {
         "hard_raw": 2.0,
         "hard_norm": 0.2,
-        "semantic_raw": 0.3798347711559312,
-        "semantic_norm": 0.4909579226445132,
-        "final": 0.3600268574544823
+        "semantic_raw": 0.3798349130051458,
+        "semantic_norm": 0.4909580622832878,
+        "final": 0.36002693425580834
       },
       "signals": {
         "must_hits": [],
@@ -367,9 +367,9 @@
       "scores": {
         "hard_raw": 4.0,
         "hard_norm": 0.4,
-        "semantic_raw": 0.2915545105931227,
-        "semantic_norm": 0.2878129989605379,
-        "final": 0.3382971494282959
+        "semantic_raw": 0.2915546769827477,
+        "semantic_norm": 0.28781326290456133,
+        "final": 0.3382972945975088
       },
       "signals": {
         "must_hits": [
