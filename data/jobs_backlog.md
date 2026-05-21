@@ -1,9 +1,12 @@
 # Job feed (backlog)
-Generated at (UTC): 2026-05-20T18:04:47.696551+00:00
-Today (UTC): 2026-05-20
-Total jobs: 80
+Generated at (UTC): 2026-05-21T17:37:59.527947+00:00
+Today (UTC): 2026-05-21
+Total jobs: 77
 
 ## Jobs
+- [cloudflare] Technical Marketing Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7733496?gh_jid=7733496
+- [cloudflare] Machine Learning Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7914628?gh_jid=7914628
+- [cloudflare] Data Science Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7914511?gh_jid=7914511
 - [stripe] PhD Data Scientist, Intern (San Francisco, New York City, Seattle, Chicago) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7874965
 - [stripe] PhD Data Scientist, Intern (Toronto, Ontario, Canada) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7285974
 - [stripe] PhD Machine Learning Engineer, Intern (San Francisco, New York City, Seattle) 鈥?greenhouse 鈥?https://stripe.com/jobs/search?gh_jid=7216664
@@ -17,18 +20,13 @@ Total jobs: 80
 - [cloudflare] Solutions Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7738938?gh_jid=7738938
 - [datadog] IT Support Technician Intern (Paris, France) 鈥?greenhouse 鈥?https://careers.datadoghq.com/detail/7826176/?gh_jid=7826176
 - [datadog] Software Engineer - Early Career (Lisbon, Portugal) 鈥?greenhouse 鈥?https://careers.datadoghq.com/detail/7646452/?gh_jid=7646452
-- [cloudflare] Technical Marketing Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7733496?gh_jid=7733496
 - [cohere] Machine Learning Intern/Co-op  (Fall, 2026) (Canada) 鈥?ashby 鈥?https://jobs.ashbyhq.com/cohere/36d1f52f-8270-4652-adf5-5303a0ff341b/application
-- [cloudflare] Machine Learning Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7914628?gh_jid=7914628
-- [cloudflare] Data Science Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7914511?gh_jid=7914511
 - [cloudflare] Technical Support Engineer Intern (July to December 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7912382?gh_jid=7912382
 - [cloudflare] Customer Advocacy Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7743202?gh_jid=7743202
 - [cloudflare] Developer GTM Intern – Enterprise Sales & AI Automation (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7789256?gh_jid=7789256
-- [cloudflare] Sales Project Manager Summer Intern - 3 months (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7899062?gh_jid=7899062
 - [cloudflare] Business Analyst Intern, Marketing (July to December 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7729700?gh_jid=7729700
 - [scaleai] Technical Advisor Specialist (Part-Time Internship)  (San Francisco, CA) 鈥?greenhouse 鈥?https://job-boards.greenhouse.io/scaleai/jobs/4611533005
 - [cloudflare] Marketing Events and Campaigns Intern (Mid-Year 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7736919?gh_jid=7736919
-- [cloudflare] Marketing Events and Campaigns Intern (Summer/Fall 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7733327?gh_jid=7733327
 - [cloudflare] Public Policy Intern, APJC (July to December 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7863831?gh_jid=7863831
 - [cohere] Research Internship (Fall, 2026) (Canada) 鈥?ashby 鈥?https://jobs.ashbyhq.com/cohere/73bd3e2b-6597-4124-b64b-1e5dbc32e785/application
 - [cohere] Software Engineer Intern (Fall / Winter 2026) (Canada) 鈥?ashby 鈥?https://jobs.ashbyhq.com/cohere/8c035d3d-081d-4c8a-914a-72f4efaad254/application
@@ -48,11 +46,10 @@ Total jobs: 80
 - [cloudflare] Product Manager Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7362113?gh_jid=7362113
 - [cloudflare] Product Marketing Engineer Intern (AI & Automation) - Intern (Summer/Spring/Fall 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7781953?gh_jid=7781953
 - [cloudflare] Revenue Operations Intern - Enablement (AI Innovation) (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7761397?gh_jid=7761397
-- [cloudflare] Security Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7582169?gh_jid=7582169
 - [cloudflare] Security Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7582150?gh_jid=7582150
+- [cloudflare] Security Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7582169?gh_jid=7582169
 - [cloudflare] Technical Support Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7726879?gh_jid=7726879
 - [cloudflare] Threat Detection and Incident Response Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7577205?gh_jid=7577205
-- [cloudflare] U.S. Public Policy and AI Innovation Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7802906?gh_jid=7802906
 - [databricks] PhD GenAI Research Scientist Intern (San Francisco, California) 鈥?greenhouse 鈥?https://databricks.com/company/careers/open-positions/job?gh_jid=7011263002
 - [perplexity] Internship - Search Machine Learning Engineer (London) 鈥?ashby 鈥?https://jobs.ashbyhq.com/perplexity/71168628-1998-47d3-87a9-be7bc56a430d/application
 - [serval] Emerging Talent Recruiter (San Francisco) 鈥?ashby 鈥?https://jobs.ashbyhq.com/serval/9784591b-28ba-415d-838a-0d167d0dd62f/application
