@@ -1,6 +1,22 @@
 {
-  "generated_at_utc": "2026-05-21T17:37:59.527947+00:00",
-  "today_utc": "2026-05-21",
-  "count": 0,
-  "jobs": []
+  "generated_at_utc": "2026-05-22T17:22:19.084987+00:00",
+  "today_utc": "2026-05-22",
+  "count": 1,
+  "jobs": [
+    {
+      "id": "be3fda329ccdfb00",
+      "source": "lever",
+      "company": "zoox",
+      "title": "Part-Time Student Worker - Labeling Technician",
+      "location": "Foster City, CA",
+      "url": "https://jobs.lever.co/zoox/02247e1c-beb8-432e-a28c-aa297c5da5bb",
+      "updated_at": 1778284510320,
+      "created_at": 1778284510320,
+      "departments": [
+        "Calibration, Localization & Mapping"
+      ],
+      "content_text": "About Zoox\nZoox is transforming mobility with fully autonomous, electric vehicles designed from the ground up for a driverless future. Our mission is to make transportation safer, more sustainable, and accessible to everyone. At Zoox, innovation, collaboration, and a bold vision for the future drive everything we do.\nAbout Our Part Time Student Worker Program\nZoox’s program offers hands-on experience with cutting-edge technology, mentorship from some of the industry’s brightest minds, and the opportunity to make meaningful contributions to real projects. We seek part time student workers  who demonstrate strong academic performance, engagement beyond the classroom, intellectual curiosity, and a genuine interest in Zoox’s mission. \nProject Overview\nZoox's Cartography team is responsible for building, curating, and maintaining high-definition road networks. This includes expanding our geofence, validating the accuracy of annotated data, and responding to “world change” events to ensure our maps remain up-to-date.\nAs a Labeling Technician (3-month contract), you'll play a key role in creating and validating semantic road network data, ensuring map content aligns with real-world geometry, and collaborating with cross-functional teams to maintain the integrity of our mapping system. We're looking for detail-oriented, analytical students who excel at precision work and can thrive in a fast-paced, collaborative environment.",
+      "content_plain": "About Zoox\nZoox is transforming mobility with fully autonomous, electric vehicles designed from the ground up for a driverless future. Our mission is to make transportation safer, more sustainable, and accessible to everyone. At Zoox, innovation, collaboration, and a bold vision for the future drive everything we do.\nAbout Our Part Time Student Worker Program\nZoox’s program offers hands-on experience with cutting-edge technology, mentorship from some of the industry’s brightest minds, and the opportunity to make meaningful contributions to real projects. We seek part time student workers  who demonstrate strong academic performance, engagement beyond the classroom, intellectual curiosity, and a genuine interest in Zoox’s mission. \nProject Overview\nZoox's Cartography team is responsible for building, curating, and maintaining high-definition road networks. This includes expanding our geofence, validating the accuracy of annotated data, and responding to “world change” events to ensure our maps remain up-to-date.\nAs a Labeling Technician (3-month contract), you'll play a key role in creating and validating semantic road network data, ensuring map content aligns with real-world geometry, and collaborating with cross-functional teams to maintain the integrity of our mapping system. We're looking for detail-oriented, analytical students who excel at precision work and can thrive in a fast-paced, collaborative environment."
+    }
+  ]
 }

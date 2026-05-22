@@ -1,7 +1,7 @@
 # Job feed (current)
-Generated at (UTC): 2026-05-21T17:37:59.527947+00:00
-Today (UTC): 2026-05-21
-Total jobs: 77
+Generated at (UTC): 2026-05-22T17:22:19.084987+00:00
+Today (UTC): 2026-05-22
+Total jobs: 78
 
 ## Errors
 - [config] auto-fixed target for company='notion' -> source='ashby'
@@ -12,6 +12,7 @@ Total jobs: 77
 - slack (workday) failed: <HTTPError 400: 'Bad Request'>
 
 ## Jobs
+- [cloudflare] Sales Project Manager (Process & AI Innovation)  Summer Intern - 3 months (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7899062?gh_jid=7899062
 - [cloudflare] Technical Marketing Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7733496?gh_jid=7733496
 - [cloudflare] Machine Learning Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7914628?gh_jid=7914628
 - [cloudflare] Data Science Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7914511?gh_jid=7914511
@@ -53,7 +54,6 @@ Total jobs: 77
 - [cloudflare] Marketing: AI Discoverability & Optimization Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7729719?gh_jid=7729719
 - [cloudflare] Product Manager Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7362113?gh_jid=7362113
 - [cloudflare] Product Marketing Engineer Intern (AI & Automation) - Intern (Summer/Spring/Fall 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7781953?gh_jid=7781953
-- [cloudflare] Revenue Operations Intern - Enablement (AI Innovation) (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7761397?gh_jid=7761397
 - [cloudflare] Security Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7582150?gh_jid=7582150
 - [cloudflare] Security Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7582169?gh_jid=7582169
 - [cloudflare] Technical Support Engineer Intern (Summer 2026) (In-Office) 鈥?greenhouse 鈥?https://boards.greenhouse.io/cloudflare/jobs/7726879?gh_jid=7726879
@@ -72,6 +72,7 @@ Total jobs: 77
 - [replit] Software Engineering Intern (Summer 2026) (Foster City, CA) 鈥?ashby 鈥?https://jobs.ashbyhq.com/replit/12737078-74c7-4e63-98a7-5e8da1e9deb1/application
 - [ramp] Software Engineer Internship, Android  (New York, NY (HQ)) 鈥?ashby 鈥?https://jobs.ashbyhq.com/ramp/67fadb77-43d8-4449-954b-d4cf2c6d3b8b/application
 - [ramp] University Grad | Software Engineer | Frontend (New York, NY (HQ)) 鈥?ashby 鈥?https://jobs.ashbyhq.com/ramp/a1229aec-1105-4c47-8533-b912e732ed89/application
+- [zoox] Part-Time Student Worker - Labeling Technician (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/02247e1c-beb8-432e-a28c-aa297c5da5bb
 - [zoox] PT Student Worker-AI Driven Trouble Shooting (Foster City, CA) 鈥?lever 鈥?https://jobs.lever.co/zoox/0bb2dd41-e6a9-41a5-bafc-8a438f0a7cca
 - [magnetforensics] Software Developer Engineer in Test Co-op (Fall 2026) (Halifax, Nova Scotia) 鈥?lever 鈥?https://jobs.lever.co/magnetforensics/f125c8e7-052d-430d-b857-ceba1037f809
 - [magnetforensics] Software Developer Co-op (Fall 2026) (Waterloo / Ottawa / Ontario) 鈥?lever 鈥?https://jobs.lever.co/magnetforensics/b9fdce72-4c58-46bb-b7e2-b4bdc90390e5
