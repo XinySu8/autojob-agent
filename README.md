@@ -1,140 +1,175 @@
 # AutoJob-Agent
 
-AutoJob-Agent is a modular, config-driven job-search automation pipeline:
+[![CI](https://github.com/XinySu8/autojob-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/XinySu8/autojob-agent/actions/workflows/ci.yml)
 
-- **V1 Producer**: fetches job postings from multiple ATS sources and maintains a single source of truth.
-- **V2 Feeder/Scoring**: applies hard gates + semantic matching to triage jobs and outputs Apply/Maybe/Skip lists.
-- **V3 Local Agent (Ollama)**: generates human-readable Markdown job cards locally (not run in GitHub Actions).
+**Stop refreshing 40 career pages.** AutoJob-Agent pulls internship and early-career postings straight from the
+public job-board APIs that companies use (Greenhouse, Lever, Ashby, Workday). It ranks them against *your*
+profile and gives you a short **Apply / Maybe / Skip** list, with the reason for every decision.
 
-This repo is designed so that **V1 + V2 can run reliably in GitHub Actions**, while **V3 is intentionally local-only**.
-
----
-
-## Repository structure
-
-```text
-scripts/                 # V1 Producer scripts (fetch + status updates)
-config/targets.json       # V1 targets and filters
-data/                     # V1 outputs: jobs.json, state.json, today/backlog, archive/
-
-v2/                       # V2 scoring + triage
-  config/                 # scoring.yaml, profile.md (input for V3 too)
-  scripts/                # score_jobs_v2.py, triage_v2.py
-  data/                   # scored_jobs.json, emb_cache.json (optional)
-  output/                 # candidates.json, apply.md, maybe.md, skip.md
-
-v3/                       # V3 local-only job cards (Ollama)
-  agent/                  # run_ollama_agent.py + prompt/template
-  cards-samples/          # curated sample cards committed for demo
-  cards/                  # generated cards (typically local output; often gitignored)
-```
-
+- **One command a day:** `autojob run` fetches about 8,000 postings from 40+ companies in about 15 seconds.
+- **Explainable ranking:** keyword hits, semantic similarity, and hard gates (location, clearance, degree) are all shown on each job.
+- **Dashboard:** a local web page where you mark jobs *Applied* or *Ignore*. Marked jobs never come back.
+- **Light install:** the only dependency is PyYAML. Semantic matching uses built-in TF-IDF. You can optionally switch to sentence-transformers.
+- **Optional job cards:** a local LLM ([Ollama](https://ollama.com)) writes evidence-only prep notes for top matches.
+- **Runs anywhere:** laptop, Docker, or GitHub Actions on a schedule.
 
 ---
 
-## V1 Producer (fetch)
+## Quick start
 
-### Inputs
-- `config/targets.json` (companies + ATS settings + filters)
-
-### Outputs (single source of truth)
-- `data/jobs.json`
-- `data/state.json`
-- additional reports:
-  - `data/jobs.md`
-  - `data/jobs_today.json / .md`
-  - `data/jobs_backlog.json / .md`
-  - `data/archive/`
-
-### Run locally
 ```bash
-python scripts/fetch_jobs.py
+pip install git+https://github.com/XinySu8/autojob-agent
+autojob init my-jobs        # creates my-jobs/autojob.yaml + my-jobs/profile.md
+cd my-jobs
+# 1) edit profile.md – a few paragraphs about you (skills, projects, what you want)
+# 2) edit autojob.yaml – companies, keywords, locations (defaults are sensible)
+autojob run --open          # fetch + score + open the dashboard
 ```
 
-## Status behavior (important)
+Daily use:
 
-`data/state.json` stores `job_uid -> status`.
-
-Jobs with `status` in `applied / ignored / closed` are hidden globally at the V1 output layer, so they will not reappear in V2 and won’t be repeatedly pushed.
-
----
-
-## V2 Feeder/Scoring (triage)
-
-### Inputs
-- `data/jobs.json`
-
-### Outputs
-- `v2/data/scored_jobs.json`
-- `v2/output/candidates.json` (Top-N candidates for downstream use)
-- `v2/output/apply.md`
-- `v2/output/maybe.md`
-- `v2/output/skip.md` (skip must include reasons)
-
-### Run locally
 ```bash
-python v2/scripts/score_jobs_v2.py --config v2/config/scoring.yaml
-python v2/scripts/triage_v2.py     --config v2/config/scoring.yaml
+autojob run                 # refresh
+autojob list                # top "apply" jobs in the terminal (list maybe / list skip)
+autojob mark applied <url-or-id> --note "referral from Alex"
+autojob serve --open        # dashboard with Applied / Ignore buttons + "Fetch & rescore"
 ```
 
-### Scoring approach (high level)
-- **Hard gate** rules (must-pass constraints)
-- **Semantic match** using sentence-transformers `all-MiniLM-L6-v2` cosine similarity
-- Optional embedding cache for repeat runs
+Check your setup at any time with `autojob doctor`.
 
----
+## Commands
 
-## V3 Local Agent (Ollama job cards)
+| Command | What it does |
+|---|---|
+| `autojob init [dir]` | Create a workspace with a starter `autojob.yaml` and `profile.md` |
+| `autojob run [--open]` | `fetch` + `score` (the daily command) |
+| `autojob fetch` | Download postings, filter to internships, update `state.json` |
+| `autojob score` | Gates, keyword and semantic scoring, triage, and reports (`data/reports/`) |
+| `autojob list [apply\|maybe\|skip] [-n N] [-u]` | Print ranked jobs |
+| `autojob mark <applied\|ignored\|closed\|new> <url\|id…>` | Record your decision; hidden jobs don't come back |
+| `autojob serve [--port 8765] [--open]` | Local dashboard (binds to 127.0.0.1) |
+| `autojob cards [--model qwen2.5:3b] [--limit 20]` | Generate job cards with local Ollama |
+| `autojob doctor` | Validate config and show optional components |
 
-**V3 requires local Ollama installed.**  
-**V3 runs locally only; not in GitHub Actions.**
+Every command accepts `-c/--config <path>`. Without it, AutoJob looks for `autojob.yaml` in the current folder
+and its parents, or uses `$AUTOJOB_CONFIG`.
 
-V3 reads the top candidates and generates a Markdown “Job Card” for each candidate, including match points, risks, skill gaps, resume-tailoring suggestions, and interview prep notes. The output is constrained to evidence from:
-- `v2/output/candidates.json`
-- `v2/config/profile.md`
+## How ranking works
 
-### Install Ollama (system-level, one time)
-Install Ollama on your machine, then pull a small model that fits your available RAM. Example:
+```
+fetch ─► filter (title looks like internship/new-grad, domain match, title exclusions)
+      ─► hard gates  (location allowlist, clearance/citizenship/degree phrases)   ─► skip + reason
+      ─► keyword score (title + must-have + nice-to-have − negatives, whole-word)  ─┐
+      ─► semantic score (profile.md vs JD: TF-IDF or sentence-transformers)        ─┴► weighted ─► apply / maybe / skip
+```
+
+- **Keyword score:** the sum of weights for whole-word hits. It is capped at `hard_saturation` and scaled to 0–1.
+- **Semantic score:** the cosine similarity between your profile and each posting, min-max scaled across today's batch.
+- **Final score:** `weights.hard × keyword + weights.semantic × semantic`. The thresholds in `triage.thresholds` decide the bucket.
+
+For better semantic matching (downloads PyTorch, about 1–2 GB):
+
+```bash
+pip install "autojob-agent[semantic] @ git+https://github.com/XinySu8/autojob-agent"
+```
+
+With `backend: auto` in the config, it gets picked up automatically.
+
+## Configuration
+
+Everything lives in `autojob.yaml`. The generated file is commented; these are the parts you will most likely change:
+
+```yaml
+fetch:
+  targets:
+    - { company: stripe,  source: greenhouse, board_token: stripe }
+    - { company: openai,  source: ashby,      job_board_name: openai }
+    - { company: zoox,    source: lever,      lever_slug: zoox }
+    - { company: slack,   source: workday,    workday_url: "https://salesforce.wd12.myworkdayjobs.com/Slack" }
+
+scoring:
+  location_allowlist:
+    enabled: true
+    regions: [US, China, Singapore]      # presets: US, Canada, China, Singapore, UK, Remote
+  keywords:
+    title:     { software engineer: 3, machine learning: 3, data engineer: 3 }
+    must_have: { python: 3, sql: 2, llm: 2 }
+    negative:  { "5+ years": -2 }
+
+triage:
+  thresholds: { apply: 0.60, maybe: 0.35 }
+```
+
+**Finding a company's board:** open its careers page and look at the job links.
+
+- `boards.greenhouse.io/<token>` → Greenhouse
+- `jobs.lever.co/<slug>` → Lever
+- `jobs.ashbyhq.com/<name>` → Ashby
+- `*.myworkdayjobs.com/<site>` → Workday
+
+## Where the data goes
+
+```
+my-jobs/
+  autojob.yaml, profile.md
+  data/
+    state.json          # your applied/ignored marks  ← the only file worth backing up
+    jobs.json           # today's open internships
+    scored.json         # every job with bucket, score and reason
+    candidates.json     # top apply+maybe with JD excerpts (input for job cards)
+    reports/digest.md   # Markdown summary
+    reports/dashboard.html
+    cards/              # Ollama job cards
+    archive/            # daily fetch stats
+```
+
+## Run on GitHub Actions
+
+The repo ships a ready-made workspace in [`workspace/`](workspace/) and two workflows:
+
+- **AutoJob daily** (`.github/workflows/autojob-daily.yml`): runs `autojob run`, writes the digest to the run
+  summary, attaches the dashboard as an artifact, and commits `workspace/data/state.json`. It starts manually by
+  default; uncomment the `schedule:` block to run it every day.
+- **AutoJob mark**: Actions → *AutoJob mark* → *Run workflow*. Enter a URL or id to mark it applied or ignored.
+
+Fork the repo, edit `workspace/profile.md` and `workspace/autojob.yaml`, and run it.
+
+## Docker
+
+```bash
+docker build -t autojob .
+docker run --rm -v "$PWD/my-jobs:/workspace" autojob run
+docker run --rm -p 8765:8765 -v "$PWD/my-jobs:/workspace" autojob serve --host 0.0.0.0
+```
+
+## Job cards with a local LLM (optional)
+
 ```bash
 ollama pull qwen2.5:3b
+autojob cards --limit 10          # writes data/cards/<id>.md
 ```
-### Generate cards locally
+
+Cards only use facts from `profile.md` and the job posting. Anything missing is written as
+*"Not specified in evidence."* Cards are regenerated only when the posting, your profile, or the model changes.
+
+## Claude Code skills
+
+[`skills/`](skills/) contains three Claude Code skills for the manual steps after triage:
+
+- `jd-triage-5min`: fast apply or skip decision
+- `jd-deep-safe-rewrite`: tailored resume bullets without exaggeration
+- `github-project-miner`: turn a skill gap into a one-week project
+
+## Development
+
 ```bash
-python v3/agent/run_ollama_agent.py --model qwen2.5:3b
-```
-Limit generation (recommended for speed):
-```bash
-python v3/agent/run_ollama_agent.py --model qwen2.5:3b --limit 20
+python -m venv .venv && source .venv/bin/activate
+pip install -e '.[dev]'
+pytest -q && ruff check .
 ```
 
-### Inputs
-- `v2/output/candidates.json`
-- `v2/config/profile.md`
+See [CHANGELOG.md](CHANGELOG.md) for what changed from the v0 scripts.
 
-### Outputs
-- `v3/cards/<job_uid>.md` (generated cards)
-- `v3/cards-samples/` contains a few curated sample cards committed for demonstration.
+## License
 
----
-
-## GitHub Actions
-
-GitHub Actions is configured to run **V1 + V2** on the default branch and push updated outputs back to the repo.
-
-V3 is excluded by design because it depends on local Ollama and is intended for local use only.
-
-## Local development setup
-
-Recommended:
-- Python 3.11 + virtual environment (`.venv`)
-
-Typical workflow:
-1) Run V1 fetch (or let Actions run it)
-2) Run V2 scoring + triage
-3) Optionally run V3 locally to generate cards for top candidates
-
-## Notes on tracked vs local-only outputs
-
-- `v3/agent/.cache/` stores local incremental indexes/logs and should not be committed.
-- `v3/cards/` is usually treated as local output (can be committed once for demo, but not recommended for frequent updates).
-- `v3/cards-samples/` is intended for curated examples.
+MIT

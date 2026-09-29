@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AutoJob Dashboard</title>
+<style>
+:root {
+  --bg: #f7f7f5; --panel: #ffffff; --ink: #1b1b1a; --muted: #6b6b66; --line: #e4e3de;
+  --accent: #2f6f4f; --accent-soft: #e3f0e8; --maybe: #9a6b12; --maybe-soft: #f6ecd6;
+  --skip: #8a3b3b; --skip-soft: #f4e2e2; --bar: #d9d8d2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151514; --panel: #1e1e1c; --ink: #ecebe6; --muted: #9b9a93; --line: #2f2f2c;
+    --accent: #7cc29b; --accent-soft: #1f3a2b; --maybe: #e2b45c; --maybe-soft: #3a2f18;
+    --skip: #e08b8b; --skip-soft: #3b2222; --bar: #3a3a36;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; }
+header { padding: 20px 16px 8px; max-width: 1100px; margin: 0 auto; }
+h1 { font-size: 20px; margin: 0 0 4px; letter-spacing: -0.01em; }
+.meta { color: var(--muted); font-size: 13px; }
+.bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; max-width: 1100px; margin: 12px auto 0; padding: 0 16px; }
+.tab { border: 1px solid var(--line); background: var(--panel); color: var(--ink); padding: 6px 12px; border-radius: 999px; cursor: pointer; font: inherit; }
+.tab[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.tab .n { opacity: .65; margin-left: 4px; }
+input[type=search] { flex: 1 1 220px; min-width: 0; padding: 7px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); font: inherit; }
+button.act { border: 1px solid var(--line); background: var(--panel); color: var(--ink); border-radius: 6px; padding: 4px 10px; cursor: pointer; font: inherit; font-size: 12px; }
+button.act:hover { border-color: var(--ink); }
+main { max-width: 1100px; margin: 12px auto 40px; padding: 0 16px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 8px; display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; }
+.card.done { opacity: .45; }
+.title { font-weight: 600; color: var(--ink); text-decoration: none; }
+.title:hover { text-decoration: underline; }
+.sub { color: var(--muted); font-size: 13px; }
+.score { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+.meter { width: 90px; height: 4px; background: var(--bar); border-radius: 2px; margin-top: 4px; margin-left: auto; overflow: hidden; }
+.meter > i { display: block; height: 100%; background: var(--accent); }
+.chips { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px; }
+.chip { font-size: 12px; padding: 1px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+.chip.neg { background: var(--skip-soft); color: var(--skip); }
+.reason { grid-column: 1 / -1; font-size: 12px; color: var(--muted); }
+.actions { grid-column: 1 / -1; display: flex; gap: 6px; align-items: center; }
+.badge { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; padding: 1px 6px; border-radius: 4px; }
+.b-apply { background: var(--accent-soft); color: var(--accent); }
+.b-maybe { background: var(--maybe-soft); color: var(--maybe); }
+.b-skip { background: var(--skip-soft); color: var(--skip); }
+.empty { color: var(--muted); padding: 40px 0; text-align: center; }
+details.warn { max-width: 1100px; margin: 8px auto 0; padding: 0 16px; color: var(--muted); font-size: 13px; }
+@media (max-width: 560px) { .card { grid-template-columns: 1fr; } .score { text-align: left; } .meter { margin-left: 0; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>AutoJob</h1>
+  <div class="meta" id="meta"></div>
+</header>
+<details class="warn" id="warn" hidden><summary></summary><ul></ul></details>
+<div class="bar">
+  <button class="tab" data-b="apply" aria-pressed="true">Apply<span class="n"></span></button>
+  <button class="tab" data-b="maybe" aria-pressed="false">Maybe<span class="n"></span></button>
+  <button class="tab" data-b="skip" aria-pressed="false">Skip<span class="n"></span></button>
+  <input type="search" id="q" placeholder="Filter by company, title, location, keyword…">
+  <button class="act" id="refresh" hidden>Fetch &amp; rescore</button>
+</div>
+<main id="list"></main>
+<script>
+const DATA = /*__DATA__*/null;
+const LIVE = /*__LIVE__*/false;
+let bucket = "apply";
+const marked = Object.assign({}, (DATA && DATA.status) || {});
+const $ = (s, el = document) => el.querySelector(s);
+
+function el(tag, attrs = {}, ...kids) {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "class") n.className = v; else if (k.startsWith("on")) n.addEventListener(k.slice(2), v); else n.setAttribute(k, v);
+  }
+  for (const k of kids) if (k != null) n.append(k);
+  return n;
+}
+
+function header() {
+  const m = DATA.meta || {}, f = DATA.fetch || {};
+  const when = (m.generated_at_utc || "").slice(0, 16).replace("T", " ");
+  $("#meta").textContent = `Updated ${when} UTC · ${f.fetched_count ?? "?"} postings fetched · ${f.count ?? "?"} open internships · semantic: ${m.semantic_backend || "n/a"}`;
+  for (const t of document.querySelectorAll(".tab")) $(".n", t).textContent = (m.counts || {})[t.dataset.b] ?? 0;
+  const errs = f.errors || [];
+  if (errs.length) {
+    const w = $("#warn"); w.hidden = false;
+    $("summary", w).textContent = `${errs.length} fetch warning(s)`;
+    for (const e of errs) $("ul", w).append(el("li", {}, e));
+  }
+  if (LIVE) $("#refresh").hidden = false;
+}
+
+async function mark(id, status, card) {
+  const r = await fetch("/api/mark", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id, status }) });
+  if (!r.ok) { alert("Failed: " + await r.text()); return; }
+  marked[id] = status;
+  card.classList.toggle("done", status !== "new");
+  render();
+}
+
+function render() {
+  const q = $("#q").value.trim().toLowerCase();
+  const rows = (DATA.jobs || []).filter(r => r.bucket === bucket).filter(r => {
+    if (!q) return true;
+    const hay = [r.company, r.title, r.location, ...(r.hard.must_hits || []), ...(r.hard.nice_hits || [])].join(" ").toLowerCase();
+    return hay.includes(q);
+  });
+  const list = $("#list"); list.replaceChildren();
+  if (!rows.length) { list.append(el("div", { class: "empty" }, q ? "No matches." : "Nothing in this bucket.")); return; }
+  for (const r of rows) {
+    const status = marked[r.id];
+    const card = el("article", { class: "card" + (status && status !== "new" ? " done" : "") });
+    const left = el("div", {},
+      el("a", { class: "title", href: r.url || "#", target: "_blank", rel: "noopener" }, r.title || "Untitled"),
+      el("div", { class: "sub" }, `${r.company || "?"} · ${r.location || "location n/a"}` + (r.first_seen_date_utc ? ` · first seen ${r.first_seen_date_utc}` : "")));
+    const pct = Math.round((r.score || 0) * 100);
+    const meter = el("div", { class: "meter" }, el("i", { style: `width:${pct}%` }));
+    const right = el("div", { class: "score" }, (r.score || 0).toFixed(2), meter);
+    card.append(left, right);
+    const chips = el("div", { class: "chips" });
+    for (const h of [...new Set([...(r.hard.title_hits || []), ...(r.hard.must_hits || []), ...(r.hard.nice_hits || [])])]) chips.append(el("span", { class: "chip" }, h));
+    for (const h of r.hard.neg_hits || []) chips.append(el("span", { class: "chip neg" }, h));
+    if (chips.childElementCount) card.append(chips);
+    if (r.bucket === "skip") card.append(el("div", { class: "reason" }, r.reason || ""));
+    const actions = el("div", { class: "actions" }, el("span", { class: "badge b-" + r.bucket }, r.bucket));
+    if (LIVE) {
+      if (status && status !== "new") {
+        actions.append(el("span", { class: "sub" }, "Marked " + status), el("button", { class: "act", onclick: () => mark(r.id, "new", card) }, "Undo"));
+      } else {
+        actions.append(
+          el("button", { class: "act", onclick: () => mark(r.id, "applied", card) }, "Applied"),
+          el("button", { class: "act", onclick: () => mark(r.id, "ignored", card) }, "Ignore"));
+      }
+    } else {
+      actions.append(el("code", { class: "sub" }, `autojob mark applied ${r.id.slice(0, 10)}`));
+    }
+    card.append(actions);
+    list.append(card);
+  }
+}
+
+for (const t of document.querySelectorAll(".tab")) t.addEventListener("click", () => {
+  bucket = t.dataset.b;
+  for (const x of document.querySelectorAll(".tab")) x.setAttribute("aria-pressed", String(x === t));
+  render();
+});
+$("#q").addEventListener("input", render);
+$("#refresh").addEventListener("click", async (e) => {
+  e.target.disabled = true; e.target.textContent = "Running…";
+  const r = await fetch("/api/run", { method: "POST", headers: { "Content-Type": "application/json" }, body: "{}" });
+  if (!r.ok) alert("Run failed: " + await r.text());
+  location.reload();
+});
+
+if (!DATA) { $("#list").append(el("div", { class: "empty" }, "No data yet. Run `autojob run`.")); }
+else { header(); render(); }
+</script>
+</body>
+</html>

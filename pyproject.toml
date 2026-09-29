@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autojob-agent"
+dynamic = ["version"]
+description = "Fetch, score and triage internship / early-career postings from Greenhouse, Lever, Ashby and Workday."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Xinyi Su" }]
+keywords = ["jobs", "internship", "greenhouse", "lever", "ashby", "workday", "job-search"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Environment :: Console",
+]
+dependencies = ["pyyaml>=6.0"]
+
+[project.optional-dependencies]
+semantic = ["sentence-transformers>=2.7", "numpy>=1.26"]
+dev = ["pytest>=7", "ruff>=0.5"]
+
+[project.scripts]
+autojob = "autojob.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/XinySu8/autojob-agent"
+
+[tool.setuptools.dynamic]
+version = { attr = "autojob.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["autojob*"]
+
+[tool.setuptools.package-data]
+"autojob.templates" = ["*.yaml", "*.md", "*.html"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501", "B905", "UP031"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

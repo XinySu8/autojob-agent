@@ -1,0 +1,45 @@
+# Runs the pipeline on GitHub's servers using the config in ./workspace.
+# Results: the digest appears in the run summary, the dashboard is attached as an
+# artifact, and workspace/data/state.json (your applied/ignored marks) is committed back.
+name: AutoJob daily
+
+on:
+  workflow_dispatch: {}
+  # Uncomment to run every day at 14:00 UTC:
+  # schedule:
+  #   - cron: "0 14 * * *"
+
+concurrency:
+  group: autojob
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      AUTOJOB_CONFIG: workspace
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install .
+      - run: autojob run
+      - name: Publish digest to run summary
+        run: cat workspace/data/reports/digest.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: autojob-dashboard
+          path: workspace/data/reports/
+          retention-days: 14
+      - name: Commit state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add workspace/data/state.json
+          git diff --cached --quiet && exit 0
+          git commit -m "chore(autojob): update state"
+          git push
