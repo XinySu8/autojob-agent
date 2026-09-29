@@ -1,0 +1,141 @@
+# AutoJob-Agent configuration
+# Paths are relative to this file. Docs: https://github.com/XinySu8/autojob-agent#configuration
+
+profile: profile.md      # free-text description of you – used for semantic matching + job cards
+data_dir: data           # all generated output lives here (safe to delete; state.json holds your marks)
+
+# ---------------------------------------------------------------------------
+# 1. Where to look
+# ---------------------------------------------------------------------------
+fetch:
+  timeout: 30            # seconds per HTTP request
+  retries: 2             # retries on 429/5xx/network errors (exponential backoff)
+  workers: 8             # parallel companies
+  workday_details: true  # fetch full JD + real location for Workday internship postings
+
+  # Supported sources and the key each needs:
+  #   greenhouse -> board_token     (boards.greenhouse.io/<board_token>)
+  #   lever      -> lever_slug      (jobs.lever.co/<lever_slug>; add `region: eu` for jobs.eu.lever.co)
+  #   ashby      -> job_board_name  (jobs.ashbyhq.com/<job_board_name>)
+  #   workday    -> workday_url     (https://<tenant>.wdN.myworkdayjobs.com/<site>)
+  # Add `enabled: false` to temporarily skip a target.
+  targets:
+    - { company: openai, source: ashby, job_board_name: openai }
+    - { company: anthropic, source: greenhouse, board_token: anthropic }
+    - { company: databricks, source: greenhouse, board_token: databricks }
+    - { company: cohere, source: ashby, job_board_name: cohere }
+    - { company: perplexity, source: ashby, job_board_name: perplexity }
+    - { company: langchain, source: ashby, job_board_name: langchain }
+    - { company: cognition, source: ashby, job_board_name: cognition }
+    - { company: replit, source: ashby, job_board_name: replit }
+    - { company: ramp, source: ashby, job_board_name: ramp }
+    - { company: zapier, source: ashby, job_board_name: zapier }
+    - { company: sierra, source: ashby, job_board_name: sierra }
+    - { company: elevenlabs, source: ashby, job_board_name: elevenlabs }
+    - { company: ashby, source: ashby, job_board_name: ashby }
+    - { company: notion, source: ashby, job_board_name: notion }
+    - { company: essentialai, source: ashby, job_board_name: essentialai }
+    - { company: modal, source: ashby, job_board_name: modal }
+    - { company: pinecone, source: ashby, job_board_name: pinecone }
+    - { company: runway, source: ashby, job_board_name: runway }
+    - { company: linear, source: ashby, job_board_name: linear }
+    - { company: plain, source: ashby, job_board_name: plain }
+    - { company: serval, source: ashby, job_board_name: serval }
+    - { company: mistral, source: lever, lever_slug: mistral }
+    - { company: waabi, source: lever, lever_slug: waabi }
+    - { company: magnetforensics, source: lever, lever_slug: magnetforensics }
+    - { company: shieldai, source: lever, lever_slug: shieldai }
+    - { company: cfsenergy, source: lever, lever_slug: cfsenergy }
+    - { company: sublimesystems, source: lever, lever_slug: SublimeSystems }
+    - { company: zoox, source: lever, lever_slug: zoox }
+    - { company: stripe, source: greenhouse, board_token: stripe }
+    - { company: scaleai, source: greenhouse, board_token: scaleai }
+    - { company: figma, source: greenhouse, board_token: figma }
+    - { company: togetherai, source: greenhouse, board_token: togetherai }
+    - { company: datadog, source: greenhouse, board_token: datadog }
+    - { company: cloudflare, source: greenhouse, board_token: cloudflare }
+    - { company: coinbase, source: greenhouse, board_token: coinbase }
+    - { company: asana, source: greenhouse, board_token: asana }
+    - { company: brex, source: greenhouse, board_token: brex }
+    - { company: okta, source: greenhouse, board_token: okta }
+    - { company: vercel, source: greenhouse, board_token: vercel }
+    - { company: square, source: greenhouse, board_token: block }
+    - { company: slack, source: workday, workday_url: "https://salesforce.wd12.myworkdayjobs.com/Slack" }
+
+# ---------------------------------------------------------------------------
+# 2. What counts as a relevant posting (applied at fetch time)
+# ---------------------------------------------------------------------------
+filters:
+  # Title must contain one of these (whole-word match), or Ashby employmentType must match below.
+  internship_any: [intern, internship, co-op, coop, co op, cooperative education, student,
+                   emerging talent, early career, new grad, university]
+  ashby_internship_types: [intern, internship, co-op, coop]
+  # Title / department / description must mention at least one of these.
+  domain_any: [software, engineer, engineering, data, machine learning, ml, ai, llm, research, product, design]
+  # Drop postings whose TITLE contains any of these.
+  exclude_title_any: [principal, director, vp, recruiter, recruiting, sales, account executive,
+                      business development, legal, counsel]
+  locations_any: []           # optional: keep only if location contains one of these
+  max_jobs_per_company: 500
+
+# ---------------------------------------------------------------------------
+# 3. How to rank
+# ---------------------------------------------------------------------------
+scoring:
+  location_allowlist:
+    enabled: true
+    regions: [US, China, Singapore]   # presets: US, Canada, China, Singapore, UK, Remote
+    allow_regex: []                   # extra patterns, e.g. '\bBerlin\b'
+    # location_then_text: use the location field; if it is empty or vague ("In-Office",
+    # "Remote", "5 Locations") look for the region in the job description instead.
+    match_order: location_then_text   # or text_only
+
+  # Any hit -> job goes to "skip" with the reason shown.
+  exclude_phrases:
+    - security clearance
+    - must be a us citizen
+    - must be a u.s. citizen
+    - citizenship required
+    - ts/sci
+    - polygraph
+    - phd required
+    - doctoral degree required
+    - must be pursuing a phd
+    - currently pursuing a phd
+    - master's required
+  exclude_regex:
+    - '\bcitizen(ship)?\s+(is\s+)?required\b'
+    - '\bsecurity\s+clearance\s+(is\s+)?(required|must)\b'
+    - '\bph\.?d\.?\s+(candidates?\s+)?(required|only)\b'
+    - '\b(master''?s|m\.s\.)\s+(degree\s+)?(required|only)\b'
+
+  # Whole-word matches. `title` only looks at the job title; the others look at
+  # title + description. Weights add up; negatives subtract.
+  keywords:
+    title: {software engineer: 3, software: 2, data engineer: 3, machine learning: 3, ml: 2, ai: 2, data: 1, product manager: 1}
+    must_have: {python: 3, data pipeline: 3, machine learning: 2, llm: 2, sql: 2, git: 1, docker: 1, cloud: 1}
+    nice_to_have: {langchain: 2, rag: 2, vector database: 1, mlflow: 1, api: 1, react: 1}
+    negative: {5+ years: -2, principal: -3, staff engineer: -3, phd: -2}
+  hard_saturation: 10         # keyword score at which the keyword part maxes out (1.0)
+
+  semantic:
+    # auto: sentence-transformers if installed, else built-in TF-IDF (no heavy deps)
+    backend: auto             # auto | sentence-transformers | tfidf | none
+    model_name: sentence-transformers/all-MiniLM-L6-v2
+    content_max_chars: 8000
+
+  weights: {hard: 0.45, semantic: 0.55}   # must sum to 1
+
+triage:
+  thresholds: {apply: 0.60, maybe: 0.35}
+  top_n: {apply: 50, maybe: 120, candidates: 150}
+  excerpt_chars: 600
+
+# ---------------------------------------------------------------------------
+# 4. Optional: local LLM job cards (`autojob cards`) – needs https://ollama.com
+# ---------------------------------------------------------------------------
+cards:
+  model: qwen2.5:3b
+  ollama_url: http://localhost:11434
+  timeout: 240
+  limit: 20

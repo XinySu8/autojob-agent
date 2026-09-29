@@ -1,6 +1,12 @@
-﻿.venv/
+.venv/
 __pycache__/
 *.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
 .DS_Store
-v3/agent/.cache/
-v3/cards/
+# generated output (state.json is kept so applied/ignored marks persist)
+workspace/data/*
+!workspace/data/state.json
