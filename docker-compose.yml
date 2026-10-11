@@ -1,0 +1,36 @@
+# docker compose up                     -> web UI + API on http://localhost:8000, PostgreSQL
+# docker compose --profile ai up        -> also starts Ollama for AI reviews
+#   then once: docker compose exec ollama ollama pull qwen2.5:7b
+# docker compose run --rm app run       -> run the pipeline once (e.g. from cron)
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: autojob
+      POSTGRES_PASSWORD: autojob
+      POSTGRES_DB: autojob
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U autojob"]
+      interval: 3s
+      retries: 20
+
+  app:
+    build: .
+    depends_on:
+      db: { condition: service_healthy }
+    environment:
+      DATABASE_URL: postgresql+psycopg://autojob:autojob@db:5432/autojob
+    volumes: ["./workspace:/workspace"]
+    ports: ["8000:8000"]
+    # Point the agent at the ollama service: set `agent.ollama_url: http://ollama:11434` in autojob.yaml
+
+  ollama:
+    image: ollama/ollama
+    profiles: [ai]
+    volumes: [ollama:/root/.ollama]
+    ports: ["11434:11434"]
+
+volumes:
+  pgdata:
+  ollama:

@@ -7,6 +7,10 @@ dist/
 .pytest_cache/
 .ruff_cache/
 .DS_Store
-# generated output (state.json is kept so applied/ignored marks persist)
-workspace/data/*
-!workspace/data/state.json
+# generated output (SQLite DB, caches, reports)
+workspace/data/
+# frontend
+web/node_modules/
+web/openapi.json
+autojob/static/
+*.db

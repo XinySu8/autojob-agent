@@ -1,8 +1,9 @@
 # AutoJob-Agent configuration
 # Paths are relative to this file. Docs: https://github.com/XinySu8/autojob-agent#configuration
 
-profile: profile.md      # free-text description of you – used for semantic matching + job cards
-data_dir: data           # all generated output lives here (safe to delete; state.json holds your marks)
+profile: profile.md      # free-text description of you – used for semantic matching + the AI agent
+data_dir: data           # SQLite database, caches and reports
+# database_url: postgresql+psycopg://user:pass@localhost:5432/autojob   # default: SQLite in data_dir ($DATABASE_URL overrides)
 
 # ---------------------------------------------------------------------------
 # 1. Where to look
@@ -11,7 +12,6 @@ fetch:
   timeout: 30            # seconds per HTTP request
   retries: 2             # retries on 429/5xx/network errors (exponential backoff)
   workers: 8             # parallel companies
-  workday_details: true  # fetch full JD + real location for Workday internship postings
 
   # Supported sources and the key each needs:
   #   greenhouse -> board_token     (boards.greenhouse.io/<board_token>)
@@ -128,14 +128,14 @@ scoring:
 
 triage:
   thresholds: {apply: 0.60, maybe: 0.35}
-  top_n: {apply: 50, maybe: 120, candidates: 150}
-  excerpt_chars: 600
+  top_n: {apply: 50, maybe: 120}
 
 # ---------------------------------------------------------------------------
-# 4. Optional: local LLM job cards (`autojob cards`) – needs https://ollama.com
+# 4. Optional: AI agent review (`autojob review`) – needs https://ollama.com
+#    pip install 'autojob-agent[agent]' && ollama pull qwen2.5:7b
 # ---------------------------------------------------------------------------
-cards:
-  model: qwen2.5:3b
+agent:
+  model: qwen2.5:7b
   ollama_url: http://localhost:11434
-  timeout: 240
-  limit: 20
+  max_retries: 2        # re-prompts when output fails schema / evidence checks
+  limit: 20             # top-N jobs of the latest run to review

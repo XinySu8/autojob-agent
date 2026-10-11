@@ -5,217 +5,226 @@ from __future__ import annotations
 import argparse
 import logging
 import sys
-import webbrowser
 from pathlib import Path
 
 from . import __version__
 from .config import ConfigError, Workspace, init_workspace, load, validate
-from .util import read_json
+from .repository import NotFound, Repository
+
+
+def _say(msg: str = "") -> None:
+    print(msg, flush=True)
 
 
 def _ws(args) -> Workspace:
     return load(args.config)
 
 
-def _say(msg: str) -> None:
-    print(msg, flush=True)
-
-
-# ----------------------------------------------------------------------------
-# Commands
-# ----------------------------------------------------------------------------
 def cmd_init(args) -> int:
-    created = init_workspace(args.dir, force=args.force)
     root = Path(args.dir).resolve()
-    if created:
-        for p in created:
-            _say(f"created {p}")
-    else:
+    created = init_workspace(root, force=args.force)
+    for p in created:
+        _say(f"created {p}")
+    if not created:
         _say(f"{root} already initialised (use --force to overwrite)")
-    _say(f"\nNext:\n  1. Edit {root / 'profile.md'} – describe yourself (used for semantic matching)\n"
-         f"  2. Edit {root / 'autojob.yaml'} – companies, keywords, locations\n"
-         f"  3. cd {root} && autojob run")
-    return 0
-
-
-def cmd_fetch(args) -> int:
-    from .fetch import fetch_all
-
-    ws = _ws(args)
-    _say(f"Fetching {len(ws.cfg['fetch']['targets'])} targets…")
-    p = fetch_all(ws, progress=_say if args.verbose else None)
-    _say(f"Fetched {p['fetched_count']} postings → {p['filtered_count']} internships "
-         f"({p['count']} open, {p['today_count']} new today).")
-    if p["errors"]:
-        _say(f"{len(p['errors'])} warning(s):")
-        for e in p["errors"]:
-            _say(f"  ! {e}")
-    return 0
-
-
-def cmd_score(args) -> int:
-    from .report import write_reports
-    from .scoring import run_scoring
-
-    ws = _ws(args)
-    res = run_scoring(ws)
-    c = res["meta"]["counts"]
-    _say(f"Scored with '{res['meta']['semantic_backend']}': {c['apply']} apply / {c['maybe']} maybe / {c['skip']} skip")
-    paths = write_reports(ws)
-    _say(f"Report: {paths['html']}")
+    _say(f"\nNext: edit {root / 'profile.md'} and {root / 'autojob.yaml'}, then `cd {root} && autojob run`")
     return 0
 
 
 def cmd_run(args) -> int:
-    rc = cmd_fetch(args) or cmd_score(args)
-    if rc == 0 and args.open:
-        ws = _ws(args)
-        webbrowser.open((ws.reports_dir / "dashboard.html").as_uri())
-    return rc
+    from .pipeline import Pipeline
+
+    ws = _ws(args)
+    _say(f"Fetching {len(ws.cfg['fetch']['targets'])} targets…")
+    run = Pipeline(ws, ws.open_db(), progress=_say if args.verbose else None).run()
+    c = run.counts
+    _say(f"Run #{run.id}: {run.fetched} postings → {run.matched} relevant ({run.new_jobs} new) → "
+         f"{c.get('apply', 0)} apply / {c.get('maybe', 0)} maybe / {c.get('skip', 0)} skip  [semantic: {run.semantic_backend}]")
+    for w in run.warnings:
+        _say(f"  ! {w}")
+    return 0
 
 
 def cmd_list(args) -> int:
     ws = _ws(args)
-    doc = read_json(ws.scored_path, default={})
-    if not doc:
-        _say("No scores yet – run `autojob run` first.")
-        return 1
-    rows = [r for r in doc["jobs"] if r["bucket"] == args.bucket][: args.limit]
-    if not rows:
-        _say(f"No jobs in '{args.bucket}'.")
-    for r in rows:
-        _say(f"{r['score']:.2f}  {r['id'][:10]}  {r['company'][:14]:<14}  {r['title'][:60]:<60}  {(r.get('location') or '')[:30]}")
-        if args.urls:
-            _say(f"      {r['url']}")
+    with ws.open_db().session() as s:
+        repo = Repository(s)
+        run = repo.latest_run()
+        if run is None:
+            _say("No runs yet – run `autojob run` first.")
+            return 1
+        rows, total = repo.ranked(run, bucket=args.bucket, status="new", limit=args.limit)
+        for score, job in rows:
+            verdict = f" agent:{job.review.verdict}" if job.review and not job.review.fallback else ""
+            _say(f"{score.score:.2f}  {job.id[:10]}  {job.company[:14]:<14}  {job.title[:58]:<58}  {job.location[:28]}{verdict}")
+            if args.urls:
+                _say(f"      {job.url}")
+        _say(f"({len(rows)} of {total} in '{args.bucket}')")
     return 0
 
 
 def cmd_mark(args) -> int:
-    from .state import find_job, load_state, save_state, set_status
-
+    """`mark` sets your status; `label` records the correct bucket for evaluation."""
     ws = _ws(args)
-    state = load_state(ws.state_path)
-    jobs = read_json(ws.jobs_path, default={}).get("jobs", [])
     rc = 0
-    for key in args.jobs:
-        jid = find_job(state, key, jobs)
-        if not jid:
-            _say(f"✗ no job matches '{key}' (use a URL, or an id / id prefix from `autojob list`)")
-            rc = 1
-            continue
-        rec = set_status(state, jid, args.status, args.note or "")
-        _say(f"✓ {jid[:10]} {rec.get('company', '')} – {rec.get('title', '')} → {args.status}")
-    save_state(ws.state_path, state)
+    with ws.open_db().session() as s:
+        repo = Repository(s)
+        for key in args.jobs:
+            try:
+                job = repo.find_job(key)
+            except NotFound:
+                _say(f"✗ no job matches '{key}' (use a URL, id or id prefix from `autojob list`)")
+                rc = 1
+                continue
+            if args.cmd == "mark":
+                repo.set_decision(job.id, status=args.value, note=args.note)
+            else:
+                repo.set_decision(job.id, label=args.value, note=args.note)
+            _say(f"✓ {job.id[:10]} {job.company} – {job.title} → {args.value}")
     return rc
 
 
-def cmd_cards(args) -> int:
-    from .cards import generate_cards
+def cmd_review(args) -> int:
+    from .agent import JobAgent
+    from .pipeline import Pipeline
 
     ws = _ws(args)
-    counts = generate_cards(ws, model=args.model, limit=args.limit, force=args.force, progress=_say)
-    _say(f"Cards: {counts['generated']} generated, {counts['skipped']} unchanged, {counts['failed']} failed → {ws.cards_dir}")
-    return 1 if counts["failed"] else 0
+    agent = JobAgent.from_config(ws.cfg, model=args.model)
+    job_id = None
+    db = ws.open_db()
+    if args.job:
+        with db.session() as s:
+            job_id = Repository(s).find_job(args.job).id
+    _say(f"Reviewing with {agent.model_name}…")
+    counts = Pipeline(ws, db, progress=_say).review(agent, limit=args.limit, job_id=job_id, force=args.force)
+    _say(f"Done: {counts}")
+    return 0
+
+
+def cmd_eval(args) -> int:
+    from .evaluation import evaluate
+
+    ws = _ws(args)
+    with ws.open_db().session() as s:
+        repo = Repository(s)
+        run = repo.latest_run()
+        rows = repo.labeled(run) if run else []
+        if not rows:
+            _say("No labeled jobs yet. Label some with `autojob label apply|maybe|skip <id>` or in the web UI.")
+            return 1
+        results = evaluate(rows)
+        ks = list(results[0].precision_at)
+        _say(f"{len(rows)} labeled jobs ({sum(1 for _s, j in rows if j.decision.label == 'apply')} labeled apply)\n")
+        _say(f"{'system':<16}" + "".join(f"{'P@' + str(k):>8}" for k in ks) + f"{'bucket acc':>12}")
+        fmt = lambda v: f"{v:.2f}" if v is not None else "–"  # noqa: E731
+        for r in results:
+            extra = f"   (agent coverage {r.agent_coverage:.0%})" if r.agent_coverage is not None else ""
+            _say(f"{r.name:<16}" + "".join(f"{fmt(r.precision_at[k]):>8}" for k in ks) + f"{fmt(r.bucket_accuracy):>12}{extra}")
+    return 0
+
+
+def cmd_digest(args) -> int:
+    from .report import render_digest
+
+    ws = _ws(args)
+    with ws.open_db().session() as s:
+        text = render_digest(Repository(s))
+    if args.output:
+        Path(args.output).write_text(text, encoding="utf-8")
+    else:
+        _say(text)
+    return 0
 
 
 def cmd_serve(args) -> int:
-    from .server import serve
+    import uvicorn
+
+    from .api import STATIC_DIR, create_app
 
     ws = _ws(args)
-
-    def pipeline():
-        from .fetch import fetch_all
-        from .report import write_reports
-        from .scoring import run_scoring
-
-        fetch_all(ws)
-        run_scoring(ws)
-        write_reports(ws)
-
-    if args.open:
-        webbrowser.open(f"http://{args.host}:{args.port}")
-    serve(ws, args.host, args.port, pipeline)
+    if not (STATIC_DIR / "index.html").exists():
+        _say("Note: web UI not built (cd web && npm install && npm run build). Serving the API only – see /docs.")
+    _say(f"AutoJob: http://{args.host}:{args.port}")
+    uvicorn.run(create_app(ws), host=args.host, port=args.port, log_level="warning")
     return 0
 
 
 def cmd_doctor(args) -> int:
-    ok = True
     _say(f"autojob {__version__}  python {sys.version.split()[0]}")
     try:
         ws = _ws(args)
-        _say(f"✓ config   {ws.config_path}")
     except ConfigError as e:
         _say(f"✗ config   {e}")
         return 1
+    _say(f"✓ config   {ws.config_path}")
     for p in validate(ws.cfg):
         _say(f"! config   {p}")
-    _say(("✓" if ws.profile_path.exists() else "✗") + f" profile  {ws.profile_path}")
-    ok &= ws.profile_path.exists()
+    ok = ws.profile_path.exists()
+    _say(("✓" if ok else "✗") + f" profile  {ws.profile_path}")
     try:
-        import sentence_transformers  # noqa: F401
-        _say("✓ semantic sentence-transformers installed")
-    except ImportError:
-        _say("· semantic sentence-transformers not installed → using built-in TF-IDF "
-             "(optional: pip install 'autojob-agent[semantic]')")
-    from urllib.request import urlopen
-    try:
-        urlopen(ws.cfg["cards"]["ollama_url"] + "/api/tags", timeout=2).close()
-        _say(f"✓ ollama   reachable at {ws.cfg['cards']['ollama_url']}")
-    except Exception:
-        _say(f"· ollama   not reachable at {ws.cfg['cards']['ollama_url']} (only needed for `autojob cards`)")
+        ws.open_db()
+        _say(f"✓ database {ws.database_url.split('@')[-1]}")
+    except Exception as e:
+        _say(f"✗ database {e}")
+        ok = False
+    for mod, extra, purpose in (("sentence_transformers", "semantic", "better semantic matching"),
+                                ("langchain_ollama", "agent", "AI agent review")):
+        try:
+            __import__(mod)
+            _say(f"✓ {extra:<8} installed")
+        except ImportError:
+            _say(f"· {extra:<8} not installed – optional, for {purpose}: pip install 'autojob-agent[{extra}]'")
     return 0 if ok else 1
 
 
-# ----------------------------------------------------------------------------
 def build_parser() -> argparse.ArgumentParser:
-    p = argparse.ArgumentParser(prog="autojob", description="Fetch, score and triage internship postings from company ATS boards.")
+    p = argparse.ArgumentParser(prog="autojob", description="Fetch, rank and review internship postings.")
     p.add_argument("--version", action="version", version=f"autojob {__version__}")
     common = argparse.ArgumentParser(add_help=False)
-    common.add_argument("-c", "--config", help="path to autojob.yaml or its folder (default: search upward from cwd, or $AUTOJOB_CONFIG)")
+    common.add_argument("-c", "--config", help="autojob.yaml or its folder (default: search upward, or $AUTOJOB_CONFIG)")
     common.add_argument("-v", "--verbose", action="store_true")
     sub = p.add_subparsers(dest="cmd", required=True, metavar="<command>")
 
     s = sub.add_parser("init", help="create a workspace with starter config + profile")
     s.add_argument("dir", nargs="?", default=".")
-    s.add_argument("--force", action="store_true", help="overwrite existing files")
+    s.add_argument("--force", action="store_true")
     s.set_defaults(fn=cmd_init)
 
-    s = sub.add_parser("run", parents=[common], help="fetch + score + report (the daily command)")
-    s.add_argument("--open", action="store_true", help="open the HTML dashboard afterwards")
-    s.set_defaults(fn=cmd_run)
+    sub.add_parser("run", parents=[common], help="fetch all boards and score (the daily command)").set_defaults(fn=cmd_run)
 
-    s = sub.add_parser("fetch", parents=[common], help="fetch postings from all targets")
-    s.set_defaults(fn=cmd_fetch)
-
-    s = sub.add_parser("score", parents=[common], help="score + triage fetched jobs and write reports")
-    s.set_defaults(fn=cmd_score)
-
-    s = sub.add_parser("list", parents=[common], help="print ranked jobs in the terminal")
+    s = sub.add_parser("list", parents=[common], help="print ranked jobs from the latest run")
     s.add_argument("bucket", nargs="?", default="apply", choices=["apply", "maybe", "skip"])
     s.add_argument("-n", "--limit", type=int, default=30)
-    s.add_argument("-u", "--urls", action="store_true", help="also print URLs")
+    s.add_argument("-u", "--urls", action="store_true")
     s.set_defaults(fn=cmd_list)
 
-    s = sub.add_parser("mark", parents=[common], help="mark jobs applied / ignored / closed / new")
-    s.add_argument("status", choices=["applied", "ignored", "closed", "new"])
-    s.add_argument("jobs", nargs="+", help="job URL, id, or id prefix (see `autojob list`)")
-    s.add_argument("--note", default="")
-    s.set_defaults(fn=cmd_mark)
+    for name, choices, help_ in (("mark", ["applied", "ignored", "closed", "new"], "set your status for jobs"),
+                                 ("label", ["apply", "maybe", "skip"], "record the correct bucket (for `autojob eval`)")):
+        s = sub.add_parser(name, parents=[common], help=help_)
+        s.add_argument("value", choices=choices)
+        s.add_argument("jobs", nargs="+", help="job URL, id or id prefix")
+        s.add_argument("--note")
+        s.set_defaults(fn=cmd_mark)
 
-    s = sub.add_parser("cards", parents=[common], help="generate job cards with a local Ollama model")
-    s.add_argument("--model")
+    s = sub.add_parser("review", parents=[common], help="AI agent review of top jobs (needs Ollama)")
+    s.add_argument("--job", help="review a single job (id, prefix or URL)")
     s.add_argument("--limit", type=int)
-    s.add_argument("--force", action="store_true")
-    s.set_defaults(fn=cmd_cards)
+    s.add_argument("--model")
+    s.add_argument("--force", action="store_true", help="re-review even if nothing changed")
+    s.set_defaults(fn=cmd_review)
 
-    s = sub.add_parser("serve", parents=[common], help="local dashboard with mark-as-applied buttons")
+    sub.add_parser("eval", parents=[common], help="precision@k of each ranker against your labels").set_defaults(fn=cmd_eval)
+
+    s = sub.add_parser("digest", parents=[common], help="Markdown summary of the latest run")
+    s.add_argument("-o", "--output")
+    s.set_defaults(fn=cmd_digest)
+
+    s = sub.add_parser("serve", parents=[common], help="web UI + REST API")
     s.add_argument("--host", default="127.0.0.1")
-    s.add_argument("--port", type=int, default=8765)
-    s.add_argument("--open", action="store_true")
+    s.add_argument("--port", type=int, default=8000)
     s.set_defaults(fn=cmd_serve)
 
-    s = sub.add_parser("doctor", parents=[common], help="check config, profile and optional dependencies")
-    s.set_defaults(fn=cmd_doctor)
+    sub.add_parser("doctor", parents=[common], help="check config, database and optional extras").set_defaults(fn=cmd_doctor)
     return p
 
 
@@ -225,7 +234,7 @@ def main(argv: list[str] | None = None) -> int:
                         format="%(levelname)s %(message)s")
     try:
         return args.fn(args)
-    except (ConfigError, RuntimeError, ValueError) as e:
+    except (ConfigError, RuntimeError, ValueError, NotFound) as e:
         print(f"error: {e}", file=sys.stderr)
         return 2
 

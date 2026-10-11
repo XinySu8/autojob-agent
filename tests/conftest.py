@@ -1,6 +1,10 @@
+import os
+
 import pytest
+from sqlalchemy import text
 
 from autojob.config import init_workspace, load
+from autojob.models import Base
 
 GREENHOUSE = {
     "jobs": [
@@ -60,8 +64,20 @@ def fake_http(url, method="GET", data=None, **_):
     raise AssertionError(f"unexpected url {url}")
 
 
+def _reset(url: str) -> None:
+    """Postgres test DBs are shared between tests: start each test from an empty schema."""
+    from sqlalchemy import create_engine
+
+    eng = create_engine(url)
+    with eng.begin() as conn:
+        Base.metadata.drop_all(conn)
+        conn.execute(text("DROP TABLE IF EXISTS alembic_version"))
+    eng.dispose()
+
+
 @pytest.fixture
-def ws(tmp_path):
+def ws(tmp_path, monkeypatch):
+    """A workspace with 3 fake boards. Uses $TEST_DATABASE_URL (Postgres in CI) or a temp SQLite file."""
     init_workspace(tmp_path)
     cfg = (tmp_path / "autojob.yaml").read_text()
     start = cfg.index("  targets:\n")
@@ -76,4 +92,24 @@ def ws(tmp_path):
     cfg = cfg.replace("backend: auto ", "backend: tfidf ")
     (tmp_path / "autojob.yaml").write_text(cfg)
     (tmp_path / "profile.md").write_text("Student skilled in Python, SQL, data pipelines, LLM tooling and APIs.")
+    url = os.environ.get("TEST_DATABASE_URL")
+    if url:
+        _reset(url)
+        monkeypatch.setenv("DATABASE_URL", url)
+    else:
+        monkeypatch.delenv("DATABASE_URL", raising=False)
     return load(tmp_path)
+
+
+@pytest.fixture
+def db(ws):
+    database = ws.open_db()
+    yield database
+    database.engine.dispose()
+
+
+@pytest.fixture
+def pipeline(ws, db):
+    from autojob.pipeline import Pipeline
+
+    return Pipeline(ws, db, http=fake_http)
