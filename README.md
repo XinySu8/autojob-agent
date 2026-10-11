@@ -2,173 +2,153 @@
 
 [![CI](https://github.com/XinySu8/autojob-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/XinySu8/autojob-agent/actions/workflows/ci.yml)
 
-**Stop refreshing 40 career pages.** AutoJob-Agent pulls internship and early-career postings straight from the
-public job-board APIs that companies use (Greenhouse, Lever, Ashby, Workday). It ranks them against *your*
-profile and gives you a short **Apply / Maybe / Skip** list, with the reason for every decision.
+AutoJob-Agent pulls internship and new-grad postings straight from the public job-board APIs of 40+ companies
+(Greenhouse, Lever, Ashby and Workday). It ranks them against your profile and lets a local LLM agent review the
+top matches. It also measures how good its own ranking is against your labels.
 
-- **One command a day:** `autojob run` fetches about 8,000 postings from 40+ companies in about 15 seconds.
-- **Explainable ranking:** keyword hits, semantic similarity, and hard gates (location, clearance, degree) are all shown on each job.
-- **Dashboard:** a local web page where you mark jobs *Applied* or *Ignore*. Marked jobs never come back.
-- **Light install:** the only dependency is PyYAML. Semantic matching uses built-in TF-IDF. You can optionally switch to sentence-transformers.
-- **Optional job cards:** a local LLM ([Ollama](https://ollama.com)) writes evidence-only prep notes for top matches.
-- **Runs anywhere:** laptop, Docker, or GitHub Actions on a schedule.
+- **Pipeline:** about 8,000 postings fetched in about 7 seconds. Results are stored in PostgreSQL (or SQLite), with score history for every run.
+- **Explainable ranking:** hard gates (location, clearance, degree), keyword hits and semantic similarity are combined into **Apply / Maybe / Skip**.
+- **AI agent:** a LangChain + Ollama reviewer returns a schema-validated verdict. Every piece of evidence must quote the job description word for word. If the output fails that check, the agent is re-prompted, and it finally falls back to the rule-based bucket.
+- **Evaluation:** you label jobs, and `autojob eval` reports precision@k for the keyword ranker, keywords plus semantic similarity, and the agent.
+- **Web app:** React + TypeScript UI on a FastAPI REST API. The frontend types are generated from the OpenAPI schema.
+- **Engineering:** Alembic migrations, 49 tests running on both SQLite and PostgreSQL, a CI pipeline, Docker Compose, and a daily GitHub Actions run.
 
----
+## Architecture
 
-## Quick start
-
-```bash
-pip install git+https://github.com/XinySu8/autojob-agent
-autojob init my-jobs        # creates my-jobs/autojob.yaml + my-jobs/profile.md
-cd my-jobs
-# 1) edit profile.md – a few paragraphs about you (skills, projects, what you want)
-# 2) edit autojob.yaml – companies, keywords, locations (defaults are sensible)
-autojob run --open          # fetch + score + open the dashboard
+```
+            ┌──────────────── autojob run (CLI · cron · "Run now") ────────────────┐
+ ATS APIs ─►│ Source adapters ─► PostingFilter ─► Repository ─► Scorer ─► scores   │
+ (4 kinds)  │  Greenhouse/Lever/   internship?      upsert jobs,   gates +         │
+            │  Ashby/Workday       title/domain     close stale    keywords +      │
+            └──────────────────────────────────────────────────────semantic───────┘
+                                        │
+                                PostgreSQL / SQLite ◄── Alembic migrations
+                     jobs · runs · scores (history) · decisions · agent_reviews
+                                        │
+   React + TS UI ◄──── FastAPI REST API ┼──── JobAgent (LangChain + Ollama)
+   (generated types)   /api/jobs, /runs, │      structured output → schema check →
+                       /eval, /decision  │      evidence-quote check → retry / fallback
+                                         └──── Evaluation: precision@k vs your labels
 ```
 
-Daily use:
+| Layer | Code |
+|---|---|
+| Source adapters (one abstract `Source`, one subclass per ATS) | [`autojob/sources.py`](autojob/sources.py) |
+| Pipeline: fetch, filter, store, score | [`autojob/pipeline.py`](autojob/pipeline.py), [`autojob/scoring.py`](autojob/scoring.py) |
+| Data model and data access | [`autojob/models.py`](autojob/models.py), [`autojob/repository.py`](autojob/repository.py), [`autojob/migrations/`](autojob/migrations) |
+| AI agent and guardrails | [`autojob/agent.py`](autojob/agent.py) |
+| Evaluation | [`autojob/evaluation.py`](autojob/evaluation.py) |
+| REST API and schemas | [`autojob/api.py`](autojob/api.py), [`autojob/schemas.py`](autojob/schemas.py) |
+| Web UI | [`web/src/`](web/src) |
+
+## Quick start (Docker)
 
 ```bash
-autojob run                 # refresh
-autojob list                # top "apply" jobs in the terminal (list maybe / list skip)
-autojob mark applied <url-or-id> --note "referral from Alex"
-autojob serve --open        # dashboard with Applied / Ignore buttons + "Fetch & rescore"
+git clone https://github.com/XinySu8/autojob-agent && cd autojob-agent
+# edit workspace/profile.md (about you) and workspace/autojob.yaml (companies, keywords, locations)
+docker compose up --build              # http://localhost:8000 → click "Run now"
 ```
 
-Check your setup at any time with `autojob doctor`.
+AI reviews need Ollama. Start it with `docker compose --profile ai up`, then pull a model with
+`docker compose exec ollama ollama pull qwen2.5:7b`. Finally, set `agent.ollama_url: http://ollama:11434`
+in `workspace/autojob.yaml`.
 
-## Commands
+## Quick start (local)
+
+```bash
+pip install "autojob-agent[agent] @ git+https://github.com/XinySu8/autojob-agent"
+autojob init my-jobs && cd my-jobs     # creates autojob.yaml + profile.md; edit both
+autojob run                            # fetch + score (SQLite at data/autojob.db)
+autojob serve                          # http://127.0.0.1:8000 (API docs at /docs)
+```
+
+`pip install` from git ships the API only. To include the web UI, build it once from a clone:
+`cd web && npm ci && npm run build`. For PostgreSQL, set `DATABASE_URL=postgresql+psycopg://user:pass@host/db`.
+
+## CLI
 
 | Command | What it does |
 |---|---|
-| `autojob init [dir]` | Create a workspace with a starter `autojob.yaml` and `profile.md` |
-| `autojob run [--open]` | `fetch` + `score` (the daily command) |
-| `autojob fetch` | Download postings, filter to internships, update `state.json` |
-| `autojob score` | Gates, keyword and semantic scoring, triage, and reports (`data/reports/`) |
-| `autojob list [apply\|maybe\|skip] [-n N] [-u]` | Print ranked jobs |
-| `autojob mark <applied\|ignored\|closed\|new> <url\|id…>` | Record your decision; hidden jobs don't come back |
-| `autojob serve [--port 8765] [--open]` | Local dashboard (binds to 127.0.0.1) |
-| `autojob cards [--model qwen2.5:3b] [--limit 20]` | Generate job cards with local Ollama |
-| `autojob doctor` | Validate config and show optional components |
+| `autojob run` | Fetch all boards and score open jobs; recorded as a run |
+| `autojob list [apply\|maybe\|skip] [-u]` | Ranked jobs from the latest run |
+| `autojob mark applied\|ignored\|closed\|new <id\|url…>` | Your status; marked jobs are not re-scored |
+| `autojob label apply\|maybe\|skip <id\|url…>` | Ground-truth label used by `eval` |
+| `autojob review [--limit N] [--job ID]` | AI agent review; skipped when job, profile and model are unchanged |
+| `autojob eval` | precision@5/10/20 and bucket accuracy per ranker |
+| `autojob serve` | Web UI and REST API |
+| `autojob digest [-o file.md]` | Markdown summary (used in the GitHub Actions run summary) |
+| `autojob doctor` | Check config, database and optional extras |
 
-Every command accepts `-c/--config <path>`. Without it, AutoJob looks for `autojob.yaml` in the current folder
-and its parents, or uses `$AUTOJOB_CONFIG`.
+## How it works
 
-## How ranking works
+**Ranking.** A job first has to pass the hard gates: the location allowlist (with US-state and city presets)
+and the clearance, citizenship and degree phrases. It then gets a keyword score: whole-word hits on the title,
+must-have, nice-to-have and negative terms, capped at `hard_saturation`. Next comes semantic similarity between
+`profile.md` and the job text, computed with TF-IDF by default or sentence-transformers via the `[semantic]` extra.
+The weighted sum is compared with the thresholds to pick Apply, Maybe or Skip.
 
-```
-fetch ─► filter (title looks like internship/new-grad, domain match, title exclusions)
-      ─► hard gates  (location allowlist, clearance/citizenship/degree phrases)   ─► skip + reason
-      ─► keyword score (title + must-have + nice-to-have − negatives, whole-word)  ─┐
-      ─► semantic score (profile.md vs JD: TF-IDF or sentence-transformers)        ─┴► weighted ─► apply / maybe / skip
-```
+**Agent guardrails.** The agent turns a ranked job into an `AgentVerdict` (verdict, confidence, summary, and
+matches and gaps with evidence) in four steps:
+1. The model's JSON mode is constrained to the Pydantic schema.
+2. Every evidence `quote` must be found in the job description (ignoring case and whitespace). This catches invented requirements.
+3. If a check fails, the model is re-prompted with the exact errors, up to `max_retries` times.
+4. If it still fails, the rule-based bucket is kept and the review is flagged `fallback`. The UI and the evaluation both know about this.
 
-- **Keyword score:** the sum of weights for whole-word hits. It is capped at `hard_saturation` and scaled to 0–1.
-- **Semantic score:** the cosine similarity between your profile and each posting, min-max scaled across today's batch.
-- **Final score:** `weights.hard × keyword + weights.semantic × semantic`. The thresholds in `triage.thresholds` decide the bucket.
+**Evaluation.** Label jobs in the UI ("Correct bucket") or with `autojob label`. `autojob eval` then compares three
+rankers on the same labeled set: `keywords`, `rules+semantic` and `rules+agent`. It reports precision@k
+(relevant = labeled *apply*) and bucket accuracy. Values with too few labels for k are shown as "–".
 
-For better semantic matching (downloads PyTorch, about 1–2 GB):
-
-```bash
-pip install "autojob-agent[semantic] @ git+https://github.com/XinySu8/autojob-agent"
-```
-
-With `backend: auto` in the config, it gets picked up automatically.
+**Data model.** `jobs` holds each posting once. `runs` holds one row per pipeline run. `scores` holds one row per
+job per run, which gives score history and "new since last run". `decisions` holds your status, label and note,
+and `agent_reviews` holds the latest verdict. Jobs that disappear from a board are closed, but only when that
+board was fetched successfully, so a timeout never closes a company's jobs.
 
 ## Configuration
 
-Everything lives in `autojob.yaml`. The generated file is commented; these are the parts you will most likely change:
+Everything is in `autojob.yaml`, which is commented.
 
 ```yaml
 fetch:
   targets:
-    - { company: stripe,  source: greenhouse, board_token: stripe }
-    - { company: openai,  source: ashby,      job_board_name: openai }
-    - { company: zoox,    source: lever,      lever_slug: zoox }
-    - { company: slack,   source: workday,    workday_url: "https://salesforce.wd12.myworkdayjobs.com/Slack" }
-
+    - { company: stripe, source: greenhouse, board_token: stripe }
+    - { company: openai, source: ashby,      job_board_name: openai }
+    - { company: slack,  source: workday,    workday_url: "https://salesforce.wd12.myworkdayjobs.com/Slack" }
 scoring:
-  location_allowlist:
-    enabled: true
-    regions: [US, China, Singapore]      # presets: US, Canada, China, Singapore, UK, Remote
+  location_allowlist: { enabled: true, regions: [US, China, Singapore] }
   keywords:
-    title:     { software engineer: 3, machine learning: 3, data engineer: 3 }
+    title:     { software engineer: 3, machine learning: 3 }
     must_have: { python: 3, sql: 2, llm: 2 }
-    negative:  { "5+ years": -2 }
-
 triage:
   thresholds: { apply: 0.60, maybe: 0.35 }
+agent:
+  model: qwen2.5:7b
 ```
 
-**Finding a company's board:** open its careers page and look at the job links.
+## GitHub Actions
 
-- `boards.greenhouse.io/<token>` → Greenhouse
-- `jobs.lever.co/<slug>` → Lever
-- `jobs.ashbyhq.com/<name>` → Ashby
-- `*.myworkdayjobs.com/<site>` → Workday
-
-## Where the data goes
-
-```
-my-jobs/
-  autojob.yaml, profile.md
-  data/
-    state.json          # your applied/ignored marks  ← the only file worth backing up
-    jobs.json           # today's open internships
-    scored.json         # every job with bucket, score and reason
-    candidates.json     # top apply+maybe with JD excerpts (input for job cards)
-    reports/digest.md   # Markdown summary
-    reports/dashboard.html
-    cards/              # Ollama job cards
-    archive/            # daily fetch stats
-```
-
-## Run on GitHub Actions
-
-The repo ships a ready-made workspace in [`workspace/`](workspace/) and two workflows:
-
-- **AutoJob daily** (`.github/workflows/autojob-daily.yml`): runs `autojob run`, writes the digest to the run
-  summary, attaches the dashboard as an artifact, and commits `workspace/data/state.json`. It starts manually by
-  default; uncomment the `schedule:` block to run it every day.
-- **AutoJob mark**: Actions → *AutoJob mark* → *Run workflow*. Enter a URL or id to mark it applied or ignored.
-
-Fork the repo, edit `workspace/profile.md` and `workspace/autojob.yaml`, and run it.
-
-## Docker
-
-```bash
-docker build -t autojob .
-docker run --rm -v "$PWD/my-jobs:/workspace" autojob run
-docker run --rm -p 8765:8765 -v "$PWD/my-jobs:/workspace" autojob serve --host 0.0.0.0
-```
-
-## Job cards with a local LLM (optional)
-
-```bash
-ollama pull qwen2.5:3b
-autojob cards --limit 10          # writes data/cards/<id>.md
-```
-
-Cards only use facts from `profile.md` and the job posting. Anything missing is written as
-*"Not specified in evidence."* Cards are regenerated only when the posting, your profile, or the model changes.
-
-## Claude Code skills
-
-[`skills/`](skills/) contains three Claude Code skills for the manual steps after triage:
-
-- `jd-triage-5min`: fast apply or skip decision
-- `jd-deep-safe-rewrite`: tailored resume bullets without exaggeration
-- `github-project-miner`: turn a skill gap into a one-week project
+`.github/workflows/autojob-daily.yml` runs `autojob run` using [`workspace/`](workspace/). It keeps the SQLite
+database between runs with the Actions cache and writes the digest to the run summary. It starts manually by
+default; uncomment `schedule:` to run it every day.
 
 ## Development
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
-pip install -e '.[dev]'
+pip install -e '.[dev,agent]'
 pytest -q && ruff check .
+TEST_DATABASE_URL=postgresql+psycopg://localhost/autojob_test pytest -q   # same suite on PostgreSQL
+
+cd web && npm ci
+autojob serve -c ../workspace & npm run dev        # Vite on :5173, proxies /api to :8000
+npm run gen:api                                    # after changing autojob/schemas.py
+
+# after changing autojob/models.py:
+DATABASE_URL=sqlite:///dev.db alembic revision --autogenerate -m "describe change"
 ```
 
-See [CHANGELOG.md](CHANGELOG.md) for what changed from the v0 scripts.
+CI runs the backend tests on Python 3.10 and 3.13 against both SQLite and PostgreSQL. It also checks that the
+migrations match the models and that the generated API types are up to date. Finally, it builds the frontend
+and the Docker image.
 
 ## License
 

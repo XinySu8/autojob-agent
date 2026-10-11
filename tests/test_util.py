@@ -1,6 +1,6 @@
 import pytest
 
-from autojob.util import has_term, html_to_text, iso_sort_key, to_iso
+from autojob.util import has_term, html_to_text, to_iso
 
 
 @pytest.mark.parametrize(
@@ -34,7 +34,3 @@ def test_to_iso_normalises_epoch_ms_and_offsets():
     assert to_iso("Posted 3 Days Ago") == "Posted 3 Days Ago"
     assert to_iso(None) is None
 
-
-def test_iso_sort_key_puts_free_text_last():
-    vals = ["Posted Today", "2026-01-01T00:00:00+00:00", None, "2026-05-01T00:00:00+00:00"]
-    assert sorted(vals, key=iso_sort_key, reverse=True)[:2] == ["2026-05-01T00:00:00+00:00", "2026-01-01T00:00:00+00:00"]

@@ -6,22 +6,68 @@ on:
   pull_request:
 
 jobs:
-  test:
+  backend:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        python-version: ["3.10", "3.11", "3.12", "3.13"]
+        python-version: ["3.10", "3.13"]
+        database: [sqlite, postgres]
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: autojob_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      TEST_DATABASE_URL: ${{ matrix.database == 'postgres' && 'postgresql+psycopg://postgres:postgres@localhost:5432/autojob_test' || '' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
           cache: pip
-      - run: pip install -e '.[dev]'
+      - run: pip install -e '.[dev,agent]'
       - run: ruff check .
       - run: pytest -q
-      - name: Smoke test packaged CLI
+      - name: Migrations match the models
         run: |
-          autojob --version
-          autojob init /tmp/ws
-          autojob doctor -c /tmp/ws
+          DATABASE_URL=sqlite:///check.db alembic upgrade head
+          DATABASE_URL=sqlite:///check.db alembic check
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: pip install -e .
+      - working-directory: web
+        run: npm ci --no-audit --no-fund
+      - name: API types are up to date with the backend
+        working-directory: web
+        run: |
+          npm run gen:api
+          git diff --exit-code src/api/schema.ts || (echo "::error::run 'npm run gen:api' and commit src/api/schema.ts" && exit 1)
+      - working-directory: web
+        run: npm run build
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t autojob .
+      - name: Smoke test image
+        run: |
+          docker run --rm autojob --version
+          docker run --rm -v "$PWD/workspace:/workspace" autojob doctor

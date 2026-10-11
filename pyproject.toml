@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "autojob-agent"
 dynamic = ["version"]
-description = "Fetch, score and triage internship / early-career postings from Greenhouse, Lever, Ashby and Workday."
+description = "Fetch, rank and AI-review internship postings from Greenhouse, Lever, Ashby and Workday – CLI, REST API and web UI."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
@@ -17,11 +17,19 @@ classifiers = [
   "Operating System :: OS Independent",
   "Environment :: Console",
 ]
-dependencies = ["pyyaml>=6.0"]
+dependencies = [
+  "pyyaml>=6.0",
+  "sqlalchemy>=2.0",
+  "alembic>=1.13",
+  "psycopg[binary]>=3.2",
+  "fastapi>=0.115",
+  "uvicorn>=0.30",
+]
 
 [project.optional-dependencies]
 semantic = ["sentence-transformers>=2.7", "numpy>=1.26"]
-dev = ["pytest>=7", "ruff>=0.5"]
+agent = ["langchain-core>=0.3", "langchain-ollama>=0.2"]
+dev = ["pytest>=7", "ruff>=0.5", "httpx>=0.27", "langchain-core>=0.3"]
 
 [project.scripts]
 autojob = "autojob.cli:main"
@@ -36,11 +44,13 @@ version = { attr = "autojob.__version__" }
 include = ["autojob*"]
 
 [tool.setuptools.package-data]
-"autojob.templates" = ["*.yaml", "*.md", "*.html"]
+"autojob" = ["static/**/*", "migrations/*.mako"]
+"autojob.templates" = ["*.yaml", "*.md"]
 
 [tool.ruff]
 line-length = 130
 target-version = "py310"
+extend-exclude = ["autojob/migrations/versions"]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "B", "UP"]
@@ -48,3 +58,6 @@ ignore = ["E501", "B905", "UP031"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = ["fastapi.Depends", "fastapi.Query"]

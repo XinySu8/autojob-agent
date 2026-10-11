@@ -1,5 +1,35 @@
 # Changelog
 
+## 2.0.0 — 2026-10-10
+
+v2 turns the CLI into a full-stack application: a database, a REST API, a web UI and an AI agent with evaluation.
+
+### Added
+- **Database**: PostgreSQL or SQLite through SQLAlchemy 2.0, with Alembic migrations that run on startup.
+  The tables are `jobs`, `runs`, `scores` (one row per job per run, which gives score history), `decisions` and `agent_reviews`.
+- **REST API** (FastAPI): `/api/jobs` (filter, search, paginate), `/api/jobs/{id}` (detail and history),
+  `PATCH /api/jobs/{id}/decision`, `POST /api/jobs/{id}/review`, `/api/runs`, `/api/eval`. Interactive docs are at `/docs`.
+- **Web UI** (React + TypeScript + Vite): job list, detail panel, status and label buttons, AI review, evaluation page and run history.
+  The API types are generated from the OpenAPI schema, and CI fails if they drift.
+- **AI agent** (LangChain + Ollama): verdicts with structured output and a check that every evidence quote appears in the JD.
+  It retries with the errors as feedback, then falls back to the rule-based bucket. Reviews are incremental, keyed by job text, profile and model.
+- **Evaluation**: `autojob label` and `autojob eval` compute precision@k and bucket accuracy for the keyword, semantic and agent rankers.
+- **Deployment**: a multi-stage Dockerfile and `docker-compose.yml` (app, PostgreSQL, and an optional Ollama profile).
+- **CI**: the test suite runs on SQLite and PostgreSQL, CI checks that migrations match the models, builds the frontend and builds the Docker image.
+
+### Changed
+- Source adapters are now classes (`Source` with one subclass per ATS), and scoring is a `Scorer` class.
+  The pipeline, the repository and the agent are separate units that can be tested on their own.
+- Jobs that disappear from a board are marked closed, but only when that board was fetched successfully.
+- `autojob fetch` and `autojob score` are merged into `autojob run`, which is recorded as a run.
+  The static HTML dashboard, the stdlib server and the Markdown job cards are replaced by the web UI and the agent.
+- The daily GitHub Actions workflow keeps the database in the Actions cache, so no data is committed to the repo.
+  The "mark job" workflow is removed; mark jobs in the UI or with the CLI instead.
+
+### Upgrading from 1.x
+v1 kept marks in `data/state.json`; v2 uses a database. Job ids are unchanged. v1 had no applied or ignored marks
+in this repo's workspace, so no import step is provided.
+
 ## 1.0.0 — 2026-09-29
 
 This release turns the v0 V1/V2/V3 scripts into an installable package with a single `autojob` CLI.

@@ -22,7 +22,8 @@ ENV_CONFIG = "AUTOJOB_CONFIG"
 DEFAULTS: dict[str, Any] = {
     "profile": "profile.md",
     "data_dir": "data",
-    "fetch": {"timeout": 30, "workers": 8, "retries": 2, "workday_details": True, "targets": []},
+    "database_url": None,  # default: SQLite file in data_dir; $DATABASE_URL overrides
+    "fetch": {"timeout": 30, "workers": 8, "retries": 2, "targets": []},
     "filters": {
         "internship_any": [],
         "ashby_internship_types": [],
@@ -46,13 +47,12 @@ DEFAULTS: dict[str, Any] = {
     },
     "triage": {
         "thresholds": {"apply": 0.60, "maybe": 0.35},
-        "top_n": {"apply": 50, "maybe": 120, "candidates": 150},
-        "excerpt_chars": 600,
+        "top_n": {"apply": 50, "maybe": 120},
     },
-    "cards": {
-        "model": "qwen2.5:3b",
+    "agent": {
+        "model": "qwen2.5:7b",
         "ollama_url": "http://localhost:11434",
-        "timeout": 240,
+        "max_retries": 2,
         "limit": 20,
     },
 }
@@ -91,36 +91,21 @@ class Workspace:
         return self.root / self.cfg["data_dir"]
 
     @property
-    def state_path(self) -> Path:
-        return self.data_dir / "state.json"
-
-    @property
-    def jobs_path(self) -> Path:
-        return self.data_dir / "jobs.json"
-
-    @property
-    def scored_path(self) -> Path:
-        return self.data_dir / "scored.json"
-
-    @property
-    def candidates_path(self) -> Path:
-        return self.data_dir / "candidates.json"
+    def database_url(self) -> str:
+        return os.environ.get("DATABASE_URL") or self.cfg["database_url"] or f"sqlite:///{self.data_dir / 'autojob.db'}"
 
     @property
     def cache_dir(self) -> Path:
         return self.data_dir / "cache"
 
-    @property
-    def archive_dir(self) -> Path:
-        return self.data_dir / "archive"
+    def open_db(self):
+        """Create the data dir, connect and migrate. Returns a ``Database``."""
+        from .db import Database
 
-    @property
-    def reports_dir(self) -> Path:
-        return self.data_dir / "reports"
-
-    @property
-    def cards_dir(self) -> Path:
-        return self.data_dir / "cards"
+        self.data_dir.mkdir(parents=True, exist_ok=True)
+        db = Database(self.database_url)
+        db.migrate()
+        return db
 
     def read_profile(self) -> str:
         if not self.profile_path.exists():

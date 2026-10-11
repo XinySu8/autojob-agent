@@ -41,16 +41,6 @@ def write_json(path: str | Path, obj: Any) -> None:
     os.replace(tmp, path)
 
 
-def write_text(path: str | Path, text: str) -> None:
-    path = Path(path)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_text(text, encoding="utf-8")
-    os.replace(tmp, path)
-
-
-def read_text(path: str | Path) -> str:
-    return Path(path).read_text(encoding="utf-8-sig")
 
 
 # ----------------------------------------------------------------------------
@@ -154,10 +144,3 @@ def to_iso(value: Any) -> str | None:
         except ValueError:
             return v  # e.g. Workday "Posted 3 Days Ago" – keep as-is
     return str(value)
-
-
-def iso_sort_key(value: Any) -> str:
-    """Sort key that puts real ISO timestamps before free-form strings."""
-    if isinstance(value, str) and value[:4].isdigit():
-        return value
-    return ""
